@@ -65,5 +65,13 @@ namespace IE_Faktury
                 stawkaPodatku = value;
             }
         }
+
+        public Produkt()
+        {
+            this.nazwa = "";
+            this.cenaHurtownia = 0;
+            this.cenaJednostkowa = 0;
+            this.stawkaPodatku = 0;
+        }
     }
 }

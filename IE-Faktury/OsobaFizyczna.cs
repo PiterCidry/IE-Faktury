@@ -13,6 +13,7 @@ namespace IE_Faktury
         private ulong pesel;
         private DateTime dataUrodzenia;
         private string adres;
+        private static uint liczbaTransakcji = 0;
 
         public string Imie
         {
@@ -76,6 +77,19 @@ namespace IE_Faktury
             set
             {
                 adres = value;
+            }
+        }
+
+        public uint LiczbaTransakcji
+        {
+            get
+            {
+                return liczbaTransakcji;
+            }
+
+            set
+            {
+                liczbaTransakcji = value;
             }
         }
     }

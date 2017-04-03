@@ -24,5 +24,17 @@ namespace IE_Faktury
         {
             InitializeComponent();
         }
+
+        private void button_wystaw_Click(object sender, RoutedEventArgs e)
+        {
+            WystawianieFaktury wystawianie = new WystawianieFaktury();
+            wystawianie.Show();
+        }
+
+        private void button_produkty_Click(object sender, RoutedEventArgs e)
+        {
+            ZmianaProduktow zmiana = new ZmianaProduktow();
+            zmiana.Show();
+        }
     }
 }

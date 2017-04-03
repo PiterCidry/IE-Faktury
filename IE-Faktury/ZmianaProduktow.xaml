@@ -1,0 +1,16 @@
+﻿<Window x:Class="IE_Faktury.ZmianaProduktow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IE_Faktury"
+        mc:Ignorable="d"
+        Title="ZmianaProduktow" Height="397.6" Width="496.8">
+    <Grid>
+        <Button x:Name="button_dodaj" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="24,29,0,0" VerticalAlignment="Top" Width="90" Height="26" Click="button_dodaj_Click"/>
+        <Button x:Name="button_zmien" Content="Zmien Produkt" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top" Width="90" Height="24"/>
+        <Button x:Name="button_usun" Content="Usun Produkt" HorizontalAlignment="Left" Margin="24,110,0,0" VerticalAlignment="Top" Width="90" Height="24"/>
+        <ListBox x:Name="listBox_produkty" HorizontalAlignment="Left" Height="146" Margin="178,34,0,0" VerticalAlignment="Top" Width="286"/>
+
+    </Grid>
+</Window>

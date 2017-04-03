@@ -8,6 +8,7 @@ namespace IE_Faktury
 {
     public class Faktura
     {
+        private static uint inkrementowany = 1;
         private string numerFaktury;
         private DateTime dataWystawienia;
         private static List<Produkt> listaProduktow;
@@ -78,6 +79,15 @@ namespace IE_Faktury
             {
                 odbiorcaPrawny = value;
             }
+        }
+
+        public Faktura()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(inkrementowany).Append("/").Append(DateTime.Today.Year.ToString());
+            this.numerFaktury = sb.ToString();
+            inkrementowany++;
+            this.DataWystawienia = DateTime.Now;
         }
     }
 }

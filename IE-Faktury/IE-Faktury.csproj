@@ -55,6 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ProduktWindow.xaml.cs">
+      <DependentUpon>ProduktWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WystawianieFaktury.xaml.cs">
+      <DependentUpon>WystawianieFaktury.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZmianaProduktow.xaml.cs">
+      <DependentUpon>ZmianaProduktow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +77,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ProduktWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WystawianieFaktury.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZmianaProduktow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OsobaFizyczna.cs" />

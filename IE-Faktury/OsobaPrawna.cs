@@ -12,6 +12,7 @@ namespace IE_Faktury
         private string adres;
         private ulong nip;
         private ulong krs;
+        private static uint liczbaTransakcji = 0;
 
         public string Nazwa
         {
@@ -62,6 +63,19 @@ namespace IE_Faktury
             set
             {
                 krs = value;
+            }
+        }
+
+        public uint LiczbaTransakcji
+        {
+            get
+            {
+                return liczbaTransakcji;
+            }
+
+            set
+            {
+                liczbaTransakcji = value;
             }
         }
     }

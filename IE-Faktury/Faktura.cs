@@ -11,10 +11,11 @@ namespace IE_Faktury
         private static uint inkrementowany = 1;
         private string numerFaktury;
         private DateTime dataWystawienia;
-        private static List<Produkt> listaProduktow;
+        private List<Produkt> listaProduktow;
         private OsobaFizyczna wystawca;
         private OsobaFizyczna odbiorcaFizyczny;
         private OsobaPrawna odbiorcaPrawny;
+        private Dictionary<Produkt, int> produkty;
 
         public string NumerFaktury
         {
@@ -81,13 +82,41 @@ namespace IE_Faktury
             }
         }
 
+        public List<Produkt> ListaProduktow
+        {
+            get
+            {
+                return listaProduktow;
+            }
+
+            set
+            {
+                listaProduktow = value;
+            }
+        }
+
+        public Dictionary<Produkt, int> Produkty
+        {
+            get
+            {
+                return produkty;
+            }
+
+            set
+            {
+                produkty = value;
+            }
+        }
+
         public Faktura()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(inkrementowany).Append("/").Append(DateTime.Today.Year.ToString());
             this.numerFaktury = sb.ToString();
             inkrementowany++;
-            this.DataWystawienia = DateTime.Now;
+            this.dataWystawienia = DateTime.Now;
+            this.listaProduktow = new List<Produkt>();
+            this.produkty = new Dictionary<Produkt, int>();
         }
     }
 }

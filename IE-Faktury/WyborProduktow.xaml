@@ -1,0 +1,16 @@
+﻿<Window x:Class="IE_Faktury.WyborProduktow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IE_Faktury"
+        mc:Ignorable="d"
+        Title="WyborProduktow" Height="159.4" Width="300">
+    <Grid>
+        <Label x:Name="label_produkt" Content="Produkt:" HorizontalAlignment="Left" Margin="21,22,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_ilosc" Content="Ilosc:" HorizontalAlignment="Left" Margin="21,57,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button__dodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="106,100,0,0" VerticalAlignment="Top" Width="75" Click="button__dodaj_Click"/>
+        <ComboBox x:Name="comboBox_produkt" HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_ilosc" HorizontalAlignment="Left" Height="23" Margin="146,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>

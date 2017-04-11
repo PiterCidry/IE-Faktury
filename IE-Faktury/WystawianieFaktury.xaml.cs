@@ -19,12 +19,21 @@ namespace IE_Faktury
     /// </summary>
     public partial class WystawianieFaktury : Window
     {
+        Faktura faktura = new Faktura();
+
         public WystawianieFaktury()
         {
             InitializeComponent();
-            Faktura faktura = new Faktura();
             textBox_nr.Text = faktura.NumerFaktury;
             textBox_data.Text = faktura.DataWystawienia.ToString("yyyy-MM-dd");
+            listView_produkty.ItemsSource = faktura.Produkty.Keys;
+        }
+
+        private void button_zmien_Click(object sender, RoutedEventArgs e)
+        {
+            WyborProduktow wybor = new WyborProduktow(faktura);
+            wybor.ShowDialog();
+            listView_produkty.Items.Refresh();
         }
     }
 }

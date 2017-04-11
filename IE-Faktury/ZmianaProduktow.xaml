@@ -5,12 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
-        Title="ZmianaProduktow" Height="397.6" Width="496.8">
+        Title="ZmianaProduktow" Height="299" Width="517.6">
     <Grid>
         <Button x:Name="button_dodaj" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="24,29,0,0" VerticalAlignment="Top" Width="90" Height="26" Click="button_dodaj_Click"/>
-        <Button x:Name="button_zmien" Content="Zmien Produkt" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top" Width="90" Height="24"/>
-        <Button x:Name="button_usun" Content="Usun Produkt" HorizontalAlignment="Left" Margin="24,110,0,0" VerticalAlignment="Top" Width="90" Height="24"/>
-        <ListBox x:Name="listBox_produkty" HorizontalAlignment="Left" Height="146" Margin="178,34,0,0" VerticalAlignment="Top" Width="286"/>
-
+        <Button x:Name="button_zmien" Content="Zmien Produkt" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top" Width="90" Height="24" Click="button_zmien_Click"/>
+        <Button x:Name="button_usun" Content="Usun Produkt" HorizontalAlignment="Left" Margin="24,110,0,0" VerticalAlignment="Top" Width="90" Height="24" Click="button_usun_Click"/>
+        <ListView x:Name="listView_produkty" HorizontalAlignment="Left" Height="187" Margin="159,29,0,0" VerticalAlignment="Top" Width="328">
+            <ListView.View>
+                <GridView x:Name="GV1">
+                    <GridViewColumn DisplayMemberBinding= "{Binding Path=Nazwa}" 
+                                Header="Nazwa produktu" Width="120">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding= "{Binding Path=CenaHurtownia}" 
+                                Header="c. hurt." Width="50">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding= "{Binding Path=CenaJednostkowa}" 
+                                Header="c. jedn." Width="50">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding= "{Binding Path=StawkaPodatku}" 
+                                Header="st. pod." Width="50">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=CenaBrutto}" 
+                                Header="c. brutto" Width="50">
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="button_gotowe" Content="Gotowe" HorizontalAlignment="Left" Margin="227,240,0,0" VerticalAlignment="Top" Width="75" Click="button_gotowe_Click"/>
     </Grid>
 </Window>

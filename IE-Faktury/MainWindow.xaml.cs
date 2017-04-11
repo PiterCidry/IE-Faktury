@@ -28,13 +28,13 @@ namespace IE_Faktury
         private void button_wystaw_Click(object sender, RoutedEventArgs e)
         {
             WystawianieFaktury wystawianie = new WystawianieFaktury();
-            wystawianie.Show();
+            wystawianie.ShowDialog();
         }
 
         private void button_produkty_Click(object sender, RoutedEventArgs e)
         {
             ZmianaProduktow zmiana = new ZmianaProduktow();
-            zmiana.Show();
+            zmiana.ShowDialog();
         }
     }
 }

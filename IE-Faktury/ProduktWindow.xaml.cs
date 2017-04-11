@@ -28,19 +28,34 @@ namespace IE_Faktury
 
         public ProduktWindow(Produkt p):this()
         {
-            InitializeComponent();
             this.p = p;
-            textBox_cenahurt.Text = "";
-            textBox_cenajedn.Text = "";
-            textBox_nazwa.Text = "";
+            if (p.CenaHurtownia != 0)
+                textBox_cenahurt.Text = p.CenaHurtownia.ToString();
+            else
+                textBox_cenahurt.Text = "";
+            if (p.CenaJednostkowa != 0)
+                textBox_cenajedn.Text = p.CenaJednostkowa.ToString();
+            else
+                textBox_cenajedn.Text = "";
+            textBox_nazwa.Text = p.Nazwa;
         }
 
         private void button_zatwierdz_Click(object sender, RoutedEventArgs e)
         {
-            p.CenaHurtownia = Double.Parse(textBox_cenahurt.Text);
-            p.CenaJednostkowa = Double.Parse(textBox_cenajedn.Text);
-            p.Nazwa = textBox_nazwa.Text;
-            p.StawkaPodatku = Double.Parse(comboBox_podatek.Text.Split('%')[0]);
+            try
+            {
+                p.CenaHurtownia = Double.Parse(textBox_cenahurt.Text);
+                p.CenaJednostkowa = Double.Parse(textBox_cenajedn.Text);
+                p.Nazwa = textBox_nazwa.Text;
+                p.StawkaPodatku = Double.Parse(comboBox_podatek.Text.Split('%')[0]);
+                p.CenaBrutto = p.PodajBrutto();
+                DialogResult = true;
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Popraw dane!");
+                DialogResult = false;
+            }
             this.Close();
         }
     }

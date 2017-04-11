@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BazaProduktow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <listaProduktow>
+    <Produkt>
+      <Nazwa>Piotrek</Nazwa>
+      <CenaHurtownia>214</CenaHurtownia>
+      <CenaJednostkowa>225</CenaJednostkowa>
+      <StawkaPodatku>23</StawkaPodatku>
+      <CenaBrutto>276.75</CenaBrutto>
+    </Produkt>
+    <Produkt>
+      <Nazwa>Asia</Nazwa>
+      <CenaHurtownia>5050</CenaHurtownia>
+      <CenaJednostkowa>5050505</CenaJednostkowa>
+      <StawkaPodatku>8</StawkaPodatku>
+      <CenaBrutto>5454545.4</CenaBrutto>
+    </Produkt>
+  </listaProduktow>
+</BazaProduktow>

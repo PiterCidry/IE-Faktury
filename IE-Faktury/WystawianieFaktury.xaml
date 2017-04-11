@@ -5,15 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
-        Title="WystawianieFaktury" Height="378.4" Width="300">
+        Title="WystawianieFaktury" Height="411.2" Width="451.8">
     <Grid>
         <Label x:Name="main_label" Content="Wprowadz dane faktury:" HorizontalAlignment="Left" Margin="33,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="18"/>
         <Label x:Name="label_nr" Content="Numer:" HorizontalAlignment="Left" Margin="23,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.714,0.516"/>
-        <TextBox x:Name="textBox_nr" HorizontalAlignment="Left" Height="23" Margin="143,60,0,0" TextWrapping="Wrap" Text="fawfa" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="textBox_nr" HorizontalAlignment="Left" Height="23" Margin="143,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label x:Name="label_data" Content="Data wystawienia:" HorizontalAlignment="Left" Margin="23,87,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.161,0.203"/>
         <TextBox x:Name="textBox_data" HorizontalAlignment="Left" Height="23" Margin="143,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label x:Name="label_produkty" Content="Produkty:" HorizontalAlignment="Left" Margin="23,129,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="dataGrid_produkty" HorizontalAlignment="Left" Margin="143,129,0,0" VerticalAlignment="Top" Height="92" Width="120"/>
-        <Button x:Name="button_zmien" Content="Zmien" Margin="66,168,166.6,0" VerticalAlignment="Top"/>
+        <ListView x:Name="listView_produkty" HorizontalAlignment="Left" Height="187" Margin="143,131,0,0" VerticalAlignment="Top" Width="276">
+            <ListView.View>
+                <GridView x:Name="GV1">
+                    <GridViewColumn DisplayMemberBinding= "{Binding Path=Nazwa}" 
+                                Header="Nazwa produktu" Width="120">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding= "{Binding Path=CenaJednostkowa}" 
+                                Header="c. jedn." Width="50">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding= "{Binding Path=StawkaPodatku}" 
+                                Header="st. pod." Width="50">
+                    </GridViewColumn>
+                    <GridViewColumn Header="ilosc" DisplayMemberBinding= "{Binding Path=ilosc}">
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="button_zmien" Content="Zmien" HorizontalAlignment="Left" Margin="23,168,0,0" VerticalAlignment="Top" Width="75" Click="button_zmien_Click"/>
     </Grid>
 </Window>

@@ -1,0 +1,82 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IE_Faktury
+{
+    class BazaProduktow : ICloneable
+    {
+
+               public List<Produkt> listaProduktow { get; set; }
+        public static string plik = "baza.txt";
+        protected int id = 0;
+        //
+              
+
+               public string NazwaBazy{ get; set; }
+
+               
+               public BazaProduktow()
+
+                {
+
+                    listaProduktow = new List<Produkt>();
+
+                  
+
+                }
+
+                public void DodajProdukt(Produkt p)
+
+                {
+
+                               id++;
+                               Produkt Prod = new Produkt();
+                               Prod = p;
+                              // Prod.nazwa = nazwap;
+                               listaProduktow.Add(Prod);
+
+                }
+
+     
+
+                public void PokazProdukty()
+
+                {
+
+                               Console.WriteLine("Produkty w bazie " + NazwaBazy + ": ");
+
+                               foreach (Produkt element in listaProduktow)
+
+                               {
+
+                                               element.ToString();
+
+                               }
+
+                }
+
+        public void Sortuj()
+        {
+            listaProduktow.Sort();
+        }
+
+
+        public void Zapisz()
+        {
+            StreamWriter sw = new StreamWriter(plik, true);
+            sw.Write(this.ToString());
+            sw.Close();
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
+
+    }
+}

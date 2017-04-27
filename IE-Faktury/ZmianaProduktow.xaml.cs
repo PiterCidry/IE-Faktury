@@ -59,8 +59,13 @@ namespace IE_Faktury
         {
             try
             {
-                ProduktWindow produkt = new ProduktWindow(baza.PodajProdukt(listView_produkty.SelectedIndex));
+                Produkt p = baza.PodajProdukt(listView_produkty.SelectedIndex);
+                ProduktWindow produkt = new ProduktWindow(p);
                 produkt.ShowDialog();
+                if (produkt.DialogResult != false)
+                {
+                    baza.ZmienProdukt(baza.PodajProdukt(listView_produkty.SelectedIndex), p);
+                }
                 listView_produkty.Items.Refresh();
             }
             catch(ArgumentOutOfRangeException)

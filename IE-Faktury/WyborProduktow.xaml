@@ -9,7 +9,7 @@
     <Grid>
         <Label x:Name="label_produkt" Content="Produkt:" HorizontalAlignment="Left" Margin="21,22,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_ilosc" Content="Ilosc:" HorizontalAlignment="Left" Margin="21,57,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button__dodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="106,100,0,0" VerticalAlignment="Top" Width="75" Click="button__dodaj_Click"/>
+        <Button x:Name="button_dodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="106,100,0,0" VerticalAlignment="Top" Width="75" Click="button_dodaj_Click"/>
         <ComboBox x:Name="comboBox_produkt" HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBox_ilosc" HorizontalAlignment="Left" Height="23" Margin="146,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
     </Grid>

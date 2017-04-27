@@ -32,7 +32,7 @@ namespace IE_Faktury
             baza = (BazaProduktow)baza.OdczytajBaze();
             comboBox_produkt.ItemsSource = baza.listaProduktow;
         }
-        private void button__dodaj_Click(object sender, RoutedEventArgs e)
+        private void button_dodaj_Click(object sender, RoutedEventArgs e)
         {
             f.Produkty.Add(comboBox_produkt.SelectedItem as Produkt, Int32.Parse(textBox_ilosc.Text));
             this.Close();

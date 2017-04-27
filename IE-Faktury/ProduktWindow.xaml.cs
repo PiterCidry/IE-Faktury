@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,25 @@ namespace IE_Faktury
                 textBox_cenajedn.Text = p.CenaJednostkowa.ToString();
             else
                 textBox_cenajedn.Text = "";
+            if (p.StawkaPodatku != 0)
+            {
+                switch (p.StawkaPodatku.ToString())
+                {
+                    case "5":
+                        comboBox_podatek.SelectedIndex = 2;
+                        break;
+                    case "8":
+                        comboBox_podatek.SelectedIndex = 1;
+                        break;
+                    case "23":
+                        comboBox_podatek.SelectedIndex = 0;
+                        break;
+                }       
+            }
+            else
+            {
+                comboBox_podatek.SelectedIndex = 0;
+            }
             textBox_nazwa.Text = p.Nazwa;
         }
 

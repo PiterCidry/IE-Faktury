@@ -3,7 +3,7 @@
   <listaProduktow>
     <Produkt>
       <Nazwa>Piotrek</Nazwa>
-      <CenaHurtownia>214</CenaHurtownia>
+      <CenaHurtownia>210</CenaHurtownia>
       <CenaJednostkowa>225</CenaJednostkowa>
       <StawkaPodatku>23</StawkaPodatku>
       <CenaBrutto>276.75</CenaBrutto>
@@ -11,9 +11,16 @@
     <Produkt>
       <Nazwa>Asia</Nazwa>
       <CenaHurtownia>5050</CenaHurtownia>
-      <CenaJednostkowa>5050505</CenaJednostkowa>
+      <CenaJednostkowa>505055</CenaJednostkowa>
       <StawkaPodatku>8</StawkaPodatku>
-      <CenaBrutto>5454545.4</CenaBrutto>
+      <CenaBrutto>545459.4</CenaBrutto>
+    </Produkt>
+    <Produkt>
+      <Nazwa>Kasia</Nazwa>
+      <CenaHurtownia>36</CenaHurtownia>
+      <CenaJednostkowa>35</CenaJednostkowa>
+      <StawkaPodatku>5</StawkaPodatku>
+      <CenaBrutto>36.75</CenaBrutto>
     </Produkt>
   </listaProduktow>
 </BazaProduktow>

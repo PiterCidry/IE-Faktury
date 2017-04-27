@@ -34,6 +34,11 @@ namespace IE_Faktury
             return listaProduktow.ElementAt(indeks);
         }
 
+        public void ZmienProdukt(Produkt stary, Produkt nowy)
+        {
+            listaProduktow[listaProduktow.FindIndex(i => i.Equals(stary))] = nowy;
+        }
+
         public void ZapiszBaze()
         {
             try

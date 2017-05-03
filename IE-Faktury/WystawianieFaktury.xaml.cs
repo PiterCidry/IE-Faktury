@@ -26,14 +26,14 @@ namespace IE_Faktury
             InitializeComponent();
             textBox_nr.Text = faktura.NumerFaktury;
             textBox_data.Text = faktura.DataWystawienia.ToString("yyyy-MM-dd");
-            listView_produkty.ItemsSource = faktura.Produkty.Keys;
+            dataGrid_produkty.ItemsSource = faktura.Produkty;
         }
 
         private void button_dodajProd_Click(object sender, RoutedEventArgs e)
         {
             WyborProduktow wybor = new WyborProduktow(faktura);
             wybor.ShowDialog();
-            listView_produkty.Items.Refresh();
+            dataGrid_produkty.Items.Refresh();
         }
     }
 }

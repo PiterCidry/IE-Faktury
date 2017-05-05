@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="WystawianieFaktury" Height="584.6" Width="465.4">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="457*"/>
+            <ColumnDefinition Width="165*"/>
+        </Grid.ColumnDefinitions>
         <Label x:Name="main_label" Content="Wprowadz dane faktury:" HorizontalAlignment="Left" Margin="33,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="18"/>
         <Label x:Name="label_nr" Content="Numer:" HorizontalAlignment="Left" Margin="23,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.714,0.516"/>
         <TextBox x:Name="textBox_nr" HorizontalAlignment="Left" Height="23" Margin="143,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
@@ -25,7 +29,7 @@
         <Label x:Name="label_odbiorca" Content="Odbiorca:" HorizontalAlignment="Left" Margin="23,118,0,0" VerticalAlignment="Top" Width="104"/>
         <RadioButton x:Name="radioButton_fizyczny" Content="Fizyczny" HorizontalAlignment="Left" Margin="23,149,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioButton_prawny" Content="Prawny" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,149,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button_dodajOdbiorce" Content="Nowy" HorizontalAlignment="Left" Margin="281,150,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,149,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_odbiorca_SelectionChanged"/>
+        <Button x:Name="button_dodajOdbiorce" Content="Nowy" HorizontalAlignment="Left" Margin="281,150,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajOdbiorce_Click"/>
     </Grid>
 </Window>

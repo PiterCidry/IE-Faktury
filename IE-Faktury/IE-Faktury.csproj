@@ -57,6 +57,12 @@
     </ApplicationDefinition>
     <Compile Include="BazaOdbiorcow.cs" />
     <Compile Include="BazaProduktow.cs" />
+    <Compile Include="Fizyczny.xaml.cs">
+      <DependentUpon>Fizyczny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prawny.xaml.cs">
+      <DependentUpon>Prawny.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProduktWindow.xaml.cs">
       <DependentUpon>ProduktWindow.xaml</DependentUpon>
     </Compile>
@@ -69,6 +75,10 @@
     <Compile Include="ZmianaProduktow.xaml.cs">
       <DependentUpon>ZmianaProduktow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Fizyczny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,6 +92,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Prawny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ProduktWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -5,19 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
-        Title="Fizyczny" Height="250" Width="300">
-    <Grid>
+        Title="Fizyczny" Height="300" Width="300">
+    <Grid Margin="0,0,0.333,-2.333" Height="273" VerticalAlignment="Top">
         <Label x:Name="label" Content="Imię" HorizontalAlignment="Left" Height="25" Margin="10,20,0,0" VerticalAlignment="Top" Width="74"/>
         <Label x:Name="label1" Content="Nazwisko" HorizontalAlignment="Left" Height="25" Margin="10,50,0,0" VerticalAlignment="Top" Width="74"/>
         <Label x:Name="label2" Content="Data Urodzenia" HorizontalAlignment="Left" Height="25" Margin="10,80,0,0" VerticalAlignment="Top" Width="110"/>
         <Label x:Name="label3" Content="PESEL" HorizontalAlignment="Left" Height="25" Margin="10,110,0,0" VerticalAlignment="Top" Width="57"/>
-        <Label x:Name="label4" Content="Adres" HorizontalAlignment="Left" Height="25" Margin="10,140,0,0" VerticalAlignment="Top" Width="57"/>
+        <Label x:Name="label4" Content="Ulica" HorizontalAlignment="Left" Height="25" Margin="10,140,0,0" VerticalAlignment="Top" Width="57"/>
         <TextBox x:Name="textBox_imie" HorizontalAlignment="Left" Height="25" Margin="136,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
         <TextBox x:Name="textBox_nazwisko" HorizontalAlignment="Left" Height="25" Margin="136,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
         <TextBox x:Name="textBox_data" HorizontalAlignment="Left" Height="25" Margin="136,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
         <TextBox x:Name="textBox_PESEL" HorizontalAlignment="Left" Height="25" Margin="136,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
-        <TextBox x:Name="textBox_adres" HorizontalAlignment="Left" Height="25" Margin="136,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
-        <Button x:Name="button_dodaj" Content="Dodaj" HorizontalAlignment="Left" Height="25" Margin="93,185,0,0" VerticalAlignment="Top" Width="100" Click="button_dodaj_Click"/>
+        <TextBox x:Name="textBox_ulica" HorizontalAlignment="Left" Height="25" Margin="136,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" TextChanged="textBox_adres_TextChanged"/>
+        <Button x:Name="button_dodaj" Content="Dodaj" HorizontalAlignment="Left" Height="25" Margin="96,238,0,0" VerticalAlignment="Top" Width="100" Click="button_dodaj_Click"/>
+        <TextBox x:Name="textBox_kod" HorizontalAlignment="Left" Height="25" Margin="136,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" TextChanged="textBox_adres_TextChanged"/>
+        <TextBox x:Name="textBox_miasto" HorizontalAlignment="Left" Height="25" Margin="136,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" TextChanged="textBox_adres_TextChanged"/>
+        <Label x:Name="label4_Copy" Content="Kod pocztowy" HorizontalAlignment="Left" Height="25" Margin="10,170,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="label4_Copy1" Content="Miasto" HorizontalAlignment="Left" Height="25" Margin="10,202,0,0" VerticalAlignment="Top" Width="57"/>
 
     </Grid>
 </Window>

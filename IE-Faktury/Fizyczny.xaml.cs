@@ -33,7 +33,9 @@ namespace IE_Faktury
             this.f = f;
             textBox_imie.Text = f.Imie;
             textBox_nazwisko.Text = f.Nazwisko;
-            textBox_adres.Text = f.Adres;
+            textBox_ulica.Text = f.Ulica;
+            textBox_kod.Text = f.KodPocztowy.ToString();
+            textBox_miasto.Text = f.Miasto;
             textBox_PESEL.Text = f.Pesel.ToString();
         }
     
@@ -45,7 +47,10 @@ namespace IE_Faktury
                 f.Imie = textBox_imie.Text;
                 f.Nazwisko = textBox_nazwisko.Text;
                 f.DataUrodzenia = DateTime.Parse(textBox_data.Text);
-                f.Adres = textBox_adres.Text;
+                f.Ulica = textBox_ulica.Text;
+                f.KodPocztowy = Int16.Parse(textBox_kod.Text);
+                f.Miasto = textBox_miasto.Text;
+
                 DialogResult = true;
             }
             catch (FormatException)
@@ -56,6 +61,13 @@ namespace IE_Faktury
             lista.Add(f);
             this.Close();
         }
+
+        private void textBox_adres_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+       
     }
     }
    

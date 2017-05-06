@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BazaOdbiorcow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <listaFizycznych />
+  <listaFizycznych>
+    <OsobaFizyczna>
+      <Imie>Joanna</Imie>
+      <Nazwisko>Jeziorek</Nazwisko>
+      <Pesel>97070900949</Pesel>
+      <DataUrodzenia>1997-09-07T00:00:00</DataUrodzenia>
+      <KodPocztowy>0</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Jan</Imie>
+      <Nazwisko>Kowalski</Nazwisko>
+      <Pesel>98079856374</Pesel>
+      <DataUrodzenia>1990-12-12T00:00:00</DataUrodzenia>
+      <KodPocztowy>0</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>dsd</Imie>
+      <Nazwisko>dssd</Nazwisko>
+      <Pesel>97070900949</Pesel>
+      <DataUrodzenia>1998-09-09T00:00:00</DataUrodzenia>
+      <Ulica>jsjsjs</Ulica>
+      <Miasto>ksdjjd</Miasto>
+      <KodPocztowy>123</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+    </OsobaFizyczna>
+  </listaFizycznych>
   <listaPrawnych>
     <OsobaPrawna>
       <Nazwa>Jan Kowalski sp.z o.o.</Nazwa>
-      <Adres>Szykanowana 12</Adres>
+      <KodPocztowy>0</KodPocztowy>
       <Nip>251251250</Nip>
       <LiczbaTransakcji>0</LiczbaTransakcji>
     </OsobaPrawna>

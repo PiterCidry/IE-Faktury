@@ -30,7 +30,9 @@ namespace IE_Faktury
         {
             this.p = p;
             textBox_nazwa.Text = p.Nazwa;
-            textBox_adres.Text = p.Adres;
+            textBox_ulica.Text = p.Ulica;
+            textBox_kod.Text = p.KodPocztowy.ToString();
+            textBox_miasto.Text = p.Miasto;
             textBox_NIP.Text = p.Nip.ToString();
         }
 
@@ -38,7 +40,9 @@ namespace IE_Faktury
         {
             try
             {
-                p.Adres = textBox_adres.Text;
+                p.Ulica = textBox_ulica.Text;
+                p.KodPocztowy = Int16.Parse(textBox_kod.Text);
+                p.Miasto = textBox_miasto.Text;
                 p.Nip = UInt64.Parse(textBox_NIP.Text);
                 p.Nazwa = textBox_nazwa.Text;
                 DialogResult = true;
@@ -49,6 +53,11 @@ namespace IE_Faktury
                 DialogResult = false;
             }
             this.Close();
+        }
+
+        private void textBox_adres_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

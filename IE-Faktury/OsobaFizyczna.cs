@@ -12,7 +12,9 @@ namespace IE_Faktury
         private string nazwisko;
         private ulong pesel;
         private DateTime dataUrodzenia;
-        private string adres;
+        private string ulica;
+        private int kodPocztowy;
+        private string miasto;
         private static uint liczbaTransakcji = 0;
 
         public string Imie
@@ -67,16 +69,40 @@ namespace IE_Faktury
             }
         }
 
-        public string Adres
+        public string Ulica
         {
             get
             {
-                return adres;
+                return ulica;
             }
 
             set
             {
-                adres = value;
+                ulica = value;
+            }
+        }
+        public string Miasto
+        {
+            get
+            {
+                return miasto;
+            }
+
+            set
+            {
+                miasto = value;
+            }
+        }
+        public int KodPocztowy
+        {
+            get
+            {
+                return kodPocztowy;
+            }
+
+            set
+            {
+                kodPocztowy = value;
             }
         }
 

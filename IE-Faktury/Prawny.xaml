@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
-        Title="Prawny" Height="190" Width="300">
+        Title="Prawny" Height="250" Width="300">
     <Grid Margin="-16,10,16,-10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -15,10 +15,14 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="label" Content="Nazwa" HorizontalAlignment="Left" Height="25" Margin="21.6,20,0,0" VerticalAlignment="Top" Width="74" Grid.Column="1"/>
         <Label x:Name="label1" Content="NIP" HorizontalAlignment="Left" Height="25" Margin="21.6,50,0,0" VerticalAlignment="Top" Width="74" Grid.Column="1"/>
-        <Label x:Name="label3" Content="Adres" HorizontalAlignment="Left" Height="25" Margin="21.6,80,0,0" VerticalAlignment="Top" Width="57" Grid.Column="1"/>
-        <TextBox x:Name="textBox_nazwa" HorizontalAlignment="Left" Height="25" Margin="6,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" Grid.Column="2" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="textBox_NIP" HorizontalAlignment="Left" Height="25" Margin="6,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" Grid.Column="2"/>
-        <TextBox x:Name="textBox_adres" HorizontalAlignment="Left" Height="25" Margin="6,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" Grid.Column="2"/>
-        <Button x:Name="button_dodaj" Content="Dodaj" Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="99.6,120,0,0" VerticalAlignment="Top" Width="96" Click="button_dodaj_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox_nazwa" HorizontalAlignment="Left" Height="25" Margin="0.333,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" Grid.Column="2"/>
+        <TextBox x:Name="textBox_NIP" HorizontalAlignment="Left" Height="25" Margin="0.333,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" Grid.Column="2"/>
+        <Button x:Name="button_dodaj" Content="Dodaj" Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="87,173,0,0" VerticalAlignment="Top" Width="96" Click="button_dodaj_Click" Grid.ColumnSpan="2"/>
+        <Label x:Name="label4" Content="Ulica" HorizontalAlignment="Left" Height="25" Margin="22,80,0,0" VerticalAlignment="Top" Width="57" Grid.Column="1"/>
+        <TextBox x:Name="textBox_ulica" HorizontalAlignment="Left" Height="25" Margin="0.333,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" TextChanged="textBox_adres_TextChanged" Grid.Column="2"/>
+        <TextBox x:Name="textBox_kod" HorizontalAlignment="Left" Height="25" Margin="0.333,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" TextChanged="textBox_adres_TextChanged" Grid.Column="2"/>
+        <TextBox x:Name="textBox_miasto" HorizontalAlignment="Left" Height="25" Margin="2.333,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" TextChanged="textBox_adres_TextChanged" Grid.Column="2"/>
+        <Label x:Name="label4_Copy" Content="Kod pocztowy" HorizontalAlignment="Left" Height="25" Margin="22,110,0,0" VerticalAlignment="Top" Width="94" Grid.Column="1"/>
+        <Label x:Name="label4_Copy1" Content="Miasto" HorizontalAlignment="Left" Height="25" Margin="22,140,0,0" VerticalAlignment="Top" Width="57" Grid.Column="1"/>
     </Grid>
 </Window>

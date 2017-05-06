@@ -9,7 +9,9 @@ namespace IE_Faktury
     public class OsobaPrawna
     {
         private string nazwa;
-        private string adres;
+        private string ulica;
+        private int kodPocztowy;
+        private string miasto;
         private ulong nip;
         private static uint liczbaTransakcji = 0;
 
@@ -25,20 +27,43 @@ namespace IE_Faktury
                 nazwa = value;
             }
         }
-
-        public string Adres
+        public string Ulica
         {
             get
             {
-                return adres;
+                return ulica;
             }
 
             set
             {
-                adres = value;
+                ulica = value;
             }
         }
+        public string Miasto
+        {
+            get
+            {
+                return miasto;
+            }
 
+            set
+            {
+                miasto = value;
+            }
+        }
+        public int KodPocztowy
+        {
+            get
+            {
+                return kodPocztowy;
+            }
+
+            set
+            {
+                kodPocztowy = value;
+            }
+        }
+       
         public ulong Nip
         {
             get

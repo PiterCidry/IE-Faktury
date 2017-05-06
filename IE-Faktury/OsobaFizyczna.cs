@@ -9,7 +9,7 @@ namespace IE_Faktury
     public class OsobaFizyczna
     {
         private string imie;
-        private string nawisko;
+        private string nazwisko;
         private ulong pesel;
         private DateTime dataUrodzenia;
         private string adres;
@@ -28,16 +28,16 @@ namespace IE_Faktury
             }
         }
 
-        public string Nawisko
+        public string Nazwisko
         {
             get
             {
-                return nawisko;
+                return nazwisko;
             }
 
             set
             {
-                nawisko = value;
+                nazwisko = value;
             }
         }
 

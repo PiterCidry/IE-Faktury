@@ -1,0 +1,15 @@
+﻿<Window x:Class="IE_Faktury.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IE_Faktury"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="205.2" Width="525">
+    <Grid>
+        <Label x:Name="main_label" Content="Program do tworzenia i analizy faktur" HorizontalAlignment="Center" Height="34" Margin="89,43,77.4,0" VerticalAlignment="Top" Width="352" FontFamily="Segoe UI Black" FontSize="18"/>
+        <Button x:Name="button_wystaw" Content="Wystaw fakture" HorizontalAlignment="Left" Margin="49,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_wystaw_Click"/>
+        <Button x:Name="button_produkty" Content="Produkty" HorizontalAlignment="Left" Margin="207,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_produkty_Click"/>
+        <Button x:Name="button_analiza" Content="Analiza" HorizontalAlignment="Left" Margin="363,122,0,0" VerticalAlignment="Top" Width="108" Height="30"/>
+    </Grid>
+</Window>

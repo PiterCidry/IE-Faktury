@@ -1,0 +1,23 @@
+﻿<Window x:Class="IE_Faktury.Fizyczny"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IE_Faktury"
+        mc:Ignorable="d"
+        Title="Fizyczny" Height="250" Width="300">
+    <Grid>
+        <Label x:Name="label" Content="Imię" HorizontalAlignment="Left" Height="25" Margin="10,20,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="label1" Content="Nazwisko" HorizontalAlignment="Left" Height="25" Margin="10,50,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="label2" Content="Data Urodzenia" HorizontalAlignment="Left" Height="25" Margin="10,80,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label x:Name="label3" Content="PESEL" HorizontalAlignment="Left" Height="25" Margin="10,110,0,0" VerticalAlignment="Top" Width="57"/>
+        <Label x:Name="label4" Content="Adres" HorizontalAlignment="Left" Height="25" Margin="10,140,0,0" VerticalAlignment="Top" Width="57"/>
+        <TextBox x:Name="textBox_imie" HorizontalAlignment="Left" Height="25" Margin="136,20,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140"/>
+        <TextBox x:Name="textBox_nazwisko" HorizontalAlignment="Left" Height="25" Margin="136,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140"/>
+        <TextBox x:Name="textBox_data" HorizontalAlignment="Left" Height="25" Margin="136,80,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140"/>
+        <TextBox x:Name="textBox_PESEL" HorizontalAlignment="Left" Height="25" Margin="136,110,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140"/>
+        <TextBox x:Name="textBox_adres" HorizontalAlignment="Left" Height="25" Margin="136,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140"/>
+        <Button x:Name="button" Content="Dodaj" HorizontalAlignment="Left" Height="25" Margin="148,184,0,0" VerticalAlignment="Top" Width="100" Click="button_Click"/>
+
+    </Grid>
+</Window>

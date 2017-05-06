@@ -8,16 +8,16 @@
         Title="WystawianieFaktury" Height="584.6" Width="465.4">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="457*"/>
-            <ColumnDefinition Width="165*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="main_label" Content="Wprowadz dane faktury:" HorizontalAlignment="Left" Margin="33,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="18"/>
-        <Label x:Name="label_nr" Content="Numer:" HorizontalAlignment="Left" Margin="23,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.714,0.516"/>
-        <TextBox x:Name="textBox_nr" HorizontalAlignment="Left" Height="23" Margin="143,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="label_data" Content="Data wystawienia:" HorizontalAlignment="Left" Margin="23,87,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.161,0.203"/>
+        <Label x:Name="main_label" Content="Wprowadz dane faktury:" HorizontalAlignment="Left" Margin="33,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="18" Height="34" Width="229"/>
+        <Label x:Name="label_nr" Content="Numer:" HorizontalAlignment="Left" Margin="23,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.714,0.516" Height="26" Width="49"/>
+        <TextBox x:Name="textBox_nr" HorizontalAlignment="Left" Height="23" Margin="143,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False" TextChanged="textBox_nr_TextChanged"/>
+        <Label x:Name="label_data" Content="Data wystawienia:" HorizontalAlignment="Left" Margin="23,87,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.161,0.203" Height="26" Width="104"/>
         <TextBox x:Name="textBox_data" HorizontalAlignment="Left" Height="23" Margin="143,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="label_produkty" Content="Produkty:" HorizontalAlignment="Left" Margin="23,202,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button_dodajProd" Content="Dodaj" HorizontalAlignment="Left" Margin="23,249,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajProd_Click"/>
+        <Label x:Name="label_produkty" Content="Produkty:" HorizontalAlignment="Left" Margin="23,202,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
+        <Button x:Name="button_dodajProd" Content="Dodaj" HorizontalAlignment="Left" Margin="23,249,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajProd_Click" Height="20"/>
         <DataGrid x:Name="dataGrid_produkty" HorizontalAlignment="Left" Margin="173,202,0,0" VerticalAlignment="Top" Height="174" Width="276" AutoGenerateColumns="False" ColumnWidth="SizeToCells">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nazwa" MinWidth="50" IsReadOnly="True" Binding="{Binding Key.Nazwa}"/>
@@ -26,10 +26,11 @@
                 <DataGridTextColumn Header="Ilosc" MinWidth="50" IsReadOnly="True" Binding="{Binding Value}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="label_odbiorca" Content="Odbiorca:" HorizontalAlignment="Left" Margin="23,118,0,0" VerticalAlignment="Top" Width="104"/>
-        <RadioButton x:Name="radioButton_fizyczny" Content="Fizyczny" HorizontalAlignment="Left" Margin="23,149,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton_prawny" Content="Prawny" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,149,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_odbiorca_SelectionChanged"/>
-        <Button x:Name="button_dodajOdbiorce" Content="Nowy" HorizontalAlignment="Left" Margin="281,150,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajOdbiorce_Click"/>
+        <Label x:Name="label_odbiorca" Content="Odbiorca:" HorizontalAlignment="Left" Margin="23,118,0,0" VerticalAlignment="Top" Width="104" Height="26"/>
+        <RadioButton x:Name="radioButton_fizyczny" Content="Fizyczny" HorizontalAlignment="Left" Margin="23,149,0,0" VerticalAlignment="Top" Height="15" Width="63"/>
+        <RadioButton x:Name="radioButton_prawny" Content="Prawny" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top" Height="15" Width="56"/>
+        <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,149,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_odbiorca_SelectionChanged" Height="21"/>
+        <Button x:Name="button_dodajOdbiorce" Content="Nowy" HorizontalAlignment="Left" Margin="281,150,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajOdbiorce_Click" Height="20"/>
+        <Button Content="Utwórz fakturę" HorizontalAlignment="Left" Height="19" Margin="218,412,0,0" VerticalAlignment="Top" Width="165" Click="Button_Click"/>
     </Grid>
 </Window>

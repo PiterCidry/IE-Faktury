@@ -39,7 +39,7 @@ namespace IE_Faktury
                 p.Adres = textBox_adres.Text;
                 p.Nip = UInt64.Parse(textBox_NIP.Text);
                 p.Nazwa = textBox_nazwa.Text;
-                
+
                 DialogResult = true;
             }
             catch (FormatException)
@@ -49,7 +49,7 @@ namespace IE_Faktury
             }
             lista.Add(p);
             this.Close();
-            
+
         }
     }
 }

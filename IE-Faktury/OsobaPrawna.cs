@@ -65,5 +65,9 @@ namespace IE_Faktury
                 liczbaTransakcji = value;
             }
         }
+
+       
     }
 }
+
+

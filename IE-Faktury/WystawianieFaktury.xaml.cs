@@ -31,31 +31,19 @@ namespace IE_Faktury
     {
         Faktura faktura = new Faktura();
         BazaOdbiorcow baza = new BazaOdbiorcow();
-        Faktura f;
 
         public WystawianieFaktury()
         {
             InitializeComponent();
+            if (File.Exists("../../BazaOdbiorcow.xml"))
+            {
+                baza = (BazaOdbiorcow)baza.OdczytajBaze();
+            }
             textBox_nr.Text = faktura.NumerFaktury;
             textBox_data.Text = faktura.DataWystawienia.ToString("yyyy-MM-dd");
             dataGrid_produkty.ItemsSource = faktura.Produkty;
         }
-        public WystawianieFaktury(Faktura faktura)
-        {
-            this.f = faktura;
-            baza = (BazaOdbiorcow)baza.OdczytajBaze();
-            if (radioButton_prawny.IsChecked == true)
-            {
-                comboBox_odbiorca.ItemsSource = baza.listaPrawnych;
-            }
-            if (radioButton_fizyczny.IsChecked == true)
-            {
 
-                comboBox_odbiorca.ItemsSource = baza.listaFizycznych;
-            }
-
-
-        }
         private void button_dodajProd_Click(object sender, RoutedEventArgs e)
         {
             WyborProduktow wybor = new WyborProduktow(faktura);
@@ -67,24 +55,60 @@ namespace IE_Faktury
         {
             if (radioButton_prawny.IsChecked == true)
             {
-                Prawny p1 = new Prawny();
+                OsobaPrawna osobaPrawna = new OsobaPrawna();
+                Prawny p1 = new Prawny(osobaPrawna);
                 p1.ShowDialog();
+                if (p1.DialogResult != false)
+                {
+                    baza.DodajPrawna(osobaPrawna);
+                    baza.ZapiszBaze();
+                    baza.OdczytajBaze();
+                    comboBox_odbiorca.Items.Refresh();
+                    comboBox_odbiorca.SelectedIndex = comboBox_odbiorca.Items.Count - 1;
+                }
             }
             if (radioButton_fizyczny.IsChecked == true)
             {
-                Fizyczny f1 = new Fizyczny();
+                OsobaFizyczna osobaFizyczna = new OsobaFizyczna();
+                Fizyczny f1 = new Fizyczny(osobaFizyczna);
                 f1.ShowDialog();
+                if(f1.DialogResult != false)
+                {
+                    baza.DodajFizyczna(osobaFizyczna);
+                    baza.ZapiszBaze();
+                    baza.OdczytajBaze();
+                    comboBox_odbiorca.Items.Refresh();
+                    comboBox_odbiorca.SelectedIndex = comboBox_odbiorca.Items.Count - 1;
+                }
             }
         }
 
-
-
-
-
-
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void radioButton_prawny_Checked(object sender, RoutedEventArgs e)
         {
+            comboBox_odbiorca.ItemsSource = baza.listaPrawnych;
+        }
+
+        private void radioButton_fizyczny_Checked(object sender, RoutedEventArgs e)
+        {
+            comboBox_odbiorca.ItemsSource = baza.listaFizycznych;
+        }
+
+        private void button_Utworz_Click(object sender, RoutedEventArgs e)
+        {
+            if (radioButton_fizyczny.IsChecked == true)
+            {
+                faktura.OdbiorcaFizyczny = (OsobaFizyczna)comboBox_odbiorca.SelectedItem;
+            }
+            if (radioButton_prawny.IsChecked == true)
+            {
+                faktura.OdbiorcaPrawny = (OsobaPrawna)comboBox_odbiorca.SelectedItem;
+            }
+            Debug.WriteLine("Data " + faktura.DataWystawienia);
+            Debug.WriteLine("Nr " + faktura.NumerFaktury);
+            Debug.WriteLine("dic prod count " + faktura.Produkty.Count);
+            Debug.WriteLine("Wystawca " + faktura.Wystawca);
+            Debug.WriteLine("Odbiorca praw " + faktura.OdbiorcaPrawny);
+            Debug.WriteLine("Odbiorca fiz " + faktura.OdbiorcaFizyczny);
             /*  try
               {
                   // Create a invoice form with the sample invoice data
@@ -94,7 +118,7 @@ namespace IE_Faktury
                   Document document = invoice.CreateDocument();
                   document.UseCmykColor = true;
 
-  #if DEBUG
+    #if DEBUG
                   // for debugging only...
                   MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
                   document = MigraDoc.DocumentObjectModel.IO.DdlReader.DocumentFromFile("MigraDoc.mdddl");
@@ -178,29 +202,5 @@ namespace IE_Faktury
             // ...and start a viewer.
             Process.Start(filename);
         }
-
-
-
-
-        private void textBox_nr_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void comboBox_odbiorca_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-
-     
     }
 }
-
-
-
-
-
-
-
-

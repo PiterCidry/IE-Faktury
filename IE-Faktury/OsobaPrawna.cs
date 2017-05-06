@@ -66,7 +66,10 @@ namespace IE_Faktury
             }
         }
 
-       
+        public override string ToString()
+        {
+            return (this.Nazwa);
+        }
     }
 }
 

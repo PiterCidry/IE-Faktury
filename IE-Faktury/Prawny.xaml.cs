@@ -20,11 +20,12 @@ namespace IE_Faktury
     public partial class Prawny : Window
     {
         OsobaPrawna p;
-        List<OsobaPrawna> lista = new List<OsobaPrawna>();
+
         public Prawny()
         {
             InitializeComponent();
         }
+
         public Prawny(OsobaPrawna p) : this()
         {
             this.p = p;
@@ -32,14 +33,14 @@ namespace IE_Faktury
             textBox_adres.Text = p.Adres;
             textBox_NIP.Text = p.Nip.ToString();
         }
-        private void button_Click(object sender, RoutedEventArgs e)
+
+        private void button_dodaj_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 p.Adres = textBox_adres.Text;
                 p.Nip = UInt64.Parse(textBox_NIP.Text);
                 p.Nazwa = textBox_nazwa.Text;
-
                 DialogResult = true;
             }
             catch (FormatException)
@@ -47,9 +48,7 @@ namespace IE_Faktury
                 MessageBox.Show("Popraw dane!");
                 DialogResult = false;
             }
-            lista.Add(p);
             this.Close();
-
         }
     }
 }

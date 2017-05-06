@@ -22,10 +22,12 @@ namespace IE_Faktury
     {
         OsobaFizyczna f;
         List<OsobaFizyczna> lista = new List<OsobaFizyczna>();
+
         public Fizyczny()
         {
             InitializeComponent();
         }
+
         public Fizyczny(OsobaFizyczna f) : this()
         {
             this.f = f;
@@ -35,9 +37,8 @@ namespace IE_Faktury
             textBox_PESEL.Text = f.Pesel.ToString();
         }
     
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-             
+        private void button_dodaj_Click(object sender, RoutedEventArgs e)
+        { 
             try
             {
                 f.Pesel = UInt64.Parse(textBox_PESEL.Text);
@@ -45,7 +46,6 @@ namespace IE_Faktury
                 f.Nazwisko = textBox_nazwisko.Text;
                 f.DataUrodzenia = DateTime.Parse(textBox_data.Text);
                 f.Adres = textBox_adres.Text;
-
                 DialogResult = true;
             }
             catch (FormatException)
@@ -53,12 +53,9 @@ namespace IE_Faktury
                 MessageBox.Show("Popraw dane!");
                 DialogResult = false;
             }
-            
             lista.Add(f);
             this.Close();
-
         }
-
     }
     }
    

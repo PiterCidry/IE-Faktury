@@ -92,5 +92,10 @@ namespace IE_Faktury
                 liczbaTransakcji = value;
             }
         }
+
+        public override string ToString()
+        {
+            return (this.Imie + " " + this.Nazwisko);
+        }
     }
 }

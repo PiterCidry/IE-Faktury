@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BazaOdbiorcow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <listaFizycznych />
+  <listaPrawnych>
+    <OsobaPrawna>
+      <Nazwa>Jan Kowalski sp.z o.o.</Nazwa>
+      <Adres>Szykanowana 12</Adres>
+      <Nip>251251250</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+    </OsobaPrawna>
+  </listaPrawnych>
+</BazaOdbiorcow>

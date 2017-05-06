@@ -19,7 +19,6 @@ namespace IE_Faktury
         private static uint inkrementowany = 1;
         private string numerFaktury;
         private DateTime dataWystawienia;
-        private List<Produkt> listaProduktow;
         private OsobaFizyczna wystawca;
         private OsobaFizyczna odbiorcaFizyczny;
         private OsobaPrawna odbiorcaPrawny;
@@ -90,19 +89,6 @@ namespace IE_Faktury
             }
         }
 
-        public List<Produkt> ListaProduktow
-        {
-            get
-            {
-                return listaProduktow;
-            }
-
-            set
-            {
-                listaProduktow = value;
-            }
-        }
-
         public Dictionary<Produkt, int> Produkty
         {
             get
@@ -123,12 +109,12 @@ namespace IE_Faktury
             this.numerFaktury = sb.ToString();
             inkrementowany++;
             this.dataWystawienia = DateTime.Now;
-            this.listaProduktow = new List<Produkt>();
             this.produkty = new Dictionary<Produkt, int>();
         }
+
         Document document;
 
-     /// <summary>
+        /// <summary>
         /// An XML invoice based on a sample created with Microsoft InfoPath.
         /// </summary>
         readonly XmlDocument invoice;

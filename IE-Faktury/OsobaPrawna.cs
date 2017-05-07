@@ -10,7 +10,7 @@ namespace IE_Faktury
     {
         private string nazwa;
         private string ulica;
-        private int kodPocztowy;
+        private string kodPocztowy;
         private string miasto;
         private ulong nip;
         private static uint liczbaTransakcji = 0;
@@ -51,7 +51,7 @@ namespace IE_Faktury
                 miasto = value;
             }
         }
-        public int KodPocztowy
+        public string KodPocztowy
         {
             get
             {
@@ -77,7 +77,6 @@ namespace IE_Faktury
             }
         }
 
-
         public uint LiczbaTransakcji
         {
             get
@@ -89,6 +88,15 @@ namespace IE_Faktury
             {
                 liczbaTransakcji = value;
             }
+        }
+
+        public OsobaPrawna()
+        {
+            this.nazwa = "";
+            this.ulica = "";
+            this.kodPocztowy = "";
+            this.miasto = "";
+            this.nip = 0;
         }
 
         public override string ToString()

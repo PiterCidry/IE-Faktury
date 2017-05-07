@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,6 @@ namespace IE_Faktury
     public partial class Fizyczny : Window
     {
         OsobaFizyczna f;
-        List<OsobaFizyczna> lista = new List<OsobaFizyczna>();
 
         public Fizyczny()
         {
@@ -34,9 +34,9 @@ namespace IE_Faktury
             textBox_imie.Text = f.Imie;
             textBox_nazwisko.Text = f.Nazwisko;
             textBox_ulica.Text = f.Ulica;
-            textBox_kod.Text = f.KodPocztowy.ToString();
+            textBox_kod.Text = "";
             textBox_miasto.Text = f.Miasto;
-            textBox_PESEL.Text = f.Pesel.ToString();
+            textBox_PESEL.Text = "";
         }
     
         private void button_dodaj_Click(object sender, RoutedEventArgs e)
@@ -46,9 +46,9 @@ namespace IE_Faktury
                 f.Pesel = UInt64.Parse(textBox_PESEL.Text);
                 f.Imie = textBox_imie.Text;
                 f.Nazwisko = textBox_nazwisko.Text;
-                f.DataUrodzenia = DateTime.Parse(textBox_data.Text);
+                f.DataUrodzenia = DateTime.ParseExact(textBox_data.Text, "dd-MM-yyyy", CultureInfo.CurrentCulture);
                 f.Ulica = textBox_ulica.Text;
-                f.KodPocztowy = Int16.Parse(textBox_kod.Text);
+                f.KodPocztowy = textBox_kod.Text;
                 f.Miasto = textBox_miasto.Text;
 
                 DialogResult = true;
@@ -58,16 +58,8 @@ namespace IE_Faktury
                 MessageBox.Show("Popraw dane!");
                 DialogResult = false;
             }
-            lista.Add(f);
             this.Close();
         }
-
-        private void textBox_adres_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-       
     }
     }
    

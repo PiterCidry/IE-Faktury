@@ -106,7 +106,6 @@ namespace IE_Faktury
             Debug.WriteLine("Data " + faktura.DataWystawienia);
             Debug.WriteLine("Nr " + faktura.NumerFaktury);
             Debug.WriteLine("dic prod count " + faktura.Produkty.Count);
-            Debug.WriteLine("Wystawca " + faktura.Wystawca);
             Debug.WriteLine("Odbiorca praw " + faktura.OdbiorcaPrawny);
             Debug.WriteLine("Odbiorca fiz " + faktura.OdbiorcaFizyczny);
             /*  try

@@ -31,9 +31,9 @@ namespace IE_Faktury
             this.p = p;
             textBox_nazwa.Text = p.Nazwa;
             textBox_ulica.Text = p.Ulica;
-            textBox_kod.Text = p.KodPocztowy.ToString();
+            textBox_kod.Text = "";
             textBox_miasto.Text = p.Miasto;
-            textBox_NIP.Text = p.Nip.ToString();
+            textBox_NIP.Text = "";
         }
 
         private void button_dodaj_Click(object sender, RoutedEventArgs e)
@@ -41,7 +41,7 @@ namespace IE_Faktury
             try
             {
                 p.Ulica = textBox_ulica.Text;
-                p.KodPocztowy = Int16.Parse(textBox_kod.Text);
+                p.KodPocztowy = textBox_kod.Text;
                 p.Miasto = textBox_miasto.Text;
                 p.Nip = UInt64.Parse(textBox_NIP.Text);
                 p.Nazwa = textBox_nazwa.Text;
@@ -53,11 +53,6 @@ namespace IE_Faktury
                 DialogResult = false;
             }
             this.Close();
-        }
-
-        private void textBox_adres_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

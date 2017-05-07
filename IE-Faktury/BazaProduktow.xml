@@ -22,5 +22,12 @@
       <StawkaPodatku>5</StawkaPodatku>
       <CenaBrutto>36.75</CenaBrutto>
     </Produkt>
+    <Produkt>
+      <Nazwa>Jabłka</Nazwa>
+      <CenaHurtownia>25</CenaHurtownia>
+      <CenaJednostkowa>250</CenaJednostkowa>
+      <StawkaPodatku>23</StawkaPodatku>
+      <CenaBrutto>307.5</CenaBrutto>
+    </Produkt>
   </listaProduktow>
 </BazaProduktow>

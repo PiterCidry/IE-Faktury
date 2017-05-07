@@ -19,7 +19,6 @@ namespace IE_Faktury
         private static uint inkrementowany = 1;
         private string numerFaktury;
         private DateTime dataWystawienia;
-        private OsobaFizyczna wystawca;
         private OsobaFizyczna odbiorcaFizyczny;
         private OsobaPrawna odbiorcaPrawny;
         private Dictionary<Produkt, int> produkty;
@@ -41,25 +40,12 @@ namespace IE_Faktury
         {
             get
             {
-                return dataWystawienia;
+                return dataWystawienia.Date;
             }
 
             set
             {
                 dataWystawienia = value;
-            }
-        }
-
-        public OsobaFizyczna Wystawca
-        {
-            get
-            {
-                return wystawca;
-            }
-
-            set
-            {
-                wystawca = value;
             }
         }
 

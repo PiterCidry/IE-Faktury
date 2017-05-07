@@ -13,7 +13,7 @@ namespace IE_Faktury
         private ulong pesel;
         private DateTime dataUrodzenia;
         private string ulica;
-        private int kodPocztowy;
+        private string kodPocztowy;
         private string miasto;
         private static uint liczbaTransakcji = 0;
 
@@ -93,7 +93,7 @@ namespace IE_Faktury
                 miasto = value;
             }
         }
-        public int KodPocztowy
+        public string KodPocztowy
         {
             get
             {
@@ -117,6 +117,17 @@ namespace IE_Faktury
             {
                 liczbaTransakcji = value;
             }
+        }
+
+        public OsobaFizyczna()
+        {
+            this.imie = "";
+            this.nazwisko = "";
+            this.pesel = 0;
+            this.dataUrodzenia = new DateTime();
+            this.ulica = "";
+            this.kodPocztowy = "";
+            this.miasto = "";
         }
 
         public override string ToString()

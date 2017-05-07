@@ -31,6 +31,6 @@
         <RadioButton x:Name="radioButton_prawny" Content="Prawny" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top" Height="15" Width="56" Checked="radioButton_prawny_Checked"/>
         <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,149,0,0" VerticalAlignment="Top" Width="120" Height="21"/>
         <Button x:Name="button_dodajOdbiorce" Content="Nowy" HorizontalAlignment="Left" Margin="281,150,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajOdbiorce_Click" Height="20"/>
-        <Button x:Name="Utworz" Content="Utwórz fakturę" HorizontalAlignment="Left" Height="19" Margin="143,412,0,0" VerticalAlignment="Top" Width="165" Click="button_Utworz_Click"/>
+        <Button x:Name="button_utworz" Content="Utwórz fakturę" HorizontalAlignment="Left" Height="19" Margin="143,412,0,0" VerticalAlignment="Top" Width="165" Click="button_utworz_Click"/>
     </Grid>
 </Window>

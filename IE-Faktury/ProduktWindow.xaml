@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
-        Title="ProduktWindow" Height="238.4" Width="300">
+        Title="ProduktWindow" Height="238.4" Width="331.2">
     <Grid>
         <Label x:Name="label_nazwa" Content="Nazwa:" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.042,-0.365"/>
         <Label x:Name="label_cenahurt" Content="Cena z hurtowni:" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
@@ -20,5 +20,8 @@
             <ComboBoxItem>8%</ComboBoxItem>
             <ComboBoxItem>5%</ComboBoxItem>
         </ComboBox>
+        <Image x:Name="image" Source="/Resources/pytajnik.jpg" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="22" Margin="293,30,0,0" RenderTransformOrigin="0.2,-0.165" ToolTip="Dozwolone litery i cyfry, 2-30 znakow"/>
+        <Image x:Name="image_Copy" Source="Resources/pytajnik.jpg" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="22" Margin="293,61,0,0" RenderTransformOrigin="0.2,-0.165" ToolTip="Nieujemna liczba, maksymalnie dwa miejsca po przecinku"/>
+        <Image x:Name="image_Copy1" Source="Resources/pytajnik.jpg" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="22" Margin="293,92,0,0" RenderTransformOrigin="0.2,-0.165" ToolTip="Nieujemna liczba, maksymalnie dwa miejsca po przecinku"/>
     </Grid>
 </Window>

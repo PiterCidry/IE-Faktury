@@ -7,20 +7,23 @@
       <CenaJednostkowa>225</CenaJednostkowa>
       <StawkaPodatku>23</StawkaPodatku>
       <CenaBrutto>276.75</CenaBrutto>
+      <ListaZmian />
     </Produkt>
     <Produkt>
       <Nazwa>Asia</Nazwa>
-      <CenaHurtownia>5050</CenaHurtownia>
-      <CenaJednostkowa>505055</CenaJednostkowa>
+      <CenaHurtownia>5</CenaHurtownia>
+      <CenaJednostkowa>5.59</CenaJednostkowa>
       <StawkaPodatku>5</StawkaPodatku>
-      <CenaBrutto>530307.75</CenaBrutto>
+      <CenaBrutto>5.8695</CenaBrutto>
+      <ListaZmian/>
     </Produkt>
     <Produkt>
       <Nazwa>Kasia</Nazwa>
       <CenaHurtownia>36</CenaHurtownia>
-      <CenaJednostkowa>35</CenaJednostkowa>
+      <CenaJednostkowa>466</CenaJednostkowa>
       <StawkaPodatku>5</StawkaPodatku>
-      <CenaBrutto>36.75</CenaBrutto>
+      <CenaBrutto>489.3</CenaBrutto>
+      <ListaZmian />
     </Produkt>
     <Produkt>
       <Nazwa>Jabłka</Nazwa>
@@ -28,6 +31,7 @@
       <CenaJednostkowa>250</CenaJednostkowa>
       <StawkaPodatku>23</StawkaPodatku>
       <CenaBrutto>307.5</CenaBrutto>
+      <ListaZmian />
     </Produkt>
   </listaProduktow>
 </BazaProduktow>

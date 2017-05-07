@@ -26,7 +26,14 @@ namespace IE_Faktury
         public ZmianaProduktow()
         {
             InitializeComponent();
-            baza = (BazaProduktow)baza.OdczytajBaze();
+            try
+            {
+                baza = (BazaProduktow)baza.OdczytajBaze();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message.ToString());
+            }
             listView_produkty.ItemsSource = baza.listaProduktow;
         }
 

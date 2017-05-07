@@ -35,13 +35,18 @@ namespace IE_Faktury
         public WystawianieFaktury()
         {
             InitializeComponent();
-            if (File.Exists("../../BazaOdbiorcow.xml"))
+            try
             {
                 baza = (BazaOdbiorcow)baza.OdczytajBaze();
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message.ToString());
+            }
             textBox_nr.Text = faktura.NumerFaktury;
-            textBox_data.Text = faktura.DataWystawienia.ToString("yyyy-MM-dd");
+            textBox_data.Text = faktura.DataWystawienia.ToString("dd-MM-yyyy");
             dataGrid_produkty.ItemsSource = faktura.Produkty;
+            button_utworz.IsEnabled = false;
         }
 
         private void button_dodajProd_Click(object sender, RoutedEventArgs e)
@@ -93,7 +98,7 @@ namespace IE_Faktury
             comboBox_odbiorca.ItemsSource = baza.listaFizycznych;
         }
 
-        private void button_Utworz_Click(object sender, RoutedEventArgs e)
+        private void button_utworz_Click(object sender, RoutedEventArgs e)
         {
             if (radioButton_fizyczny.IsChecked == true)
             {

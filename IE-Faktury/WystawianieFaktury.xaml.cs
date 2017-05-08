@@ -58,14 +58,35 @@ namespace IE_Faktury
 
         private void button_zmien_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                var element = dataGrid_produkty.SelectedItem;
+                System.Collections.Generic.KeyValuePair<IE_Faktury.Produkt, System.Int32> element2 = (System.Collections.Generic.KeyValuePair<IE_Faktury.Produkt, System.Int32>)element;
+                WyborProduktow wybor = new WyborProduktow(faktura, element2.Key, element2.Value);
+                wybor.ShowDialog();
+                dataGrid_produkty.Items.Refresh();
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Nie wybrano żadnego produktu!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
 
         private void button_usun_Click(object sender, RoutedEventArgs e)
         {
-            Produkt p = dataGrid_produkty.SelectedItem as Produkt;
-            faktura.Produkty.Remove(p);
-            dataGrid_produkty.Items.Refresh();
+            try
+            {
+                var element = dataGrid_produkty.SelectedItem;
+                System.Collections.Generic.KeyValuePair<IE_Faktury.Produkt, System.Int32> element2 = (System.Collections.Generic.KeyValuePair<IE_Faktury.Produkt, System.Int32>)element;
+                faktura.Produkty.Remove(element2.Key);
+                dataGrid_produkty.Items.Refresh();
+            }
+            catch(NullReferenceException)
+            {
+                MessageBox.Show("Nie wybrano produktu do usunięcia!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
 
         private void button_dodajOdbiorce_Click(object sender, RoutedEventArgs e)
@@ -112,6 +133,7 @@ namespace IE_Faktury
 
         private void button_utworz_Click(object sender, RoutedEventArgs e)
         {
+            button_utworz.IsEnabled = false;
             if (radioButton_fizyczny.IsChecked == true)
             {
                 faktura.OdbiorcaFizyczny = (OsobaFizyczna)comboBox_odbiorca.SelectedItem;

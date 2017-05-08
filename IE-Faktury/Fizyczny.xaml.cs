@@ -37,20 +37,82 @@ namespace IE_Faktury
             textBox_kod.Text = "";
             textBox_miasto.Text = f.Miasto;
             textBox_PESEL.Text = "";
+            datePicker_dataur.DisplayDateEnd = DateTime.Today;
         }
     
         private void button_dodaj_Click(object sender, RoutedEventArgs e)
         { 
             try
             {
-                f.Pesel = UInt64.Parse(textBox_PESEL.Text);
-                f.Imie = textBox_imie.Text;
-                f.Nazwisko = textBox_nazwisko.Text;
-                f.DataUrodzenia = DateTime.ParseExact(textBox_data.Text, "dd-MM-yyyy", CultureInfo.CurrentCulture);
-                f.Ulica = textBox_ulica.Text;
-                f.KodPocztowy = textBox_kod.Text;
-                f.Miasto = textBox_miasto.Text;
+                if (f.validateImie(textBox_imie.Text))
+                {
+                    f.Imie = textBox_imie.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawne imie!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
 
+                if (f.validateNazwisko(textBox_nazwisko.Text))
+                {
+                    f.Nazwisko = textBox_nazwisko.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawne nazwisko!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                if (f.validatePesel(textBox_PESEL.Text))
+                {
+                    f.Pesel = UInt64.Parse(textBox_PESEL.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawny nr PESEL!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                
+                if (datePicker_dataur.SelectedDate != null)
+                {
+                    f.DataUrodzenia = datePicker_dataur.SelectedDate.Value;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawna data urodzenia!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                if (f.validateUlica(textBox_ulica.Text) && f.validateNrDomu(textBox_nrdomu.Text))
+                {
+                    f.Ulica = textBox_ulica.Text + " " + textBox_nrdomu.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawny adres!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                if (f.validateKodPocztowy(textBox_kod.Text))
+                {
+                    f.KodPocztowy = textBox_kod.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawny kod pocztowy!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                if (f.validateMiasto(textBox_miasto.Text))
+                {
+                    f.Miasto = textBox_miasto.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawa nazwa miasta!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
                 DialogResult = true;
             }
             catch (FormatException)

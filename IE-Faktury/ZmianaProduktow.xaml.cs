@@ -58,7 +58,8 @@ namespace IE_Faktury
             }
             catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("Nie wybrano żadnego produktu!");
+                MessageBox.Show("Nie wybrano żadnego produktu!", "Bład!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
         }
 
@@ -77,7 +78,8 @@ namespace IE_Faktury
             }
             catch(ArgumentOutOfRangeException)
             {
-                MessageBox.Show("Nie wybrano żadnego produktu!");
+                MessageBox.Show("Nie wybrano żadnego produktu!", "Bład!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
         }
 

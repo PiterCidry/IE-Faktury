@@ -2,23 +2,13 @@
 <BazaOdbiorcow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <listaFizycznych>
     <OsobaFizyczna>
-      <Imie>aa</Imie>
-      <Nazwisko>aa</Nazwisko>
-      <Pesel>88888</Pesel>
-      <DataUrodzenia>1996-06-30T00:00:00</DataUrodzenia>
-      <Ulica>afaw</Ulica>
-      <Miasto>58aw</Miasto>
-      <KodPocztowy>85985</KodPocztowy>
-      <LiczbaTransakcji>0</LiczbaTransakcji>
-    </OsobaFizyczna>
-    <OsobaFizyczna>
-      <Imie>Piotr</Imie>
-      <Nazwisko>Gretszel</Nazwisko>
-      <Pesel>96063010290</Pesel>
-      <DataUrodzenia>1996-06-30T00:00:00</DataUrodzenia>
-      <Ulica>Szymały 12</Ulica>
-      <Miasto>Radzionków</Miasto>
-      <KodPocztowy>41-922</KodPocztowy>
+      <Imie>Joanna</Imie>
+      <Nazwisko>Motyczyńska</Nazwisko>
+      <Pesel>96071200003</Pesel>
+      <DataUrodzenia>1996-07-12T00:00:00</DataUrodzenia>
+      <Ulica>Krakowska 22</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>30-012</KodPocztowy>
       <LiczbaTransakcji>0</LiczbaTransakcji>
     </OsobaFizyczna>
   </listaFizycznych>

@@ -12,10 +12,15 @@
     <Produkt>
       <Nazwa>Asia</Nazwa>
       <CenaHurtownia>5</CenaHurtownia>
-      <CenaJednostkowa>5.59</CenaJednostkowa>
-      <StawkaPodatku>5</StawkaPodatku>
-      <CenaBrutto>5.8695</CenaBrutto>
-      <ListaZmian/>
+      <CenaJednostkowa>5.56</CenaJednostkowa>
+      <StawkaPodatku>8</StawkaPodatku>
+      <CenaBrutto>6.0048</CenaBrutto>
+      <ListaZmian>
+        <ZmianyCen>
+          <Key>2017-05-08T22:55:15.6525451+02:00</Key>
+          <Value>5.56</Value>
+        </ZmianyCen>
+      </ListaZmian>
     </Produkt>
     <Produkt>
       <Nazwa>Kasia</Nazwa>
@@ -32,6 +37,27 @@
       <StawkaPodatku>23</StawkaPodatku>
       <CenaBrutto>307.5</CenaBrutto>
       <ListaZmian />
+    </Produkt>
+    <Produkt>
+      <Nazwa>Losos Wedzony lux</Nazwa>
+      <CenaHurtownia>15</CenaHurtownia>
+      <CenaJednostkowa>25</CenaJednostkowa>
+      <StawkaPodatku>8</StawkaPodatku>
+      <CenaBrutto>27</CenaBrutto>
+      <ListaZmian>
+        <ZmianyCen>
+          <Key>2017-05-08T20:42:11.3744264+02:00</Key>
+          <Value>25</Value>
+        </ZmianyCen>
+        <ZmianyCen>
+          <Key>2017-05-08T20:43:25.4068344+02:00</Key>
+          <Value>25</Value>
+        </ZmianyCen>
+        <ZmianyCen>
+          <Key>2017-05-08T20:49:51.494598+02:00</Key>
+          <Value>25</Value>
+        </ZmianyCen>
+      </ListaZmian>
     </Produkt>
   </listaProduktow>
 </BazaProduktow>

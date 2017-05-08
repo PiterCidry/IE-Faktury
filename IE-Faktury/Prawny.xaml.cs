@@ -40,11 +40,56 @@ namespace IE_Faktury
         {
             try
             {
-                p.Ulica = textBox_ulica.Text;
-                p.KodPocztowy = textBox_kod.Text;
-                p.Miasto = textBox_miasto.Text;
-                p.Nip = UInt64.Parse(textBox_NIP.Text);
-                p.Nazwa = textBox_nazwa.Text;
+                if (p.validateNazwa(textBox_nazwa.Text))
+                {
+                    p.Nazwa = textBox_nazwa.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawna nazwa!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                if (p.validateNip(textBox_NIP.Text))
+                {
+                    p.Nip = UInt64.Parse(textBox_NIP.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawny nr NIP!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                if (p.validateUlica(textBox_ulica.Text) && p.validateNrDomu(textBox_nrDomu.Text))
+                {
+                    p.Ulica = textBox_ulica.Text + " " + textBox_nrDomu.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawna nazwa ulicy!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                if (p.validateKodPocztowy(textBox_kod.Text))
+                {
+                    p.KodPocztowy = textBox_kod.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawny kod pocztowy!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                if (p.validateMiasto(textBox_miasto.Text))
+                {
+                    p.Miasto = textBox_miasto.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Niepoprawna nazwa miasta!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
                 DialogResult = true;
             }
             catch (FormatException)

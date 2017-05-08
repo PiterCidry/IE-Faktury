@@ -98,9 +98,7 @@ namespace IE_Faktury
                     p.CenaJednostkowa = cenaJednostkowa;
                 }
 
-                Regex rgx_nazwa = new Regex(@"^[a-zA-Z0-9][a-zA-Z0-9]{0,28}[a-zA-Z0-9]$");
-                Match match_nazwa = rgx_nazwa.Match(textBox_nazwa.Text);
-                if (match_nazwa.Success)
+                if (p.validateNazwa(textBox_nazwa.Text))
                 {
                     p.Nazwa = textBox_nazwa.Text;
                 }

@@ -135,5 +135,19 @@ namespace IE_Faktury
         {
             return this.Nazwa;
         }
+
+        public bool validateNazwa(string n)
+        {
+            Regex rgx_nazwa = new Regex(@"^[\p{L}0-9][\p{L}0-9\s]{0,28}[\p{L}0-9]$");
+            Match match_nazwa = rgx_nazwa.Match(n);
+            if (match_nazwa.Success)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

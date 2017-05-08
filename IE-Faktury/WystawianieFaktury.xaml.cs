@@ -56,6 +56,18 @@ namespace IE_Faktury
             dataGrid_produkty.Items.Refresh();
         }
 
+        private void button_zmien_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_usun_Click(object sender, RoutedEventArgs e)
+        {
+            Produkt p = dataGrid_produkty.SelectedItem as Produkt;
+            faktura.Produkty.Remove(p);
+            dataGrid_produkty.Items.Refresh();
+        }
+
         private void button_dodajOdbiorce_Click(object sender, RoutedEventArgs e)
         {
             if (radioButton_prawny.IsChecked == true)
@@ -205,6 +217,25 @@ namespace IE_Faktury
             pdfRenderer.Save(filename);
             // ...and start a viewer.
             Process.Start(filename);
+        }
+
+        private void button_sprawdz_Click(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(comboBox_odbiorca.Text))
+            {
+                MessageBox.Show("Nie wybrano odbiorcy!", "Bład!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else if (dataGrid_produkty.Items.Count <= 0)
+            {
+                MessageBox.Show("Nie wprowadzono żadnego produktu!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Wszystko w porządku, tworzenie faktury...", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+                button_utworz.IsEnabled = true;
+            }
         }
     }
 }

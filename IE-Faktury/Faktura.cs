@@ -11,9 +11,12 @@ using MigraDoc.DocumentObjectModel.Tables;
 using MigraDoc.DocumentObjectModel.Shapes;
 using MigraDoc.Rendering;
 using System.Diagnostics;
+using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace IE_Faktury
 {
+
     public class Faktura
     {
         private static uint inkrementowany = 1;

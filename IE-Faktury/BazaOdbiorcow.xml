@@ -12,5 +12,14 @@
       <LiczbaTransakcji>0</LiczbaTransakcji>
     </OsobaFizyczna>
   </listaFizycznych>
-  <listaPrawnych />
+  <listaPrawnych>
+    <OsobaPrawna>
+      <Nazwa>ASD</Nazwa>
+      <Ulica>WDFDSF 34</Ulica>
+      <Miasto>KIELCE</Miasto>
+      <KodPocztowy>25-900</KodPocztowy>
+      <Nip>1111111111</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+    </OsobaPrawna>
+  </listaPrawnych>
 </BazaOdbiorcow>

@@ -31,7 +31,7 @@ namespace IE_Faktury
     {
         Faktura faktura = new Faktura();
         BazaOdbiorcow baza = new BazaOdbiorcow();
-
+        BazaFaktur bazaf = new BazaFaktur();
         public WystawianieFaktury()
         {
             InitializeComponent();
@@ -82,7 +82,7 @@ namespace IE_Faktury
                 faktura.Produkty.Remove(element2.Key);
                 dataGrid_produkty.Items.Refresh();
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("Nie wybrano produktu do usunięcia!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -110,7 +110,7 @@ namespace IE_Faktury
                 OsobaFizyczna osobaFizyczna = new OsobaFizyczna();
                 Fizyczny f1 = new Fizyczny(osobaFizyczna);
                 f1.ShowDialog();
-                if(f1.DialogResult != false)
+                if (f1.DialogResult != false)
                 {
                     baza.DodajFizyczna(osobaFizyczna);
                     baza.ZapiszBaze();
@@ -147,6 +147,9 @@ namespace IE_Faktury
             Debug.WriteLine("dic prod count " + faktura.Produkty.Count);
             Debug.WriteLine("Odbiorca praw " + faktura.OdbiorcaPrawny);
             Debug.WriteLine("Odbiorca fiz " + faktura.OdbiorcaFizyczny);
+
+
+            //bazaf.OdczytajBaze();
             /*  try
               {
                   // Create a invoice form with the sample invoice data
@@ -211,7 +214,7 @@ namespace IE_Faktury
               document.Save(filename);
               // ...and start a viewer.
               Process.Start(filename); }*/
-            Faktura invoice = new Faktura();
+            DokumentFaktury invoice = new DokumentFaktury();
             Document document = invoice.CreateDocument();
             document.UseCmykColor = true;
 
@@ -239,6 +242,10 @@ namespace IE_Faktury
             pdfRenderer.Save(filename);
             // ...and start a viewer.
             Process.Start(filename);
+
+            bazaf.DodajFakture(faktura);
+            bazaf.ZapiszBaze();
+
         }
 
         private void button_sprawdz_Click(object sender, RoutedEventArgs e)
@@ -258,6 +265,7 @@ namespace IE_Faktury
                 MessageBox.Show("Wszystko w porządku, tworzenie faktury...", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
                 button_utworz.IsEnabled = true;
             }
+          
         }
     }
 }

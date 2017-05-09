@@ -99,8 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BazaFaktur.cs" />
     <Compile Include="BazaOdbiorcow.cs" />
     <Compile Include="BazaProduktow.cs" />
+    <Compile Include="DokumentFaktury.cs" />
     <Compile Include="Fizyczny.xaml.cs">
       <DependentUpon>Fizyczny.xaml</DependentUpon>
     </Compile>

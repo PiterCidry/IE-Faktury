@@ -33,10 +33,19 @@
     <Produkt>
       <Nazwa>Jabłka</Nazwa>
       <CenaHurtownia>25</CenaHurtownia>
-      <CenaJednostkowa>250</CenaJednostkowa>
+      <CenaJednostkowa>45</CenaJednostkowa>
       <StawkaPodatku>23</StawkaPodatku>
-      <CenaBrutto>307.5</CenaBrutto>
-      <ListaZmian />
+      <CenaBrutto>55.35</CenaBrutto>
+      <ListaZmian>
+        <ZmianyCen>
+          <Key>2017-05-10T13:15:34.3614209+02:00</Key>
+          <Value>30</Value>
+        </ZmianyCen>
+        <ZmianyCen>
+          <Key>2017-05-10T13:16:21.7127991+02:00</Key>
+          <Value>45</Value>
+        </ZmianyCen>
+      </ListaZmian>
     </Produkt>
     <Produkt>
       <Nazwa>Losos Wedzony lux</Nazwa>

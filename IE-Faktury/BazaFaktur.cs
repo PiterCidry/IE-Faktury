@@ -11,7 +11,7 @@ using System.Xml.Serialization;
 
 namespace IE_Faktury
 {
-    [Serializable]
+   [Serializable]
    public class BazaFaktur
     {
         public List<Faktura> listaFaktur { get; set; }
@@ -40,18 +40,19 @@ namespace IE_Faktury
 
         public void ZapiszBaze()
         {
-            try { 
+            try
+            { 
             
                 XmlSerializer serializer = new XmlSerializer(typeof(BazaFaktur));
                 StreamWriter sw = new StreamWriter("../../BazaFaktur.xml");
                 serializer.Serialize(sw, this);
                 sw.Close();
-        }
+            }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
             }
-}
+        }
 
         public Object OdczytajBaze()
         {

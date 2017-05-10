@@ -30,14 +30,14 @@ namespace IE_Faktury
     public partial class WystawianieFaktury : Window
     {
         Faktura faktura = new Faktura();
-        BazaOdbiorcow baza = new BazaOdbiorcow();
-        BazaFaktur bazaf = new BazaFaktur();
+        BazaOdbiorcow bazaOdbiorcow = new BazaOdbiorcow();
+        BazaFaktur bazaFaktur = new BazaFaktur();
         public WystawianieFaktury()
         {
             InitializeComponent();
             try
             {
-                baza = (BazaOdbiorcow)baza.OdczytajBaze();
+                bazaOdbiorcow = (BazaOdbiorcow)bazaOdbiorcow.OdczytajBaze();
             }
             catch (Exception ex)
             {
@@ -98,9 +98,9 @@ namespace IE_Faktury
                 p1.ShowDialog();
                 if (p1.DialogResult != false)
                 {
-                    baza.DodajPrawna(osobaPrawna);
-                    baza.ZapiszBaze();
-                    baza.OdczytajBaze();
+                    bazaOdbiorcow.DodajPrawna(osobaPrawna);
+                    bazaOdbiorcow.ZapiszBaze();
+                    bazaOdbiorcow.OdczytajBaze();
                     comboBox_odbiorca.Items.Refresh();
                     comboBox_odbiorca.SelectedIndex = comboBox_odbiorca.Items.Count - 1;
                 }
@@ -112,9 +112,9 @@ namespace IE_Faktury
                 f1.ShowDialog();
                 if (f1.DialogResult != false)
                 {
-                    baza.DodajFizyczna(osobaFizyczna);
-                    baza.ZapiszBaze();
-                    baza.OdczytajBaze();
+                    bazaOdbiorcow.DodajFizyczna(osobaFizyczna);
+                    bazaOdbiorcow.ZapiszBaze();
+                    bazaOdbiorcow.OdczytajBaze();
                     comboBox_odbiorca.Items.Refresh();
                     comboBox_odbiorca.SelectedIndex = comboBox_odbiorca.Items.Count - 1;
                 }
@@ -123,12 +123,12 @@ namespace IE_Faktury
 
         private void radioButton_prawny_Checked(object sender, RoutedEventArgs e)
         {
-            comboBox_odbiorca.ItemsSource = baza.listaPrawnych;
+            comboBox_odbiorca.ItemsSource = bazaOdbiorcow.listaPrawnych;
         }
 
         private void radioButton_fizyczny_Checked(object sender, RoutedEventArgs e)
         {
-            comboBox_odbiorca.ItemsSource = baza.listaFizycznych;
+            comboBox_odbiorca.ItemsSource = bazaOdbiorcow.listaFizycznych;
         }
 
         private void button_utworz_Click(object sender, RoutedEventArgs e)
@@ -243,8 +243,8 @@ namespace IE_Faktury
             // ...and start a viewer.
             Process.Start(filename);
 
-            bazaf.DodajFakture(faktura);
-            bazaf.ZapiszBaze();
+            bazaFaktur.DodajFakture(faktura);
+            bazaFaktur.ZapiszBaze();
 
         }
 

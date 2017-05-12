@@ -14,7 +14,8 @@ namespace IE_Faktury
     [Serializable]
     public class BazaProduktow
     {
-        public List<Produkt> listaProduktow { get; set; } 
+        public List<Produkt> listaProduktow { get; set; }
+
         public BazaProduktow()
         {
             listaProduktow = new List<Produkt>();

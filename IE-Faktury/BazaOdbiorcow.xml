@@ -2,24 +2,24 @@
 <BazaOdbiorcow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <listaFizycznych>
     <OsobaFizyczna>
-      <Imie>Joanna</Imie>
-      <Nazwisko>Motyczyńska</Nazwisko>
-      <Pesel>96071200003</Pesel>
-      <DataUrodzenia>1996-07-12T00:00:00</DataUrodzenia>
-      <Ulica>Krakowska 22</Ulica>
-      <Miasto>Kraków</Miasto>
-      <KodPocztowy>30-012</KodPocztowy>
-      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Imie>Piotr</Imie>
+      <Nazwisko>Gretszel</Nazwisko>
+      <Pesel>96063010290</Pesel>
+      <DataUrodzenia>1996-06-30T00:00:00</DataUrodzenia>
+      <Ulica>Szymały 12</Ulica>
+      <Miasto>Radzionków</Miasto>
+      <KodPocztowy>41-922</KodPocztowy>
+      <LiczbaTransakcji>9</LiczbaTransakcji>
     </OsobaFizyczna>
   </listaFizycznych>
   <listaPrawnych>
     <OsobaPrawna>
-      <Nazwa>ASD</Nazwa>
-      <Ulica>WDFDSF 34</Ulica>
-      <Miasto>KIELCE</Miasto>
-      <KodPocztowy>25-900</KodPocztowy>
-      <Nip>1111111111</Nip>
-      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Nazwa>Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie</Nazwa>
+      <Ulica>Gramatyka 10</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>30-102</KodPocztowy>
+      <Nip>8819759685</Nip>
+      <LiczbaTransakcji>5</LiczbaTransakcji>
     </OsobaPrawna>
   </listaPrawnych>
 </BazaOdbiorcow>

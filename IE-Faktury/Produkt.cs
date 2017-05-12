@@ -12,7 +12,7 @@ using System.Xml.Serialization;
 namespace IE_Faktury
 {
     [Serializable]
-    [XmlType(TypeName = "ZmianyCen")]
+    [XmlType]
     public struct KeyValuePair<K, V>
     {
         public K Key

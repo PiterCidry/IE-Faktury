@@ -32,12 +32,14 @@ namespace IE_Faktury
         Faktura faktura = new Faktura();
         BazaOdbiorcow bazaOdbiorcow = new BazaOdbiorcow();
         BazaFaktur bazaFaktur = new BazaFaktur();
+
         public WystawianieFaktury()
         {
             InitializeComponent();
             try
             {
                 bazaOdbiorcow = (BazaOdbiorcow)bazaOdbiorcow.OdczytajBaze();
+                bazaFaktur = (BazaFaktur)bazaFaktur.OdczytajBaze();
             }
             catch (Exception ex)
             {
@@ -136,18 +138,20 @@ namespace IE_Faktury
             button_utworz.IsEnabled = false;
             if (radioButton_fizyczny.IsChecked == true)
             {
-                faktura.OdbiorcaFizyczny = (OsobaFizyczna)comboBox_odbiorca.SelectedItem;
+                OsobaFizyczna os = (OsobaFizyczna)comboBox_odbiorca.SelectedItem;
+                os.LiczbaTransakcji++;
+                bazaOdbiorcow.ZmienFizyczna((OsobaFizyczna)comboBox_odbiorca.SelectedItem, os);
+                bazaOdbiorcow.ZapiszBaze();
+                faktura.OdbiorcaFizyczny = os;
             }
             if (radioButton_prawny.IsChecked == true)
             {
-                faktura.OdbiorcaPrawny = (OsobaPrawna)comboBox_odbiorca.SelectedItem;
+                OsobaPrawna os = (OsobaPrawna)comboBox_odbiorca.SelectedItem;
+                os.LiczbaTransakcji++;
+                bazaOdbiorcow.ZmienPrawna((OsobaPrawna)comboBox_odbiorca.SelectedItem, os);
+                bazaOdbiorcow.ZapiszBaze();
+                faktura.OdbiorcaPrawny = os;
             }
-            Debug.WriteLine("Data " + faktura.DataWystawienia);
-            Debug.WriteLine("Nr " + faktura.NumerFaktury);
-            Debug.WriteLine("dic prod count " + faktura.Produkty.Count);
-            Debug.WriteLine("Odbiorca praw " + faktura.OdbiorcaPrawny);
-            Debug.WriteLine("Odbiorca fiz " + faktura.OdbiorcaFizyczny);
-
 
             //bazaf.OdczytajBaze();
             /*  try
@@ -243,6 +247,14 @@ namespace IE_Faktury
             // ...and start a viewer.
             Process.Start(filename);
 
+            foreach(System.Collections.Generic.KeyValuePair<Produkt, int> p in faktura.Produkty)
+            {
+                KeyValuePair<Produkt, int> kvp = new KeyValuePair<Produkt, int>();
+                kvp.Key = p.Key;
+                kvp.Value = p.Value;
+                faktura.ProduktyList.Add(kvp);
+            }
+
             bazaFaktur.DodajFakture(faktura);
             bazaFaktur.ZapiszBaze();
 
@@ -265,7 +277,6 @@ namespace IE_Faktury
                 MessageBox.Show("Wszystko w porządku, tworzenie faktury...", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
                 button_utworz.IsEnabled = true;
             }
-          
         }
     }
 }

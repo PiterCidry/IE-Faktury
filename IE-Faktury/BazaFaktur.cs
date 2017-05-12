@@ -26,23 +26,10 @@ namespace IE_Faktury
             listaFaktur.Add(f);
         }
 
-      /*  public void UsunFakture(int indeks)
-        {
-            listaFaktur.RemoveAt(indeks);
-        }
-        */
-      /*  public Faktura PodajFakture(int nrFaktury)
-        {
-            return listaFaktur.ElementAt(nrFaktury);
-        }
-        */
-       
-
         public void ZapiszBaze()
         {
             try
-            { 
-            
+            {
                 XmlSerializer serializer = new XmlSerializer(typeof(BazaFaktur));
                 StreamWriter sw = new StreamWriter("../../BazaFaktur.xml");
                 serializer.Serialize(sw, this);
@@ -51,6 +38,7 @@ namespace IE_Faktury
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
+                Debug.WriteLine(ex.InnerException.ToString());
             }
         }
 

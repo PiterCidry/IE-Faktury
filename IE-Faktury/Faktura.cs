@@ -13,10 +13,15 @@ using MigraDoc.Rendering;
 using System.Diagnostics;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Xml.Serialization;
+using System.Runtime.Serialization;
+using System.Threading;
 
 namespace IE_Faktury
 {
 
+    [Serializable]
+    [DataContract]
     public class Faktura
     {
         private static uint inkrementowany = 1;
@@ -25,6 +30,7 @@ namespace IE_Faktury
         private OsobaFizyczna odbiorcaFizyczny;
         private OsobaPrawna odbiorcaPrawny;
         private Dictionary<Produkt, int> produkty;
+        private List<IE_Faktury.KeyValuePair<Produkt, int>> produktyList;
 
         public string NumerFaktury
         {
@@ -77,7 +83,7 @@ namespace IE_Faktury
                 odbiorcaPrawny = value;
             }
         }
-
+        [XmlIgnore]
         public Dictionary<Produkt, int> Produkty
         {
             get
@@ -91,14 +97,44 @@ namespace IE_Faktury
             }
         }
 
+        public List<KeyValuePair<Produkt, int>> ProduktyList
+        {
+            get
+            {
+                return produktyList;
+            }
+
+            set
+            {
+                produktyList = value;
+            }
+        }
+
         public Faktura()
         {
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load("../../BazaFaktur.xml");
+                XmlElement root = doc.DocumentElement;
+                XmlNodeList nodes = root.SelectNodes("//listaFaktur/Faktura[last()]/NumerFaktury");
+                foreach (XmlNode node in nodes)
+                {
+                    string[] numerki = node.InnerText.ToString().Split('/');
+                    inkrementowany = UInt32.Parse(numerki[0]);
+                }
+                inkrementowany++;
+            }
+            catch(System.IO.FileNotFoundException fnfe)
+            {
+                Debug.WriteLine(fnfe.Message);
+            }
             StringBuilder sb = new StringBuilder();
             sb.Append(inkrementowany).Append("/").Append(DateTime.Today.Year.ToString());
             this.numerFaktury = sb.ToString();
-            inkrementowany++;
             this.dataWystawienia = DateTime.Now;
             this.produkty = new Dictionary<Produkt, int>();
+            this.produktyList = new List<KeyValuePair<Produkt, int>>();
         }
 
     }

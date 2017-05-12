@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BazaFaktur xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <listaFaktur>
+    <Faktura>
+      <NumerFaktury>1/2017</NumerFaktury>
+      <DataWystawienia>2017-05-12T00:00:00+02:00</DataWystawienia>
+      <OdbiorcaFizyczny>
+        <Imie>Piotr</Imie>
+        <Nazwisko>Gretszel</Nazwisko>
+        <Pesel>96063010290</Pesel>
+        <DataUrodzenia>1996-06-30T00:00:00</DataUrodzenia>
+        <Ulica>Szymały 12</Ulica>
+        <Miasto>Radzionków</Miasto>
+        <KodPocztowy>41-922</KodPocztowy>
+        <LiczbaTransakcji>9</LiczbaTransakcji>
+      </OdbiorcaFizyczny>
+      <ProduktyList>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Jabłka</Nazwa>
+            <CenaHurtownia>3.2</CenaHurtownia>
+            <CenaJednostkowa>4.5</CenaJednostkowa>
+            <StawkaPodatku>23</StawkaPodatku>
+            <CenaBrutto>5.535</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-12T17:59:15.0775962+02:00</Key>
+                <Value>4.5</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>1</Value>
+        </KeyValuePairOfProduktInt32>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Pomidory</Nazwa>
+            <CenaHurtownia>2.5</CenaHurtownia>
+            <CenaJednostkowa>3.7</CenaJednostkowa>
+            <StawkaPodatku>8</StawkaPodatku>
+            <CenaBrutto>3.9960000000000004</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-12T17:59:27.8438818+02:00</Key>
+                <Value>3.7</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>2</Value>
+        </KeyValuePairOfProduktInt32>
+      </ProduktyList>
+    </Faktura>
+  </listaFaktur>
+</BazaFaktur>

@@ -2,70 +2,58 @@
 <BazaProduktow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <listaProduktow>
     <Produkt>
-      <Nazwa>Piotrek</Nazwa>
-      <CenaHurtownia>215</CenaHurtownia>
-      <CenaJednostkowa>225</CenaJednostkowa>
-      <StawkaPodatku>23</StawkaPodatku>
-      <CenaBrutto>276.75</CenaBrutto>
-      <ListaZmian />
-    </Produkt>
-    <Produkt>
-      <Nazwa>Asia</Nazwa>
-      <CenaHurtownia>5</CenaHurtownia>
-      <CenaJednostkowa>5.56</CenaJednostkowa>
-      <StawkaPodatku>8</StawkaPodatku>
-      <CenaBrutto>6.0048</CenaBrutto>
-      <ListaZmian>
-        <ZmianyCen>
-          <Key>2017-05-08T22:55:15.6525451+02:00</Key>
-          <Value>5.56</Value>
-        </ZmianyCen>
-      </ListaZmian>
-    </Produkt>
-    <Produkt>
-      <Nazwa>Kasia</Nazwa>
-      <CenaHurtownia>36</CenaHurtownia>
-      <CenaJednostkowa>466</CenaJednostkowa>
-      <StawkaPodatku>5</StawkaPodatku>
-      <CenaBrutto>489.3</CenaBrutto>
-      <ListaZmian />
-    </Produkt>
-    <Produkt>
       <Nazwa>Jabłka</Nazwa>
-      <CenaHurtownia>25</CenaHurtownia>
-      <CenaJednostkowa>45</CenaJednostkowa>
-      <StawkaPodatku>23</StawkaPodatku>
-      <CenaBrutto>55.35</CenaBrutto>
+      <CenaHurtownia>2.7</CenaHurtownia>
+      <CenaJednostkowa>3.33</CenaJednostkowa>
+      <StawkaPodatku>8</StawkaPodatku>
+      <CenaBrutto>3.5964000000000005</CenaBrutto>
       <ListaZmian>
-        <ZmianyCen>
-          <Key>2017-05-10T13:15:34.3614209+02:00</Key>
-          <Value>30</Value>
-        </ZmianyCen>
-        <ZmianyCen>
-          <Key>2017-05-10T13:16:21.7127991+02:00</Key>
-          <Value>45</Value>
-        </ZmianyCen>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-12T17:59:15.0775962+02:00</Key>
+          <Value>4.5</Value>
+        </KeyValuePairOfDateTimeDouble>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-12T19:26:43.8988186+02:00</Key>
+          <Value>3.33</Value>
+        </KeyValuePairOfDateTimeDouble>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-12T19:27:05.7302343+02:00</Key>
+          <Value>3.33</Value>
+        </KeyValuePairOfDateTimeDouble>
       </ListaZmian>
     </Produkt>
     <Produkt>
-      <Nazwa>Losos Wedzony lux</Nazwa>
-      <CenaHurtownia>15</CenaHurtownia>
-      <CenaJednostkowa>25</CenaJednostkowa>
+      <Nazwa>Pomidory</Nazwa>
+      <CenaHurtownia>2.5</CenaHurtownia>
+      <CenaJednostkowa>3.7</CenaJednostkowa>
       <StawkaPodatku>8</StawkaPodatku>
-      <CenaBrutto>27</CenaBrutto>
+      <CenaBrutto>3.9960000000000004</CenaBrutto>
       <ListaZmian>
-        <ZmianyCen>
-          <Key>2017-05-08T20:42:11.3744264+02:00</Key>
-          <Value>25</Value>
-        </ZmianyCen>
-        <ZmianyCen>
-          <Key>2017-05-08T20:43:25.4068344+02:00</Key>
-          <Value>25</Value>
-        </ZmianyCen>
-        <ZmianyCen>
-          <Key>2017-05-08T20:49:51.494598+02:00</Key>
-          <Value>25</Value>
-        </ZmianyCen>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-12T17:59:27.8438818+02:00</Key>
+          <Value>3.7</Value>
+        </KeyValuePairOfDateTimeDouble>
+      </ListaZmian>
+    </Produkt>
+    <Produkt>
+      <Nazwa>Szczypiorek</Nazwa>
+      <CenaHurtownia>2.79</CenaHurtownia>
+      <CenaJednostkowa>4.6</CenaJednostkowa>
+      <StawkaPodatku>23</StawkaPodatku>
+      <CenaBrutto>5.6579999999999995</CenaBrutto>
+      <ListaZmian>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-12T17:59:42.3879702+02:00</Key>
+          <Value>4</Value>
+        </KeyValuePairOfDateTimeDouble>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-12T17:59:51.0436171+02:00</Key>
+          <Value>4</Value>
+        </KeyValuePairOfDateTimeDouble>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-12T18:01:48.373228+02:00</Key>
+          <Value>4.6</Value>
+        </KeyValuePairOfDateTimeDouble>
       </ListaZmian>
     </Produkt>
   </listaProduktow>

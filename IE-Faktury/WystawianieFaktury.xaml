@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
-        Title="WystawianieFaktury" Height="518.2" Width="465.4">
+        Title="WystawianieFaktury" Height="550.2" Width="465.4">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,6 +23,7 @@
                 <DataGridTextColumn Header="Nazwa" MinWidth="50" IsReadOnly="True" Binding="{Binding Key.Nazwa}"/>
                 <DataGridTextColumn Header="C. Jedn." MinWidth="50" IsReadOnly="True" Binding="{Binding Key.CenaJednostkowa}"/>
                 <DataGridTextColumn Header="St. Pod." MinWidth="50" IsReadOnly="True" Binding="{Binding Key.StawkaPodatku}"/>
+                <DataGridTextColumn Header="Brutto" MinWidth="50" IsReadOnly="True" Binding="{Binding Key.CenaBrutto}"/>
                 <DataGridTextColumn Header="Ilosc" MinWidth="50" IsReadOnly="True" Binding="{Binding Value}"/>
             </DataGrid.Columns>
         </DataGrid>
@@ -31,9 +32,13 @@
         <RadioButton x:Name="radioButton_prawny" Content="Prawny" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top" Height="15" Width="56" Checked="radioButton_prawny_Checked"/>
         <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,149,0,0" VerticalAlignment="Top" Width="120" Height="21"/>
         <Button x:Name="button_dodajOdbiorce" Content="Nowy" HorizontalAlignment="Left" Margin="281,150,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajOdbiorce_Click" Height="20"/>
-        <Button x:Name="button_utworz" Content="Utwórz fakturę" HorizontalAlignment="Left" Height="19" Margin="143,449,0,0" VerticalAlignment="Top" Width="165" Click="button_utworz_Click"/>
-        <Button x:Name="button_sprawdz" Content="Sprawdź dane" HorizontalAlignment="Left" Margin="143,411,0,0" VerticalAlignment="Top" Width="165" Click="button_sprawdz_Click"/>
+        <Button x:Name="button_utworz" Content="Utwórz fakturę" HorizontalAlignment="Left" Height="19" Margin="143,483,0,0" VerticalAlignment="Top" Width="165" Click="button_utworz_Click"/>
+        <Button x:Name="button_sprawdz" Content="Sprawdź dane" HorizontalAlignment="Left" Margin="143,446,0,0" VerticalAlignment="Top" Width="165" Click="button_sprawdz_Click"/>
         <Button x:Name="button_zmien" Content="Zmień" HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="75" Click="button_zmien_Click"/>
         <Button x:Name="button_usun" Content="Usuń" HorizontalAlignment="Left" Margin="23,298,0,0" VerticalAlignment="Top" Width="75" Click="button_usun_Click"/>
+        <Label x:Name="label_rabat" Content="Rabat:" HorizontalAlignment="Left" Margin="173,391,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_rabat" HorizontalAlignment="Left" Height="26" Margin="222,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
+        <Label x:Name="label_razem" Content="Razem:" HorizontalAlignment="Left" Margin="331,391,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_razem" HorizontalAlignment="Left" Height="26" Margin="399,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
     </Grid>
 </Window>

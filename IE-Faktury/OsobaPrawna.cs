@@ -15,7 +15,8 @@ namespace IE_Faktury
         private string kodPocztowy;
         private string miasto;
         private ulong nip;
-        private static uint liczbaTransakcji = 0;
+        private uint liczbaTransakcji = 0;
+        private double rabat;
 
         public string Nazwa
         {
@@ -92,6 +93,19 @@ namespace IE_Faktury
             }
         }
 
+        public double Rabat
+        {
+            get
+            {
+                return rabat;
+            }
+
+            set
+            {
+                rabat = value;
+            }
+        }
+
         public OsobaPrawna()
         {
             this.nazwa = "";
@@ -99,6 +113,7 @@ namespace IE_Faktury
             this.kodPocztowy = "";
             this.miasto = "";
             this.nip = 0;
+            this.rabat = 0;
         }
 
         public override string ToString()

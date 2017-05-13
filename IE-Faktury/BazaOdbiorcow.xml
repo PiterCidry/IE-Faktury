@@ -9,7 +9,41 @@
       <Ulica>Szymały 12</Ulica>
       <Miasto>Radzionków</Miasto>
       <KodPocztowy>41-922</KodPocztowy>
-      <LiczbaTransakcji>9</LiczbaTransakcji>
+      <LiczbaTransakcji>12</LiczbaTransakcji>
+      <Rabat>0</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Jan</Imie>
+      <Nazwisko>Kowalski</Nazwisko>
+      <Pesel>80020700003</Pesel>
+      <DataUrodzenia>1980-02-07T00:00:00</DataUrodzenia>
+      <Ulica>Kwiatowa 15</Ulica>
+      <Miasto>Olsztyn</Miasto>
+      <KodPocztowy>92-912</KodPocztowy>
+      <LiczbaTransakcji>12</LiczbaTransakcji>
+      <Rabat>0</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Anna</Imie>
+      <Nazwisko>Nowak</Nazwisko>
+      <Pesel>99010100002</Pesel>
+      <DataUrodzenia>1999-01-01T00:00:00</DataUrodzenia>
+      <Ulica>Szeroka 15</Ulica>
+      <Miasto>Wrocław</Miasto>
+      <KodPocztowy>11-111</KodPocztowy>
+      <LiczbaTransakcji>13</LiczbaTransakcji>
+      <Rabat>0</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Krzystof</Imie>
+      <Nazwisko>Kamiński</Nazwisko>
+      <Pesel>90033100008</Pesel>
+      <DataUrodzenia>1990-03-31T00:00:00</DataUrodzenia>
+      <Ulica>Wąska 12/5</Ulica>
+      <Miasto>Gdańsk</Miasto>
+      <KodPocztowy>25-212</KodPocztowy>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
+      <Rabat>0</Rabat>
     </OsobaFizyczna>
   </listaFizycznych>
   <listaPrawnych>
@@ -20,6 +54,7 @@
       <KodPocztowy>30-102</KodPocztowy>
       <Nip>8819759685</Nip>
       <LiczbaTransakcji>5</LiczbaTransakcji>
+      <Rabat>0</Rabat>
     </OsobaPrawna>
   </listaPrawnych>
 </BazaOdbiorcow>

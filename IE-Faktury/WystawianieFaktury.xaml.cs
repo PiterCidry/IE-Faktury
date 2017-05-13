@@ -55,6 +55,10 @@ namespace IE_Faktury
         {
             WyborProduktow wybor = new WyborProduktow(faktura);
             wybor.ShowDialog();
+            if(wybor.DialogResult != false)
+            {
+
+            }
             dataGrid_produkty.Items.Refresh();
         }
 
@@ -257,7 +261,6 @@ namespace IE_Faktury
 
             bazaFaktur.DodajFakture(faktura);
             bazaFaktur.ZapiszBaze();
-
         }
 
         private void button_sprawdz_Click(object sender, RoutedEventArgs e)

@@ -16,7 +16,8 @@ namespace IE_Faktury
         private string ulica;
         private string kodPocztowy;
         private string miasto;
-        private static uint liczbaTransakcji = 0;
+        private uint liczbaTransakcji = 0;
+        private double rabat;
 
         public string Imie
         {
@@ -120,6 +121,19 @@ namespace IE_Faktury
             }
         }
 
+        public double Rabat
+        {
+            get
+            {
+                return rabat;
+            }
+
+            set
+            {
+                rabat = value;
+            }
+        }
+
         public OsobaFizyczna()
         {
             this.imie = "";
@@ -129,6 +143,7 @@ namespace IE_Faktury
             this.ulica = "";
             this.kodPocztowy = "";
             this.miasto = "";
+            this.rabat = 0;
         }
 
         public override string ToString()

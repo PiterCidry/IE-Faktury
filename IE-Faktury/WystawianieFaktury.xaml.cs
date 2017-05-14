@@ -21,6 +21,8 @@ using PdfSharp.Pdf.IO;
 using System.Diagnostics;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.Rendering;
+using System.Xml;
+using System.ComponentModel;
 
 namespace IE_Faktury
 {
@@ -43,7 +45,7 @@ namespace IE_Faktury
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message.ToString());
+                Debug.WriteLine(ex.InnerException);
             }
             textBox_nr.Text = faktura.NumerFaktury;
             textBox_data.Text = faktura.DataWystawienia.ToString("dd-MM-yyyy");
@@ -55,14 +57,10 @@ namespace IE_Faktury
         {
             WyborProduktow wybor = new WyborProduktow(faktura);
             wybor.ShowDialog();
-            if(wybor.DialogResult != false)
-            {
-
-            }
             dataGrid_produkty.Items.Refresh();
         }
 
-        private void button_zmien_Click(object sender, RoutedEventArgs e)
+        private void button_zmienProd_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -79,7 +77,7 @@ namespace IE_Faktury
             }
         }
 
-        private void button_usun_Click(object sender, RoutedEventArgs e)
+        private void button_usunProd_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -144,6 +142,7 @@ namespace IE_Faktury
             {
                 OsobaFizyczna os = (OsobaFizyczna)comboBox_odbiorca.SelectedItem;
                 os.LiczbaTransakcji++;
+                os.ustawRabat();
                 bazaOdbiorcow.ZmienFizyczna((OsobaFizyczna)comboBox_odbiorca.SelectedItem, os);
                 bazaOdbiorcow.ZapiszBaze();
                 faktura.OdbiorcaFizyczny = os;
@@ -152,11 +151,12 @@ namespace IE_Faktury
             {
                 OsobaPrawna os = (OsobaPrawna)comboBox_odbiorca.SelectedItem;
                 os.LiczbaTransakcji++;
+                os.ustawRabat();
                 bazaOdbiorcow.ZmienPrawna((OsobaPrawna)comboBox_odbiorca.SelectedItem, os);
                 bazaOdbiorcow.ZapiszBaze();
                 faktura.OdbiorcaPrawny = os;
             }
-
+            textBox_razem.Text = faktura.podajRazem().ToString();
             //bazaf.OdczytajBaze();
             /*  try
               {
@@ -261,6 +261,7 @@ namespace IE_Faktury
 
             bazaFaktur.DodajFakture(faktura);
             bazaFaktur.ZapiszBaze();
+            this.Close();
         }
 
         private void button_sprawdz_Click(object sender, RoutedEventArgs e)
@@ -280,6 +281,65 @@ namespace IE_Faktury
                 MessageBox.Show("Wszystko w porządku, tworzenie faktury...", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
                 button_utworz.IsEnabled = true;
             }
+        }
+
+        private void comboBox_odbiorca_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (comboBox_odbiorca.SelectedItem != null)
+            {
+                if(radioButton_fizyczny.IsChecked == true)
+                {
+                    OsobaFizyczna osf = new OsobaFizyczna();
+                    osf = comboBox_odbiorca.SelectedItem as OsobaFizyczna;
+                    osf.ustawRabat();
+                    if(osf.Rabat == 1)
+                    {
+                        textBox_rabat.Text = "0%";
+                    }
+                    else if(osf.Rabat == 0.9)
+                    {
+                        textBox_rabat.Text = "10%";
+                    }
+                    else if(osf.Rabat == 0.85)
+                    {
+                        textBox_rabat.Text = "15%";
+                    }
+                    else if(osf.Rabat == 0.8)
+                    {
+                        textBox_rabat.Text = "20%";
+                    }
+                    else
+                    {
+                        textBox_rabat.Text = "0%";
+                    }
+                }
+                else
+                {
+                    OsobaPrawna osp = new OsobaPrawna();
+                    osp = comboBox_odbiorca.SelectedItem as OsobaPrawna;
+                    osp.ustawRabat();
+                    if (osp.Rabat == 1)
+                    {
+                        textBox_rabat.Text = "0%";
+                    }
+                    else if (osp.Rabat == 0.9)
+                    {
+                        textBox_rabat.Text = "10%";
+                    }
+                    else if (osp.Rabat == 0.85)
+                    {
+                        textBox_rabat.Text = "15%";
+                    }
+                    else if (osp.Rabat == 0.8)
+                    {
+                        textBox_rabat.Text = "20%";
+                    }
+                    else
+                    {
+                        textBox_rabat.Text = "0%";
+                    }
+                }
+            }  
         }
     }
 }

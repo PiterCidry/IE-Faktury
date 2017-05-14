@@ -30,15 +30,15 @@
         <Label x:Name="label_odbiorca" Content="Odbiorca:" HorizontalAlignment="Left" Margin="23,118,0,0" VerticalAlignment="Top" Width="104" Height="26"/>
         <RadioButton x:Name="radioButton_fizyczny" Content="Fizyczny" HorizontalAlignment="Left" Margin="23,149,0,0" VerticalAlignment="Top" Height="15" Width="63" Checked="radioButton_fizyczny_Checked"/>
         <RadioButton x:Name="radioButton_prawny" Content="Prawny" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top" Height="15" Width="56" Checked="radioButton_prawny_Checked"/>
-        <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,149,0,0" VerticalAlignment="Top" Width="120" Height="21"/>
+        <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,149,0,0" VerticalAlignment="Top" Width="120" Height="21" SelectionChanged="comboBox_odbiorca_SelectionChanged"/>
         <Button x:Name="button_dodajOdbiorce" Content="Nowy" HorizontalAlignment="Left" Margin="281,150,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajOdbiorce_Click" Height="20"/>
         <Button x:Name="button_utworz" Content="Utwórz fakturę" HorizontalAlignment="Left" Height="19" Margin="143,483,0,0" VerticalAlignment="Top" Width="165" Click="button_utworz_Click"/>
         <Button x:Name="button_sprawdz" Content="Sprawdź dane" HorizontalAlignment="Left" Margin="143,446,0,0" VerticalAlignment="Top" Width="165" Click="button_sprawdz_Click"/>
-        <Button x:Name="button_zmien" Content="Zmień" HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="75" Click="button_zmien_Click"/>
-        <Button x:Name="button_usun" Content="Usuń" HorizontalAlignment="Left" Margin="23,298,0,0" VerticalAlignment="Top" Width="75" Click="button_usun_Click"/>
+        <Button x:Name="button_zmienProd" Content="Zmień" HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="75" Click="button_zmienProd_Click"/>
+        <Button x:Name="button_usunProd" Content="Usuń" HorizontalAlignment="Left" Margin="23,298,0,0" VerticalAlignment="Top" Width="75" Click="button_usunProd_Click"/>
         <Label x:Name="label_rabat" Content="Rabat:" HorizontalAlignment="Left" Margin="173,391,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox_rabat" HorizontalAlignment="Left" Height="26" Margin="222,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
-        <Label x:Name="label_razem" Content="Razem:" HorizontalAlignment="Left" Margin="331,391,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_razem" Content="Razem:" HorizontalAlignment="Left" Margin="336,391,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox_razem" HorizontalAlignment="Left" Height="26" Margin="399,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
     </Grid>
 </Window>

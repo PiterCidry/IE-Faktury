@@ -246,6 +246,30 @@ namespace IE_Faktury
             }
             return result;
         }
+
+        public void ustawRabat()
+        {
+            if (this.LiczbaTransakcji < 6)
+            {
+                this.Rabat = 1;
+            }
+            else if (this.LiczbaTransakcji >= 6 && this.LiczbaTransakcji < 11)
+            {
+                this.Rabat = 0.9;
+            }
+            else if (this.LiczbaTransakcji >= 11 && this.LiczbaTransakcji < 16)
+            {
+                this.Rabat = 0.85;
+            }
+            else if (this.LiczbaTransakcji >= 16)
+            {
+                this.Rabat = 0.8;
+            }
+            else
+            {
+                this.Rabat = 1;
+            }
+        }
     }
 }
 

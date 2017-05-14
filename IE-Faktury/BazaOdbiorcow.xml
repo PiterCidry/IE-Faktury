@@ -9,8 +9,8 @@
       <Ulica>Szymały 12</Ulica>
       <Miasto>Radzionków</Miasto>
       <KodPocztowy>41-922</KodPocztowy>
-      <LiczbaTransakcji>12</LiczbaTransakcji>
-      <Rabat>0</Rabat>
+      <LiczbaTransakcji>14</LiczbaTransakcji>
+      <Rabat>0.85</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
       <Imie>Jan</Imie>
@@ -20,8 +20,8 @@
       <Ulica>Kwiatowa 15</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>92-912</KodPocztowy>
-      <LiczbaTransakcji>12</LiczbaTransakcji>
-      <Rabat>0</Rabat>
+      <LiczbaTransakcji>6</LiczbaTransakcji>
+      <Rabat>0.9</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
       <Imie>Anna</Imie>
@@ -31,8 +31,8 @@
       <Ulica>Szeroka 15</Ulica>
       <Miasto>Wrocław</Miasto>
       <KodPocztowy>11-111</KodPocztowy>
-      <LiczbaTransakcji>13</LiczbaTransakcji>
-      <Rabat>0</Rabat>
+      <LiczbaTransakcji>23</LiczbaTransakcji>
+      <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
       <Imie>Krzystof</Imie>
@@ -42,8 +42,8 @@
       <Ulica>Wąska 12/5</Ulica>
       <Miasto>Gdańsk</Miasto>
       <KodPocztowy>25-212</KodPocztowy>
-      <LiczbaTransakcji>1</LiczbaTransakcji>
-      <Rabat>0</Rabat>
+      <LiczbaTransakcji>4</LiczbaTransakcji>
+      <Rabat>1</Rabat>
     </OsobaFizyczna>
   </listaFizycznych>
   <listaPrawnych>
@@ -53,8 +53,17 @@
       <Miasto>Kraków</Miasto>
       <KodPocztowy>30-102</KodPocztowy>
       <Nip>8819759685</Nip>
-      <LiczbaTransakcji>5</LiczbaTransakcji>
-      <Rabat>0</Rabat>
+      <LiczbaTransakcji>11</LiczbaTransakcji>
+      <Rabat>0.85</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Uniwersytet Ekonomiczny</Nazwa>
+      <Ulica>Aleja Bora-Komorowskiego 22</Ulica>
+      <Miasto>Katowice</Miasto>
+      <KodPocztowy>12-345</KodPocztowy>
+      <Nip>4411752086</Nip>
+      <LiczbaTransakcji>7</LiczbaTransakcji>
+      <Rabat>0.9</Rabat>
     </OsobaPrawna>
   </listaPrawnych>
 </BazaOdbiorcow>

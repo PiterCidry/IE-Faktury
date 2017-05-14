@@ -31,6 +31,7 @@ namespace IE_Faktury
         private OsobaPrawna odbiorcaPrawny;
         private Dictionary<Produkt, int> produkty;
         private List<IE_Faktury.KeyValuePair<Produkt, int>> produktyList;
+        private double razem = 0.0;
 
         public string NumerFaktury
         {
@@ -110,6 +111,19 @@ namespace IE_Faktury
             }
         }
 
+        public double Razem
+        {
+            get
+            {
+                return razem;
+            }
+
+            set
+            {
+                razem = value;
+            }
+        }
+
         public Faktura()
         {
             try
@@ -135,6 +149,25 @@ namespace IE_Faktury
             this.dataWystawienia = DateTime.Now;
             this.produkty = new Dictionary<Produkt, int>();
             this.produktyList = new List<KeyValuePair<Produkt, int>>();
+        }
+
+        public double podajRazem()
+        {
+            double razem = 0.0;
+            foreach (System.Collections.Generic.KeyValuePair<Produkt,int> kvp in this.Produkty)
+            {
+                razem += kvp.Key.CenaBrutto * kvp.Value;
+            }
+            if(this.OdbiorcaFizyczny != null)
+            {
+                razem = razem * this.OdbiorcaFizyczny.Rabat;
+            }
+            if(this.OdbiorcaPrawny != null)
+            {
+                razem = razem * this.OdbiorcaPrawny.Rabat;
+            }
+            this.Razem = razem;
+            return razem;
         }
 
     }

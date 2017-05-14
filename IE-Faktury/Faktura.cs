@@ -141,7 +141,7 @@ namespace IE_Faktury
             }
             catch(System.IO.FileNotFoundException fnfe)
             {
-                Debug.WriteLine(fnfe.Message);
+                Debug.WriteLine(fnfe.InnerException);
             }
             StringBuilder sb = new StringBuilder();
             sb.Append(inkrementowany).Append("/").Append(DateTime.Today.Year.ToString());
@@ -170,6 +170,21 @@ namespace IE_Faktury
             return razem;
         }
 
+        public double podajRazem(string rabat)
+        {
+            double razem = 0.0;
+            if (!string.IsNullOrEmpty(rabat))
+            {
+                string[] rabaty = rabat.Split('%');
+                double rabacik = Double.Parse(rabaty[0]);
+                foreach (System.Collections.Generic.KeyValuePair<Produkt, int> kvp in this.Produkty)
+                {
+                    razem += kvp.Key.CenaBrutto * kvp.Value;
+                }
+                razem = razem * (1 - (rabacik / 100));
+            }
+            return razem;
+        }
     }
 }
 

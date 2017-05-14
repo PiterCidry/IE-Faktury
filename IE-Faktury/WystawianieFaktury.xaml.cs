@@ -58,6 +58,7 @@ namespace IE_Faktury
             WyborProduktow wybor = new WyborProduktow(faktura);
             wybor.ShowDialog();
             dataGrid_produkty.Items.Refresh();
+            textBox_razem.Text = faktura.podajRazem(textBox_rabat.Text).ToString();
         }
 
         private void button_zmienProd_Click(object sender, RoutedEventArgs e)
@@ -69,6 +70,7 @@ namespace IE_Faktury
                 WyborProduktow wybor = new WyborProduktow(faktura, element2.Key, element2.Value);
                 wybor.ShowDialog();
                 dataGrid_produkty.Items.Refresh();
+                textBox_razem.Text = faktura.podajRazem(textBox_rabat.Text).ToString();
             }
             catch (NullReferenceException)
             {
@@ -85,6 +87,7 @@ namespace IE_Faktury
                 System.Collections.Generic.KeyValuePair<IE_Faktury.Produkt, System.Int32> element2 = (System.Collections.Generic.KeyValuePair<IE_Faktury.Produkt, System.Int32>)element;
                 faktura.Produkty.Remove(element2.Key);
                 dataGrid_produkty.Items.Refresh();
+                textBox_razem.Text = faktura.podajRazem(textBox_rabat.Text).ToString();
             }
             catch (NullReferenceException)
             {
@@ -156,8 +159,7 @@ namespace IE_Faktury
                 bazaOdbiorcow.ZapiszBaze();
                 faktura.OdbiorcaPrawny = os;
             }
-            textBox_razem.Text = faktura.podajRazem().ToString();
-            //bazaf.OdczytajBaze();
+            faktura.podajRazem();
             /*  try
               {
                   // Create a invoice form with the sample invoice data
@@ -223,7 +225,7 @@ namespace IE_Faktury
               // ...and start a viewer.
               Process.Start(filename); }*/
             DokumentFaktury invoice = new DokumentFaktury();
-            Document document = invoice.CreateDocument();
+            Document document = invoice.CreateDocument(faktura);
             document.UseCmykColor = true;
 
 #if DEBUG
@@ -339,7 +341,8 @@ namespace IE_Faktury
                         textBox_rabat.Text = "0%";
                     }
                 }
-            }  
+            }
+            textBox_razem.Text = faktura.podajRazem(textBox_rabat.Text).ToString();
         }
     }
 }

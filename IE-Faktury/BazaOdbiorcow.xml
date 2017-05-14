@@ -9,8 +9,8 @@
       <Ulica>Szymały 12</Ulica>
       <Miasto>Radzionków</Miasto>
       <KodPocztowy>41-922</KodPocztowy>
-      <LiczbaTransakcji>14</LiczbaTransakcji>
-      <Rabat>0.85</Rabat>
+      <LiczbaTransakcji>21</LiczbaTransakcji>
+      <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
       <Imie>Jan</Imie>
@@ -31,7 +31,7 @@
       <Ulica>Szeroka 15</Ulica>
       <Miasto>Wrocław</Miasto>
       <KodPocztowy>11-111</KodPocztowy>
-      <LiczbaTransakcji>23</LiczbaTransakcji>
+      <LiczbaTransakcji>24</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -42,7 +42,7 @@
       <Ulica>Wąska 12/5</Ulica>
       <Miasto>Gdańsk</Miasto>
       <KodPocztowy>25-212</KodPocztowy>
-      <LiczbaTransakcji>4</LiczbaTransakcji>
+      <LiczbaTransakcji>5</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaFizyczna>
   </listaFizycznych>
@@ -62,8 +62,17 @@
       <Miasto>Katowice</Miasto>
       <KodPocztowy>12-345</KodPocztowy>
       <Nip>4411752086</Nip>
-      <LiczbaTransakcji>7</LiczbaTransakcji>
+      <LiczbaTransakcji>8</LiczbaTransakcji>
       <Rabat>0.9</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>DS 11 Bonus</Nazwa>
+      <Ulica>Witolda Budryka 5/316</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>30-072</KodPocztowy>
+      <Nip>8712581799</Nip>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
+      <Rabat>1</Rabat>
     </OsobaPrawna>
   </listaPrawnych>
 </BazaOdbiorcow>

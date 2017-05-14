@@ -20,6 +20,7 @@ namespace IE_Faktury
     {
 
         Document document;
+
         public DokumentFaktury()
         {
 
@@ -45,6 +46,7 @@ namespace IE_Faktury
         /// </summary>
         Table table;
 
+        private Faktura faktura;
         /// <summary>
         /// Initializes a new instance of the class BillFrom and opens the specified XML document.
         /// </summary>
@@ -58,17 +60,16 @@ namespace IE_Faktury
         /// <summary>
         /// Tworzenie dokumentu
         /// </summary>
-        public Document CreateDocument()
+        public Document CreateDocument(Faktura f)
         {
-
+            this.faktura = f;
             this.document = new Document();
             this.document.Info.Title = "A sample invoice";
             this.document.Info.Subject = "Demonstrates how to create an invoice.";
             this.document.Info.Author = "Stefan Lange";
 
             DefineStyles();
-
-            CreatePage();
+            CreatePage(f);
 
             //  FillContent();
 
@@ -107,7 +108,7 @@ namespace IE_Faktury
         /// <summary>
         /// Tworzenie faktury
         /// </summary>
-        void CreatePage()
+        void CreatePage(Faktura f)
         {
 
             Section section = this.document.AddSection();
@@ -138,7 +139,8 @@ namespace IE_Faktury
             this.addressFrame.RelativeVertical = RelativeVertical.Page;
 
             // dane klienta
-            paragraph = this.addressFrame.AddParagraph("TUTAJ DANE KLIENTA");
+            paragraph = this.addressFrame.AddParagraph(f.OdbiorcaFizyczny.ToString());
+            // TODO: DODAC WSZYSTKIE DANE O KLIENCIE!
             paragraph.Format.Font.Name = "Times New Roman";
             paragraph.Format.Font.Size = 7;
             paragraph.Format.SpaceAfter = 3;
@@ -150,7 +152,7 @@ namespace IE_Faktury
             paragraph.AddFormattedText("Faktura", TextFormat.Bold);
             paragraph.AddTab();
             paragraph.AddText("Kraków, ");
-            paragraph.AddDateField("dd.MM.yyyy");
+            paragraph.AddDateField(f.DataWystawienia.ToString("dd-MM-yyyy"));
 
             // tabela produktów
             this.table = section.AddTable();

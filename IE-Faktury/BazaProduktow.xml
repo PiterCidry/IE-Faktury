@@ -38,9 +38,9 @@
     <Produkt>
       <Nazwa>Szczypiorek</Nazwa>
       <CenaHurtownia>2.79</CenaHurtownia>
-      <CenaJednostkowa>4.6</CenaJednostkowa>
+      <CenaJednostkowa>4.4</CenaJednostkowa>
       <StawkaPodatku>23</StawkaPodatku>
-      <CenaBrutto>5.6579999999999995</CenaBrutto>
+      <CenaBrutto>5.412</CenaBrutto>
       <ListaZmian>
         <KeyValuePairOfDateTimeDouble>
           <Key>2017-05-12T17:59:42.3879702+02:00</Key>
@@ -53,6 +53,10 @@
         <KeyValuePairOfDateTimeDouble>
           <Key>2017-05-12T18:01:48.373228+02:00</Key>
           <Value>4.6</Value>
+        </KeyValuePairOfDateTimeDouble>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-14T23:30:19.1336313+02:00</Key>
+          <Value>4.4</Value>
         </KeyValuePairOfDateTimeDouble>
       </ListaZmian>
     </Produkt>

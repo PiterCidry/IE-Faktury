@@ -32,7 +32,7 @@ namespace IE_Faktury
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message.ToString());
+                Debug.WriteLine(ex.InnerException);
             }
             listView_produkty.ItemsSource = baza.listaProduktow;
         }

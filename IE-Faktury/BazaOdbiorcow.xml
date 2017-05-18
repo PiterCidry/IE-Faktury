@@ -45,6 +45,17 @@
       <LiczbaTransakcji>5</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Krystyna</Imie>
+      <Nazwisko>Janda</Nazwisko>
+      <Pesel>80013100007</Pesel>
+      <DataUrodzenia>1980-01-31T00:00:00</DataUrodzenia>
+      <Ulica>Jabłeczna 4</Ulica>
+      <Miasto>Olsztyn</Miasto>
+      <KodPocztowy>30-001</KodPocztowy>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
   </listaFizycznych>
   <listaPrawnych>
     <OsobaPrawna>

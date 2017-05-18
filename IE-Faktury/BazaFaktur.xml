@@ -555,5 +555,39 @@
       </ProduktyList>
       <Razem>12.988800000000001</Razem>
     </Faktura>
+    <Faktura>
+      <NumerFaktury>12/2017</NumerFaktury>
+      <DataWystawienia>2017-05-18T00:00:00+02:00</DataWystawienia>
+      <OdbiorcaFizyczny>
+        <Imie>Krystyna</Imie>
+        <Nazwisko>Janda</Nazwisko>
+        <Pesel>80013100007</Pesel>
+        <DataUrodzenia>1980-01-31T00:00:00</DataUrodzenia>
+        <Ulica>Jabłeczna 4</Ulica>
+        <Miasto>Olsztyn</Miasto>
+        <KodPocztowy>30-001</KodPocztowy>
+        <LiczbaTransakcji>1</LiczbaTransakcji>
+        <Rabat>1</Rabat>
+      </OdbiorcaFizyczny>
+      <ProduktyList>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Coca Cola 2l</Nazwa>
+            <CenaHurtownia>3</CenaHurtownia>
+            <CenaJednostkowa>5.5</CenaJednostkowa>
+            <StawkaPodatku>8</StawkaPodatku>
+            <CenaBrutto>5.94</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-18T15:55:11.6675027+02:00</Key>
+                <Value>5.5</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>2</Value>
+        </KeyValuePairOfProduktInt32>
+      </ProduktyList>
+      <Razem>11.88</Razem>
+    </Faktura>
   </listaFaktur>
 </BazaFaktur>

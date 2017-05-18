@@ -60,5 +60,18 @@
         </KeyValuePairOfDateTimeDouble>
       </ListaZmian>
     </Produkt>
+    <Produkt>
+      <Nazwa>Coca Cola 2l</Nazwa>
+      <CenaHurtownia>3</CenaHurtownia>
+      <CenaJednostkowa>5.5</CenaJednostkowa>
+      <StawkaPodatku>8</StawkaPodatku>
+      <CenaBrutto>5.94</CenaBrutto>
+      <ListaZmian>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-18T15:55:11.6675027+02:00</Key>
+          <Value>5.5</Value>
+        </KeyValuePairOfDateTimeDouble>
+      </ListaZmian>
+    </Produkt>
   </listaProduktow>
 </BazaProduktow>

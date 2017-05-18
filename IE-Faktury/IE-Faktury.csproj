@@ -99,6 +99,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AnalizaWindow.xaml.cs">
+      <DependentUpon>AnalizaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BazaFaktur.cs" />
     <Compile Include="BazaOdbiorcow.cs" />
     <Compile Include="BazaProduktow.cs" />
@@ -112,6 +115,10 @@
     <Compile Include="ProduktWindow.xaml.cs">
       <DependentUpon>ProduktWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SprzedazOgolna.xaml.cs">
+      <DependentUpon>SprzedazOgolna.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs" />
     <Compile Include="WyborProduktow.xaml.cs">
       <DependentUpon>WyborProduktow.xaml</DependentUpon>
     </Compile>
@@ -121,6 +128,10 @@
     <Compile Include="ZmianaProduktow.xaml.cs">
       <DependentUpon>ZmianaProduktow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AnalizaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Fizyczny.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProduktWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SprzedazOgolna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

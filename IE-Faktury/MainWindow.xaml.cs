@@ -36,5 +36,11 @@ namespace IE_Faktury
             ZmianaProduktow zmiana = new ZmianaProduktow();
             zmiana.ShowDialog();
         }
+
+        private void button_analiza_Click(object sender, RoutedEventArgs e)
+        {
+            AnalizaWindow analiza = new AnalizaWindow();
+            analiza.ShowDialog();
+        }
     }
 }

@@ -10,6 +10,6 @@
         <Label x:Name="main_label" Content="Program do tworzenia i analizy faktur" HorizontalAlignment="Center" Height="34" Margin="89,43,77.4,0" VerticalAlignment="Top" Width="352" FontFamily="Segoe UI Black" FontSize="18"/>
         <Button x:Name="button_wystaw" Content="Wystaw fakture" HorizontalAlignment="Left" Margin="49,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_wystaw_Click"/>
         <Button x:Name="button_produkty" Content="Produkty" HorizontalAlignment="Left" Margin="207,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_produkty_Click"/>
-        <Button x:Name="button_analiza" Content="Analiza" HorizontalAlignment="Left" Margin="363,122,0,0" VerticalAlignment="Top" Width="108" Height="30"/>
+        <Button x:Name="button_analiza" Content="Analiza" HorizontalAlignment="Left" Margin="363,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_analiza_Click"/>
     </Grid>
 </Window>

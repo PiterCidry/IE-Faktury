@@ -1,0 +1,17 @@
+﻿<Window x:Class="IE_Faktury.AnalizaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IE_Faktury"
+        mc:Ignorable="d"
+        Title="AnalizaWindow" Height="260.216" Width="196.337">
+    <Grid>
+        <Button x:Name="button_ogolna" Content="Wyswietl statystyki  &#xD;&#xA; sprzedazy ogolnej" HorizontalAlignment="Left" Margin="31,8,0,0" VerticalAlignment="Top" Width="130" Height="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="button_ogolna_Click"/>
+        <Button x:Name="button_produkt" Content="Wyswietl statystyki  &#xD;&#xA;         produktu" HorizontalAlignment="Left" Margin="31,49,0,0" VerticalAlignment="Top" Width="130" Height="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="button_produkt_Click"/>
+        <Button x:Name="button_kontrahent" Content="Wyswietl statystyki &#xD;&#xA;       kontrahena" HorizontalAlignment="Left" Margin="31,90,0,0" VerticalAlignment="Top" Width="130" Height="36" Click="button_kontrahent_Click"/>
+        <Button x:Name="button_porownanie_sprzedazy" Content="Porownanie sprzedazy &#xD;&#xA;   dwoch produktow" HorizontalAlignment="Left" Margin="31,131,0,0" VerticalAlignment="Top" Width="130" Height="36" Click="button_porownanie_sprzedazy_Click"/>
+        <Button x:Name="button_porownanie_zysku" Content="Porownanie zysku na &#xA;  dwoch produktach" HorizontalAlignment="Left" Margin="31,172,0,0" VerticalAlignment="Top" Width="130" Height="36" Click="button_porownanie_zysku_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="IE_Faktury.SprzedazOgolna"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IE_Faktury"
+        mc:Ignorable="d"
+        Title="SprzedazOgolna" Height="389.2" Width="465.2">
+    <Grid>
+        <DatePicker x:Name="dataPocz" HorizontalAlignment="Left" Margin="263,11,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dataKon" HorizontalAlignment="Left" Margin="263,49,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Wybierz date poczatkowa:" HorizontalAlignment="Left" Margin="101,10,0,0" VerticalAlignment="Top" Width="157" Height="24"/>
+        <Label x:Name="label1" Content="Wybierz date koncowa:" HorizontalAlignment="Left" Margin="101,47,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_pokaz" Content="Pokaz Statystyki" HorizontalAlignment="Left" Margin="182,151,0,0" VerticalAlignment="Top" Width="100" Height="24" Click="button_pokaz_Click"/>
+        <RadioButton x:Name="radioButton_przychod" Content="Przychod" HorizontalAlignment="Left" Margin="111,87,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton_zysk" Content="Zysk" HorizontalAlignment="Left" Margin="263,122,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="radioButton_iloscProd" Content="Ilosc produktow" HorizontalAlignment="Left" Margin="111,122,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton_koszty" Content="Koszty" HorizontalAlignment="Left" Margin="263,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_srednia" HorizontalAlignment="Left" Height="23" Margin="114,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
+        <Label x:Name="label_srednia" Content="Srednia:" HorizontalAlignment="Left" Margin="25,194,0,0" VerticalAlignment="Top" Height="23" Width="104"/>
+        <Label x:Name="label_mediana" Content="Mediana:" HorizontalAlignment="Left" Margin="25,222,0,0" VerticalAlignment="Top" Width="59"/>
+        <TextBox x:Name="textBox_mediana" HorizontalAlignment="Left" Height="23" Margin="114,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
+        <Label x:Name="label_q1" Content="Dolny kwartyl:" HorizontalAlignment="Left" Margin="25,280,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox x:Name="textBox_q1" HorizontalAlignment="Left" Height="23" Margin="114,280,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
+        <Label x:Name="label_q2" Content="Gorny kwartyl:" HorizontalAlignment="Left" Margin="23,308,0,0" VerticalAlignment="Top" Width="86"/>
+        <TextBox x:Name="textBox_q2" HorizontalAlignment="Left" Height="23" Margin="114,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
+        <Label x:Name="label_min" Content="Minimum:" HorizontalAlignment="Left" Margin="247,194,0,0" VerticalAlignment="Top" Height="23" Width="104"/>
+        <Label x:Name="label_max" Content="Maksimum:" HorizontalAlignment="Left" Margin="247,222,0,0" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="textBox_min" HorizontalAlignment="Left" Height="23" Margin="338,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
+        <TextBox x:Name="textBox_max" HorizontalAlignment="Left" Height="23" Margin="338,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
+        <Label x:Name="label_kurtoza" Content="Kurtoza:" HorizontalAlignment="Left" Margin="247,250,0,0" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="textBox_kurtoza" HorizontalAlignment="Left" Height="23" Margin="338,252,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
+        <Label x:Name="label_skosnosc" Content="Skosnosc:" HorizontalAlignment="Left" Margin="247,280,0,0" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="textBox_skosnosc" HorizontalAlignment="Left" Height="23" Margin="338,280,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
+        <TextBox x:Name="textBox_standardowe" HorizontalAlignment="Left" Height="23" Margin="114,252,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
+        <Label x:Name="label_standardowe" Content="Od. Stand:" HorizontalAlignment="Left" Margin="25,250,0,0" VerticalAlignment="Top" Width="84"/>
+
+    </Grid>
+</Window>

@@ -120,6 +120,15 @@ namespace IE_Faktury
         {
             return (this.Nazwa);
         }
+        public string wyswietl()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(this.Nazwa);
+            sb.AppendLine(this.Ulica);
+            sb.AppendLine(this.KodPocztowy +" "+this.Miasto);
+            sb.AppendLine("NIP: " + this.Nip);
+            return sb.ToString();
+        }
 
         public bool validateNazwa(string n)
         {

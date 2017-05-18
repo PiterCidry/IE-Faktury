@@ -9,7 +9,7 @@
       <Ulica>Szymały 12</Ulica>
       <Miasto>Radzionków</Miasto>
       <KodPocztowy>41-922</KodPocztowy>
-      <LiczbaTransakcji>21</LiczbaTransakcji>
+      <LiczbaTransakcji>28</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -20,7 +20,7 @@
       <Ulica>Kwiatowa 15</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>92-912</KodPocztowy>
-      <LiczbaTransakcji>7</LiczbaTransakcji>
+      <LiczbaTransakcji>9</LiczbaTransakcji>
       <Rabat>0.9</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -31,7 +31,7 @@
       <Ulica>Szeroka 15</Ulica>
       <Miasto>Wrocław</Miasto>
       <KodPocztowy>11-111</KodPocztowy>
-      <LiczbaTransakcji>24</LiczbaTransakcji>
+      <LiczbaTransakcji>27</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -42,8 +42,8 @@
       <Ulica>Wąska 12/5</Ulica>
       <Miasto>Gdańsk</Miasto>
       <KodPocztowy>25-212</KodPocztowy>
-      <LiczbaTransakcji>5</LiczbaTransakcji>
-      <Rabat>1</Rabat>
+      <LiczbaTransakcji>8</LiczbaTransakcji>
+      <Rabat>0.9</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
       <Imie>Krystyna</Imie>
@@ -53,7 +53,7 @@
       <Ulica>Jabłeczna 4</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>30-001</KodPocztowy>
-      <LiczbaTransakcji>1</LiczbaTransakcji>
+      <LiczbaTransakcji>2</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaFizyczna>
   </listaFizycznych>
@@ -64,7 +64,7 @@
       <Miasto>Kraków</Miasto>
       <KodPocztowy>30-102</KodPocztowy>
       <Nip>8819759685</Nip>
-      <LiczbaTransakcji>11</LiczbaTransakcji>
+      <LiczbaTransakcji>12</LiczbaTransakcji>
       <Rabat>0.85</Rabat>
     </OsobaPrawna>
     <OsobaPrawna>

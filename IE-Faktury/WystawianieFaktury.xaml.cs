@@ -34,6 +34,7 @@ namespace IE_Faktury
         Faktura faktura = new Faktura();
         BazaOdbiorcow bazaOdbiorcow = new BazaOdbiorcow();
         BazaFaktur bazaFaktur = new BazaFaktur();
+        public bool JestFizyczny;
 
         public WystawianieFaktury()
         {
@@ -149,6 +150,7 @@ namespace IE_Faktury
                 bazaOdbiorcow.ZmienFizyczna((OsobaFizyczna)comboBox_odbiorca.SelectedItem, os);
                 bazaOdbiorcow.ZapiszBaze();
                 faktura.OdbiorcaFizyczny = os;
+                JestFizyczny = true;
             }
             if (radioButton_prawny.IsChecked == true)
             {
@@ -158,6 +160,7 @@ namespace IE_Faktury
                 bazaOdbiorcow.ZmienPrawna((OsobaPrawna)comboBox_odbiorca.SelectedItem, os);
                 bazaOdbiorcow.ZapiszBaze();
                 faktura.OdbiorcaPrawny = os;
+                JestFizyczny = false;
             }
             faktura.podajRazem();
             /*  try

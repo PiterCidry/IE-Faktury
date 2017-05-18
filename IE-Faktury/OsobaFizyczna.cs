@@ -146,10 +146,22 @@ namespace IE_Faktury
             this.rabat = 0;
         }
 
+
         public override string ToString()
         {
-            return (this.Imie + " " + this.Nazwisko);
+           return (this.Imie + " " + this.Nazwisko);
+            
         }
+        
+        public string wyswietl()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(this.Imie + " " + this.Nazwisko);
+            sb.AppendLine(this.Ulica);
+            sb.AppendLine(this.KodPocztowy + " " + this.Miasto);
+            return sb.ToString();
+        }
+    
 
         public bool validateImie(string i)
         {

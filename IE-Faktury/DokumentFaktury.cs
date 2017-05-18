@@ -20,7 +20,7 @@ namespace IE_Faktury
     {
 
         Document document;
-
+        
         public DokumentFaktury()
         {
 
@@ -139,10 +139,12 @@ namespace IE_Faktury
             this.addressFrame.RelativeVertical = RelativeVertical.Page;
 
             // dane klienta
-            paragraph = this.addressFrame.AddParagraph(f.OdbiorcaFizyczny.ToString());
+            
+            paragraph = this.addressFrame.AddParagraph(f.OdbiorcaFizyczny.wyswietl());           
+            //paragraph = this.addressFrame.AddParagraph(f.OdbiorcaPrawny.wyswietl());
             // TODO: DODAC WSZYSTKIE DANE O KLIENCIE!
             paragraph.Format.Font.Name = "Times New Roman";
-            paragraph.Format.Font.Size = 7;
+            paragraph.Format.Font.Size = 15;
             paragraph.Format.SpaceAfter = 3;
 
             // miejscowosc/data
@@ -167,13 +169,13 @@ namespace IE_Faktury
             Column column = this.table.AddColumn("1cm");
             column.Format.Alignment = ParagraphAlignment.Center;
 
-            column = this.table.AddColumn("2.5cm");
+            column = this.table.AddColumn("5cm");
             column.Format.Alignment = ParagraphAlignment.Right;
 
             column = this.table.AddColumn("3cm");
             column.Format.Alignment = ParagraphAlignment.Right;
 
-            column = this.table.AddColumn("3.5cm");
+            column = this.table.AddColumn("2cm");
             column.Format.Alignment = ParagraphAlignment.Right;
 
             column = this.table.AddColumn("2cm");
@@ -183,8 +185,8 @@ namespace IE_Faktury
             column.Format.Alignment = ParagraphAlignment.Right;
 
             // nagłówki w tabeli produktów
-            Row row = table.AddRow();
-
+            
+/*
             row.HeadingFormat = true;
             row.Format.Alignment = ParagraphAlignment.Center;
             row.Format.Font.Bold = true;
@@ -201,13 +203,17 @@ namespace IE_Faktury
             row.Cells[5].Format.Alignment = ParagraphAlignment.Left;
             row.Cells[5].VerticalAlignment = VerticalAlignment.Bottom;
             row.Cells[5].MergeDown = 1;
+            */
 
-
-            row = table.AddRow();
+            Row row = table.AddRow();
             row.HeadingFormat = true;
             row.Format.Alignment = ParagraphAlignment.Center;
             row.Format.Font.Bold = true;
             row.Shading.Color = TableBlue;
+            row.Cells[0].AddParagraph("L.P.");
+            row.Cells[0].Format.Font.Bold = false;
+            row.Cells[0].Format.Alignment = ParagraphAlignment.Left;
+            row.Cells[0].VerticalAlignment = VerticalAlignment.Bottom;
             row.Cells[1].AddParagraph("Nazwa");
             row.Cells[1].Format.Alignment = ParagraphAlignment.Left;
             row.Cells[2].AddParagraph("Cena jednostkowa");
@@ -216,8 +222,54 @@ namespace IE_Faktury
             row.Cells[3].Format.Alignment = ParagraphAlignment.Left;
             row.Cells[4].AddParagraph("Ilosc");
             row.Cells[4].Format.Alignment = ParagraphAlignment.Left;
+            row.Cells[5].AddParagraph("Suma");
+            row.Cells[5].Format.Alignment = ParagraphAlignment.Left;
+            row.Cells[5].VerticalAlignment = VerticalAlignment.Bottom;
+            
+            int i = 0;
+            double suma1 = 0;
+            double suma2 = 0;
 
-
+            foreach (System.Collections.Generic.KeyValuePair<Produkt, int> kvp in f.Produkty)
+            {
+                i++;
+                suma1 = kvp.Key.CenaBrutto * 2;
+                suma2 = suma1++;
+                row = table.AddRow();
+                row.Format.Alignment = ParagraphAlignment.Center;
+                row.Format.Font.Bold = false;
+                row.Shading.Color = TableGray;
+                row.Cells[0].AddParagraph(i+".");
+                row.Cells[0].Format.Font.Bold = false;
+                row.Cells[0].Format.Alignment = ParagraphAlignment.Center;
+                row.Cells[0].VerticalAlignment = VerticalAlignment.Bottom;
+                row.Cells[1].AddParagraph(kvp.Key.Nazwa.ToString());
+                row.Cells[1].Format.Alignment = ParagraphAlignment.Center;
+                row.Cells[1].VerticalAlignment = VerticalAlignment.Bottom;
+                row.Cells[2].AddParagraph(kvp.Key.CenaBrutto.ToString());
+                row.Cells[2].Format.Alignment = ParagraphAlignment.Right;
+                row.Cells[2].VerticalAlignment = VerticalAlignment.Bottom;
+                row.Cells[3].AddParagraph(kvp.Key.StawkaPodatku.ToString());
+                row.Cells[3].Format.Alignment = ParagraphAlignment.Right;
+                row.Cells[3].VerticalAlignment = VerticalAlignment.Bottom;
+                row.Cells[4].AddParagraph();
+                row.Cells[4].Format.Alignment = ParagraphAlignment.Right;
+                row.Cells[4].VerticalAlignment = VerticalAlignment.Bottom;
+                row.Cells[5].AddParagraph(suma1.ToString());
+                row.Cells[5].Format.Alignment = ParagraphAlignment.Right;
+                row.Cells[5].VerticalAlignment = VerticalAlignment.Bottom;
+            }
+            
+            row = table.AddRow();
+            row.HeadingFormat = true;
+            row.Format.Alignment = ParagraphAlignment.Center;
+            row.Format.Font.Bold = true;
+            row.Shading.Color = TableBlue;
+            row.Cells[0].AddParagraph("Razem:");
+            row.Cells[0].Format.Alignment = ParagraphAlignment.Left;
+            row.Cells[0].MergeRight = 4;
+            row.Cells[5].AddParagraph(suma2.ToString());
+            row.Cells[5].Format.Alignment = ParagraphAlignment.Right;
         }
 
         /*/// <summary>

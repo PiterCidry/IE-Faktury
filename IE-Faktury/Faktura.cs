@@ -32,6 +32,7 @@ namespace IE_Faktury
         private Dictionary<Produkt, int> produkty;
         private List<IE_Faktury.KeyValuePair<Produkt, int>> produktyList;
         private double razem = 0.0;
+       
 
         public string NumerFaktury
         {

@@ -589,5 +589,39 @@
       </ProduktyList>
       <Razem>11.88</Razem>
     </Faktura>
+    <Faktura>
+      <NumerFaktury>13/2017</NumerFaktury>
+      <DataWystawienia>2017-05-18T00:00:00+02:00</DataWystawienia>
+      <OdbiorcaFizyczny>
+        <Imie>Jan</Imie>
+        <Nazwisko>Kowalski</Nazwisko>
+        <Pesel>80020700003</Pesel>
+        <DataUrodzenia>1980-02-07T00:00:00</DataUrodzenia>
+        <Ulica>Kwiatowa 15</Ulica>
+        <Miasto>Olsztyn</Miasto>
+        <KodPocztowy>92-912</KodPocztowy>
+        <LiczbaTransakcji>7</LiczbaTransakcji>
+        <Rabat>0.9</Rabat>
+      </OdbiorcaFizyczny>
+      <ProduktyList>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Sok pomarańczowy</Nazwa>
+            <CenaHurtownia>2.99</CenaHurtownia>
+            <CenaJednostkowa>4.32</CenaJednostkowa>
+            <StawkaPodatku>5</StawkaPodatku>
+            <CenaBrutto>4.5360000000000005</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-18T16:16:26.6559673+02:00</Key>
+                <Value>4.32</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>2</Value>
+        </KeyValuePairOfProduktInt32>
+      </ProduktyList>
+      <Razem>8.1648000000000014</Razem>
+    </Faktura>
   </listaFaktur>
 </BazaFaktur>

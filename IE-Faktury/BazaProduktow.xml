@@ -73,5 +73,18 @@
         </KeyValuePairOfDateTimeDouble>
       </ListaZmian>
     </Produkt>
+    <Produkt>
+      <Nazwa>Sok pomarańczowy</Nazwa>
+      <CenaHurtownia>2.99</CenaHurtownia>
+      <CenaJednostkowa>4.32</CenaJednostkowa>
+      <StawkaPodatku>5</StawkaPodatku>
+      <CenaBrutto>4.5360000000000005</CenaBrutto>
+      <ListaZmian>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-18T16:16:26.6559673+02:00</Key>
+          <Value>4.32</Value>
+        </KeyValuePairOfDateTimeDouble>
+      </ListaZmian>
+    </Produkt>
   </listaProduktow>
 </BazaProduktow>

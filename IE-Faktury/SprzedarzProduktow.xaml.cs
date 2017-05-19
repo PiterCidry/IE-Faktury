@@ -251,7 +251,6 @@ namespace IE_Faktury
             }
             else if (radioButton_iloscProd.IsChecked == true)
             {
-                
                 foreach (Faktura f in bazaFaktur.listaFaktur)
                 {
                     if (f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate && comboBox_produkt.SelectedItem != null)

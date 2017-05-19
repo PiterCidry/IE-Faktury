@@ -44,12 +44,14 @@ namespace IE_Faktury
 
         private void button_porownanie_sprzedazy_Click(object sender, RoutedEventArgs e)
         {
-
+            PorownanieSprzedazy porownanie = new PorownanieSprzedazy();
+            porownanie.ShowDialog();
         }
 
         private void button_porownanie_zysku_Click(object sender, RoutedEventArgs e)
         {
-
+            PorownanieZysku porownanie = new PorownanieZysku();
+            porownanie.ShowDialog();
         }
     }
 }

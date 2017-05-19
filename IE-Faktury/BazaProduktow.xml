@@ -86,5 +86,18 @@
         </KeyValuePairOfDateTimeDouble>
       </ListaZmian>
     </Produkt>
+    <Produkt>
+      <Nazwa>Kapusta kiszona</Nazwa>
+      <CenaHurtownia>1.4</CenaHurtownia>
+      <CenaJednostkowa>3.5</CenaJednostkowa>
+      <StawkaPodatku>23</StawkaPodatku>
+      <CenaBrutto>4.305</CenaBrutto>
+      <ListaZmian>
+        <KeyValuePairOfDateTimeDouble>
+          <Key>2017-05-19T19:53:15.4409824+02:00</Key>
+          <Value>3.5</Value>
+        </KeyValuePairOfDateTimeDouble>
+      </ListaZmian>
+    </Produkt>
   </listaProduktow>
 </BazaProduktow>

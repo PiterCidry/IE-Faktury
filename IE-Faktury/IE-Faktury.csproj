@@ -52,6 +52,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=3.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.19.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
       <Private>True</Private>
@@ -109,6 +113,12 @@
     <Compile Include="Fizyczny.xaml.cs">
       <DependentUpon>Fizyczny.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PorownanieSprzedazy.xaml.cs">
+      <DependentUpon>PorownanieSprzedazy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PorownanieZysku.xaml.cs">
+      <DependentUpon>PorownanieZysku.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Prawny.xaml.cs">
       <DependentUpon>Prawny.xaml</DependentUpon>
     </Compile>
@@ -155,6 +165,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PorownanieSprzedazy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PorownanieZysku.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Prawny.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

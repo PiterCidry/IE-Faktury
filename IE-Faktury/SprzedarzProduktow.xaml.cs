@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,20 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using StatDescriptive;
+using System.Diagnostics;
 
 namespace IE_Faktury
 {
     /// <summary>
-    /// Interaction logic for SprzedazOgolna.xaml
+    /// Interaction logic for SprzedarzProduktow.xaml
     /// </summary>
-    public partial class SprzedazOgolna : Window
+    public partial class SprzedarzProduktow : Window
     {
         private List<DateTime> daty = new List<DateTime>();
         private List<double> ceny = new List<double>();
+        private List<string> nazwyProduktow = new List<string>();
         private BazaFaktur bazaFaktur = new BazaFaktur();
         private Descriptive desc = new Descriptive();
 
-        public SprzedazOgolna()
+        public SprzedarzProduktow()
         {
             InitializeComponent();
             bazaFaktur = (BazaFaktur)bazaFaktur.OdczytajBaze();
@@ -34,11 +35,22 @@ namespace IE_Faktury
             {
                 daty.Add(f.DataWystawienia);
             }
+            foreach (Faktura f in bazaFaktur.listaFaktur)
+            {
+                foreach(var kvp in f.ProduktyList)
+                {
+                    if (!nazwyProduktow.Contains(kvp.Key.Nazwa))
+                    {
+                        nazwyProduktow.Add(kvp.Key.Nazwa);
+                    }
+                }
+            }
             daty.Sort();
             dataPocz.DisplayDateStart = daty.First();
             dataPocz.DisplayDateEnd = daty.Last();
             dataKon.DisplayDateStart = daty.First();
             dataKon.DisplayDateEnd = daty.Last();
+            comboBox_produkt.ItemsSource = nazwyProduktow;            
         }
 
         private void button_pokaz_Click(object sender, RoutedEventArgs e)
@@ -47,11 +59,25 @@ namespace IE_Faktury
             {
                 foreach (Faktura f in bazaFaktur.listaFaktur)
                 {
-                    if(f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate)
+                    if (f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate && comboBox_produkt.SelectedItem!=null)
                     {
-                        ceny.Add(f.Razem);
+                        foreach (var kvp in f.ProduktyList)
+                        {
+                            if (kvp.Key.Nazwa == comboBox_produkt.SelectedItem.ToString())
+                            {
+                                if (f.OdbiorcaFizyczny != null && f.OdbiorcaPrawny == null)
+                                {
+                                    ceny.Add(kvp.Key.CenaBrutto * kvp.Value * f.OdbiorcaFizyczny.Rabat);
+                                }
+                                else if (f.OdbiorcaPrawny != null && f.OdbiorcaFizyczny == null)
+                                {
+                                    ceny.Add(kvp.Key.CenaBrutto * kvp.Value * f.OdbiorcaPrawny.Rabat);
+                                }
+                            }
+                        }
                     }
                 }
+                ceny = ceny.Where(x => x != 0).ToList();
                 desc = new Descriptive(ceny.ToArray());
                 try
                 {
@@ -78,7 +104,7 @@ namespace IE_Faktury
                 }
                 catch (System.IndexOutOfRangeException)
                 {
-                    MessageBox.Show("Brak faktur wystawionych w wybranym okresie!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Brak faktur wystawionych w wybranym okresie dla wybranego produktu!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                     textBox_srednia.Text = "";
                     textBox_mediana.Text = "";
                     textBox_q1.Text = "";
@@ -96,16 +122,20 @@ namespace IE_Faktury
             {
                 foreach (Faktura f in bazaFaktur.listaFaktur)
                 {
-                    if (f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate)
+                    if (f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate && comboBox_produkt.SelectedItem != null)
                     {
                         double kosztFaktury = 0;
                         foreach (var kvp in f.ProduktyList)
                         {
-                            kosztFaktury += kvp.Key.CenaHurtownia * kvp.Value;
+                            if(kvp.Key.Nazwa == comboBox_produkt.SelectedItem.ToString())
+                            {
+                                kosztFaktury += kvp.Key.CenaHurtownia * kvp.Value;
+                            }
                         }
                         ceny.Add(kosztFaktury);
                     }
                 }
+                ceny = ceny.Where(x => x != 0).ToList();
                 desc = new Descriptive(ceny.ToArray());
                 try
                 {
@@ -132,7 +162,7 @@ namespace IE_Faktury
                 }
                 catch (System.IndexOutOfRangeException)
                 {
-                    MessageBox.Show("Brak faktur wystawionych w wybranym okresie!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Brak faktur wystawionych w wybranym okresie dla wybranego produktu!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                     textBox_srednia.Text = "";
                     textBox_mediana.Text = "";
                     textBox_q1.Text = "";
@@ -150,28 +180,35 @@ namespace IE_Faktury
             {
                 foreach (Faktura f in bazaFaktur.listaFaktur)
                 {
-                    if (f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate)
+                    if (f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate && comboBox_produkt.SelectedItem != null)
                     {
-                        if(f.OdbiorcaFizyczny != null && f.OdbiorcaPrawny == null)
+                        if (f.OdbiorcaFizyczny != null && f.OdbiorcaPrawny == null)
                         {
                             double zyskFaktury = 0;
                             foreach (var kvp in f.ProduktyList)
                             {
-                                zyskFaktury += (kvp.Key.CenaBrutto * f.OdbiorcaFizyczny.Rabat * kvp.Value) - (kvp.Key.CenaHurtownia * kvp.Value);
+                                if(kvp.Key.Nazwa == comboBox_produkt.SelectedItem.ToString())
+                                {
+                                    zyskFaktury += (kvp.Key.CenaBrutto * f.OdbiorcaFizyczny.Rabat * kvp.Value) - (kvp.Key.CenaHurtownia * kvp.Value);
+                                }    
                             }
                             ceny.Add(zyskFaktury);
                         }
-                        else if(f.OdbiorcaPrawny != null && f.OdbiorcaFizyczny == null)
+                        else if (f.OdbiorcaPrawny != null && f.OdbiorcaFizyczny == null)
                         {
                             double zyskFaktury = 0;
                             foreach (var kvp in f.ProduktyList)
                             {
-                                zyskFaktury += (kvp.Key.CenaBrutto * f.OdbiorcaPrawny.Rabat * kvp.Value) - (kvp.Key.CenaHurtownia * kvp.Value);
+                                if(kvp.Key.Nazwa == comboBox_produkt.SelectedItem.ToString())
+                                {
+                                    zyskFaktury += (kvp.Key.CenaBrutto * f.OdbiorcaPrawny.Rabat * kvp.Value) - (kvp.Key.CenaHurtownia * kvp.Value);
+                                }           
                             }
                             ceny.Add(zyskFaktury);
                         }
                     }
                 }
+                ceny = ceny.Where(x => x != 0).ToList();
                 desc = new Descriptive(ceny.ToArray());
                 try
                 {
@@ -198,7 +235,7 @@ namespace IE_Faktury
                 }
                 catch (System.IndexOutOfRangeException)
                 {
-                    MessageBox.Show("Brak faktur wystawionych w wybranym okresie!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Brak faktur wystawionych w wybranym okresie dla wybranego produktu!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                     textBox_srednia.Text = "";
                     textBox_mediana.Text = "";
                     textBox_q1.Text = "";
@@ -214,18 +251,23 @@ namespace IE_Faktury
             }
             else if (radioButton_iloscProd.IsChecked == true)
             {
+                
                 foreach (Faktura f in bazaFaktur.listaFaktur)
                 {
-                    if (f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate)
+                    if (f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate && comboBox_produkt.SelectedItem != null)
                     {
                         int ilosc = 0;
                         foreach (var item in f.ProduktyList)
                         {
-                            ilosc += item.Value;
+                            if (item.Key.Nazwa == comboBox_produkt.SelectedItem.ToString())
+                            {
+                                ilosc += item.Value;
+                            }
                         }
                         ceny.Add(ilosc);
                     }
                 }
+                ceny = ceny.Where(x => x != 0).ToList();
                 desc = new Descriptive(ceny.ToArray());
                 try
                 {
@@ -252,7 +294,7 @@ namespace IE_Faktury
                 }
                 catch (System.IndexOutOfRangeException)
                 {
-                    MessageBox.Show("Brak faktur wystawionych w wybranym okresie!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Brak faktur wystawionych w wybranym okresie dla wybranego produktu!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                     textBox_srednia.Text = "";
                     textBox_mediana.Text = "";
                     textBox_q1.Text = "";

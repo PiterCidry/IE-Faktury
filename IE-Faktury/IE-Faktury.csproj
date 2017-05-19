@@ -115,6 +115,12 @@
     <Compile Include="ProduktWindow.xaml.cs">
       <DependentUpon>ProduktWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SprzedarzKontrahent.xaml.cs">
+      <DependentUpon>SprzedarzKontrahent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SprzedarzProduktow.xaml.cs">
+      <DependentUpon>SprzedarzProduktow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SprzedazOgolna.xaml.cs">
       <DependentUpon>SprzedazOgolna.xaml</DependentUpon>
     </Compile>
@@ -154,6 +160,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProduktWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SprzedarzKontrahent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SprzedarzProduktow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

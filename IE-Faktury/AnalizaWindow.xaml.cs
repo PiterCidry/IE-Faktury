@@ -32,12 +32,14 @@ namespace IE_Faktury
 
         private void button_produkt_Click(object sender, RoutedEventArgs e)
         {
-
+            SprzedarzProduktow sprzedarz = new SprzedarzProduktow();
+            sprzedarz.ShowDialog();
         }
 
         private void button_kontrahent_Click(object sender, RoutedEventArgs e)
         {
-
+            SprzedarzKontrahent sprzedarz = new SprzedarzKontrahent();
+            sprzedarz.ShowDialog();
         }
 
         private void button_porownanie_sprzedazy_Click(object sender, RoutedEventArgs e)

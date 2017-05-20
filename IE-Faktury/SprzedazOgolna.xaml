@@ -6,34 +6,46 @@
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
         Title="SprzedazOgolna" Height="389.2" Width="465.2">
-    <Grid>
-        <DatePicker x:Name="dataPocz" HorizontalAlignment="Left" Margin="263,11,0,0" VerticalAlignment="Top"/>
-        <DatePicker x:Name="dataKon" HorizontalAlignment="Left" Margin="263,49,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label" Content="Wybierz date poczatkowa:" HorizontalAlignment="Left" Margin="101,10,0,0" VerticalAlignment="Top" Width="157" Height="24"/>
-        <Label x:Name="label1" Content="Wybierz date koncowa:" HorizontalAlignment="Left" Margin="101,47,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button_pokaz" Content="Pokaz Statystyki" HorizontalAlignment="Left" Margin="182,151,0,0" VerticalAlignment="Top" Width="100" Height="24" Click="button_pokaz_Click"/>
-        <RadioButton x:Name="radioButton_przychod" Content="Przychod" HorizontalAlignment="Left" Margin="111,87,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton_zysk" Content="Zysk" HorizontalAlignment="Left" Margin="263,122,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <RadioButton x:Name="radioButton_iloscProd" Content="Ilosc produktow" HorizontalAlignment="Left" Margin="111,122,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton_koszty" Content="Koszty" HorizontalAlignment="Left" Margin="263,90,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox_srednia" HorizontalAlignment="Left" Height="23" Margin="114,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
-        <Label x:Name="label_srednia" Content="Srednia:" HorizontalAlignment="Left" Margin="25,194,0,0" VerticalAlignment="Top" Height="23" Width="104"/>
-        <Label x:Name="label_mediana" Content="Mediana:" HorizontalAlignment="Left" Margin="25,222,0,0" VerticalAlignment="Top" Width="59"/>
-        <TextBox x:Name="textBox_mediana" HorizontalAlignment="Left" Height="23" Margin="114,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
-        <Label x:Name="label_q1" Content="Dolny kwartyl:" HorizontalAlignment="Left" Margin="25,280,0,0" VerticalAlignment="Top" Width="104"/>
-        <TextBox x:Name="textBox_q1" HorizontalAlignment="Left" Height="23" Margin="114,280,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
-        <Label x:Name="label_q2" Content="Gorny kwartyl:" HorizontalAlignment="Left" Margin="23,308,0,0" VerticalAlignment="Top" Width="86"/>
-        <TextBox x:Name="textBox_q2" HorizontalAlignment="Left" Height="23" Margin="114,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
-        <Label x:Name="label_min" Content="Minimum:" HorizontalAlignment="Left" Margin="247,194,0,0" VerticalAlignment="Top" Height="23" Width="104"/>
-        <Label x:Name="label_max" Content="Maksimum:" HorizontalAlignment="Left" Margin="247,222,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="textBox_min" HorizontalAlignment="Left" Height="23" Margin="338,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
-        <TextBox x:Name="textBox_max" HorizontalAlignment="Left" Height="23" Margin="338,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
-        <Label x:Name="label_kurtoza" Content="Kurtoza:" HorizontalAlignment="Left" Margin="247,250,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="textBox_kurtoza" HorizontalAlignment="Left" Height="23" Margin="338,252,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
-        <Label x:Name="label_skosnosc" Content="Skosnosc:" HorizontalAlignment="Left" Margin="247,280,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="textBox_skosnosc" HorizontalAlignment="Left" Height="23" Margin="338,280,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
-        <TextBox x:Name="textBox_standardowe" HorizontalAlignment="Left" Height="23" Margin="114,252,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
-        <Label x:Name="label_standardowe" Content="Od. Stand:" HorizontalAlignment="Left" Margin="25,250,0,0" VerticalAlignment="Top" Width="84"/>
+    <Window.Resources>
+        <Style x:Key="t" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Grid Style="{DynamicResource t}">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF26839E" Offset="0.968"/>
+                <GradientStop Color="White" Offset="0.008"/>
+                <GradientStop Color="#FF7BCCE4" Offset="0.656"/>
+                <GradientStop Color="#FFE3EEF1" Offset="0.216"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <DatePicker x:Name="dataPocz" HorizontalAlignment="Left" Margin="263,11,0,0" VerticalAlignment="Top" FontFamily="Lucida Console" />
+        <DatePicker x:Name="dataKon" HorizontalAlignment="Left" Margin="263,49,0,0" VerticalAlignment="Top" FontFamily="Lucida Console" />
+        <Label x:Name="label" Content="Wybierz date poczatkowa:" HorizontalAlignment="Left" Margin="81,11,0,0" VerticalAlignment="Top" Width="177" Height="24" FontFamily="Lucida Console" />
+        <Label x:Name="label1" Content="Wybierz date koncowa:" HorizontalAlignment="Left" Margin="81,48,0,0" VerticalAlignment="Top" FontFamily="Lucida Console" />
+        <Button x:Name="button_pokaz" Content="Pokaz Statystyki" HorizontalAlignment="Left" Margin="172,151,0,0" VerticalAlignment="Top" Width="123" Height="24" Click="button_pokaz_Click" FontFamily="Lucida Console" Background="{x:Null}" />
+        <RadioButton x:Name="radioButton_przychod" Content="Przychod" HorizontalAlignment="Left" Margin="111,87,0,0" VerticalAlignment="Top" FontFamily="Lucida Console" />
+        <RadioButton x:Name="radioButton_zysk" Content="Zysk" HorizontalAlignment="Left" Margin="263,122,0,0" VerticalAlignment="Top" IsChecked="True" FontFamily="Lucida Console" />
+        <RadioButton x:Name="radioButton_iloscProd" Content="Ilosc produktow" HorizontalAlignment="Left" Margin="111,122,0,0" VerticalAlignment="Top" FontFamily="Lucida Console" />
+        <RadioButton x:Name="radioButton_koszty" Content="Koszty" HorizontalAlignment="Left" Margin="263,90,0,0" VerticalAlignment="Top" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_srednia" HorizontalAlignment="Left" Height="23" Margin="129,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False" FontFamily="Lucida Console" />
+        <Label x:Name="label_srednia" Content="Srednia:" HorizontalAlignment="Left" Margin="25,194,0,0" VerticalAlignment="Top" Height="23" Width="104" FontFamily="Lucida Console" />
+        <Label x:Name="label_mediana" Content="Mediana:" HorizontalAlignment="Left" Margin="25,222,0,0" VerticalAlignment="Top" Width="59" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_mediana" HorizontalAlignment="Left" Height="23" Margin="129,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False" FontFamily="Lucida Console" />
+        <Label x:Name="label_q1" Content="Dolny kwartyl:" HorizontalAlignment="Left" Margin="25,280,0,0" VerticalAlignment="Top" Width="104" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_q1" HorizontalAlignment="Left" Height="23" Margin="129,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False" FontFamily="Lucida Console" />
+        <Label x:Name="label_q2" Content="Gorny kwartyl:" HorizontalAlignment="Left" Margin="23,308,0,0" VerticalAlignment="Top" Width="86" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_q2" HorizontalAlignment="Left" Height="23" Margin="129,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False" FontFamily="Lucida Console" />
+        <Label x:Name="label_min" Content="Minimum:" HorizontalAlignment="Left" Margin="247,194,0,0" VerticalAlignment="Top" Height="23" Width="104" FontFamily="Lucida Console" />
+        <Label x:Name="label_max" Content="Maksimum:" HorizontalAlignment="Left" Margin="247,222,0,0" VerticalAlignment="Top" Width="70" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_min" HorizontalAlignment="Left" Height="23" Margin="338,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_max" HorizontalAlignment="Left" Height="23" Margin="338,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False" FontFamily="Lucida Console" />
+        <Label x:Name="label_kurtoza" Content="Kurtoza:" HorizontalAlignment="Left" Margin="247,250,0,0" VerticalAlignment="Top" Width="70" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_kurtoza" HorizontalAlignment="Left" Height="23" Margin="338,252,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False" FontFamily="Lucida Console" />
+        <Label x:Name="label_skosnosc" Content="Skosnosc:" HorizontalAlignment="Left" Margin="247,280,0,0" VerticalAlignment="Top" Width="70" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_skosnosc" HorizontalAlignment="Left" Height="23" Margin="338,280,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_standardowe" HorizontalAlignment="Left" Height="23" Margin="129,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False" FontFamily="Lucida Console" />
+        <Label x:Name="label_standardowe" Content="Od. Stand:" HorizontalAlignment="Left" Margin="25,250,0,0" VerticalAlignment="Top" Width="84" FontFamily="Lucida Console" />
 
     </Grid>
 </Window>

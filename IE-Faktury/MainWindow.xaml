@@ -6,10 +6,22 @@
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
         Title="MainWindow" Height="205.2" Width="525">
-    <Grid>
-        <Label x:Name="main_label" Content="Program do tworzenia i analizy faktur" HorizontalAlignment="Center" Height="34" Margin="89,43,77.4,0" VerticalAlignment="Top" Width="352" FontFamily="Segoe UI Black" FontSize="18"/>
-        <Button x:Name="button_wystaw" Content="Wystaw fakture" HorizontalAlignment="Left" Margin="49,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_wystaw_Click"/>
-        <Button x:Name="button_produkty" Content="Produkty" HorizontalAlignment="Left" Margin="207,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_produkty_Click"/>
-        <Button x:Name="button_analiza" Content="Analiza" HorizontalAlignment="Left" Margin="363,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_analiza_Click"/>
+    <Window.Resources>
+        <Style x:Key="t" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Grid Style="{DynamicResource t}">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF26839E" Offset="0.968"/>
+                <GradientStop Color="White" Offset="0.008"/>
+                <GradientStop Color="#FF7BCCE4" Offset="0.656"/>
+                <GradientStop Color="#FFE3EEF1" Offset="0.216"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label x:Name="main_label" Content="Program do tworzenia i analizy faktur" HorizontalAlignment="Center" Height="34" Margin="49,43,46,0" VerticalAlignment="Top" Width="422" FontFamily="Lucida Console"  FontSize="18"/>
+        <Button x:Name="button_wystaw" Content="Wystaw fakture" HorizontalAlignment="Left" Margin="49,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_wystaw_Click" Background="{x:Null}" FontFamily="Lucida Console" />
+        <Button x:Name="button_produkty" Content="Produkty" HorizontalAlignment="Left" Margin="207,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_produkty_Click" Background="{x:Null}" FontFamily="Lucida Console" />
+        <Button x:Name="button_analiza" Content="Analiza" HorizontalAlignment="Left" Margin="363,122,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="button_analiza_Click" Background="{x:Null}" FontFamily="Lucida Console" />
     </Grid>
 </Window>

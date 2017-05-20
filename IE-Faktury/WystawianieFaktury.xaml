@@ -6,19 +6,30 @@
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
         Title="WystawianieFaktury" Height="550.2" Width="465.4">
-    <Grid>
+    <Window.Resources>
+        <Style x:Key="t" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Grid Style="{DynamicResource t}">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF26839E" Offset="0.968"/>
+                <GradientStop Color="White" Offset="0.008"/>
+                <GradientStop Color="#FF7BCCE4" Offset="0.656"/>
+                <GradientStop Color="#FFE3EEF1" Offset="0.216"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="main_label" Content="Wprowadz dane faktury:" HorizontalAlignment="Left" Margin="33,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="18" Height="34" Width="229"/>
-        <Label x:Name="label_nr" Content="Numer:" HorizontalAlignment="Left" Margin="23,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.714,0.516" Height="26" Width="49"/>
-        <TextBox x:Name="textBox_nr" HorizontalAlignment="Left" Height="23" Margin="143,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="label_data" Content="Data wystawienia:" HorizontalAlignment="Left" Margin="23,87,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.161,0.203" Height="26" Width="104"/>
-        <TextBox x:Name="textBox_data" HorizontalAlignment="Left" Height="23" Margin="143,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="label_produkty" Content="Produkty:" HorizontalAlignment="Left" Margin="23,202,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
-        <Button x:Name="button_dodajProd" Content="Dodaj" HorizontalAlignment="Left" Margin="23,249,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajProd_Click" Height="20"/>
-        <DataGrid x:Name="dataGrid_produkty" HorizontalAlignment="Left" Margin="173,202,0,0" VerticalAlignment="Top" Height="174" Width="276" AutoGenerateColumns="False" ColumnWidth="SizeToCells">
+        <Label x:Name="main_label" Content="Wprowadz dane faktury:" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" FontFamily="Lucida Console" FontSize="18" Height="34" Width="255" FontWeight="Bold"/>
+        <Label x:Name="label_nr" Content="Numer:" HorizontalAlignment="Left" Margin="23,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.714,0.516" Height="26" Width="49" FontFamily="Lucida Console"/>
+        <TextBox x:Name="textBox_nr" HorizontalAlignment="Left" Height="23" Margin="143,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" IsEnabled="False" Background="{x:Null}" FontFamily="Lucida Console"/>
+        <Label x:Name="label_data" Content="Data wystawienia:" HorizontalAlignment="Left" Margin="23,91,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.161,0.203" Height="26" Width="104" FontFamily="Lucida Console"/>
+        <TextBox x:Name="textBox_data" HorizontalAlignment="Left" Height="23" Margin="143,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" IsEnabled="False" Background="{x:Null}" FontFamily="Lucida Console"/>
+        <Label x:Name="label_produkty" Content="Produkty:" HorizontalAlignment="Left" Margin="23,211,0,0" VerticalAlignment="Top" Height="26" Width="60" FontFamily="Lucida Console"/>
+        <Button x:Name="button_dodajProd" Content="Dodaj" HorizontalAlignment="Left" Margin="23,249,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajProd_Click" Height="20" FontFamily="Lucida Console" Background="{x:Null}"/>
+        <DataGrid x:Name="dataGrid_produkty" HorizontalAlignment="Left" Margin="173,211,0,0" VerticalAlignment="Top" Height="165" Width="276" AutoGenerateColumns="False" ColumnWidth="SizeToCells" FontFamily="Lucida Console" Background="{x:Null}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nazwa" MinWidth="50" IsReadOnly="True" Binding="{Binding Key.Nazwa}"/>
                 <DataGridTextColumn Header="C. Jedn." MinWidth="50" IsReadOnly="True" Binding="{Binding Key.CenaJednostkowa}"/>
@@ -27,18 +38,18 @@
                 <DataGridTextColumn Header="Ilosc" MinWidth="50" IsReadOnly="True" Binding="{Binding Value}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="label_odbiorca" Content="Odbiorca:" HorizontalAlignment="Left" Margin="23,118,0,0" VerticalAlignment="Top" Width="104" Height="26"/>
-        <RadioButton x:Name="radioButton_fizyczny" Content="Fizyczny" HorizontalAlignment="Left" Margin="23,149,0,0" VerticalAlignment="Top" Height="15" Width="63" Checked="radioButton_fizyczny_Checked"/>
-        <RadioButton x:Name="radioButton_prawny" Content="Prawny" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top" Height="15" Width="56" Checked="radioButton_prawny_Checked"/>
-        <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,149,0,0" VerticalAlignment="Top" Width="120" Height="21" SelectionChanged="comboBox_odbiorca_SelectionChanged"/>
-        <Button x:Name="button_dodajOdbiorce" Content="Nowy" HorizontalAlignment="Left" Margin="281,150,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajOdbiorce_Click" Height="20"/>
-        <Button x:Name="button_utworz" Content="Utwórz fakturę" HorizontalAlignment="Left" Height="19" Margin="143,483,0,0" VerticalAlignment="Top" Width="165" Click="button_utworz_Click"/>
-        <Button x:Name="button_sprawdz" Content="Sprawdź dane" HorizontalAlignment="Left" Margin="143,446,0,0" VerticalAlignment="Top" Width="165" Click="button_sprawdz_Click"/>
-        <Button x:Name="button_zmienProd" Content="Zmień" HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="75" Click="button_zmienProd_Click"/>
-        <Button x:Name="button_usunProd" Content="Usuń" HorizontalAlignment="Left" Margin="23,298,0,0" VerticalAlignment="Top" Width="75" Click="button_usunProd_Click"/>
-        <Label x:Name="label_rabat" Content="Rabat:" HorizontalAlignment="Left" Margin="173,391,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox_rabat" HorizontalAlignment="Left" Height="26" Margin="222,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
-        <Label x:Name="label_razem" Content="Razem:" HorizontalAlignment="Left" Margin="336,391,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox_razem" HorizontalAlignment="Left" Height="26" Margin="399,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
+        <Label x:Name="label_odbiorca" Content="Odbiorca:" HorizontalAlignment="Left" Margin="23,123,0,0" VerticalAlignment="Top" Width="104" Height="26" FontFamily="Lucida Console"/>
+        <RadioButton x:Name="radioButton_fizyczny" Content="Fizyczny" HorizontalAlignment="Left" Margin="23,154,0,0" VerticalAlignment="Top" Height="15" Width="82" Checked="radioButton_fizyczny_Checked" FontFamily="Lucida Console"/>
+        <RadioButton x:Name="radioButton_prawny" Content="Prawny" HorizontalAlignment="Left" Margin="23,174,0,0" VerticalAlignment="Top" Height="15" Width="75" Checked="radioButton_prawny_Checked" FontFamily="Lucida Console"/>
+        <ComboBox x:Name="comboBox_odbiorca" HorizontalAlignment="Left" Margin="143,154,0,0" VerticalAlignment="Top" Width="129" Height="21" SelectionChanged="comboBox_odbiorca_SelectionChanged" Background="{x:Null}" FontFamily="Lucida Console"/>
+        <Button x:Name="button_dodajOdbiorce" Content="Nowy" HorizontalAlignment="Left" Margin="300,154,0,0" VerticalAlignment="Top" Width="75" Click="button_dodajOdbiorce_Click" Height="20" FontFamily="Lucida Console" Background="{x:Null}"/>
+        <Button x:Name="button_utworz" Content="Utwórz fakturę" HorizontalAlignment="Left" Height="19" Margin="143,483,0,0" VerticalAlignment="Top" Width="165" Click="button_utworz_Click" FontFamily="Lucida Console" Background="{x:Null}"/>
+        <Button x:Name="button_sprawdz" Content="Sprawdź dane" HorizontalAlignment="Left" Margin="143,446,0,0" VerticalAlignment="Top" Width="165" Click="button_sprawdz_Click" FontFamily="Lucida Console" Background="{x:Null}"/>
+        <Button x:Name="button_zmienProd" Content="Zmień" HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="75" Click="button_zmienProd_Click" FontFamily="Lucida Console" Height="19" Background="{x:Null}"/>
+        <Button x:Name="button_usunProd" Content="Usuń" HorizontalAlignment="Left" Margin="23,298,0,0" VerticalAlignment="Top" Width="75" Click="button_usunProd_Click" FontFamily="Lucida Console" Height="20" Background="{x:Null}"/>
+        <Label x:Name="label_rabat" Content="Rabat:" HorizontalAlignment="Left" Margin="173,391,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
+        <TextBox x:Name="textBox_rabat" HorizontalAlignment="Left" Height="26" Margin="222,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" IsEnabled="False" Background="{x:Null}" BorderBrush="#FF707070" FontFamily="Lucida Console"/>
+        <Label x:Name="label_razem" Content="Razem:" HorizontalAlignment="Left" Margin="336,391,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
+        <TextBox x:Name="textBox_razem" HorizontalAlignment="Left" Height="26" Margin="399,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" IsEnabled="False" Background="{x:Null}" BorderBrush="#FF707070" FontFamily="Lucida Console"/>
     </Grid>
 </Window>

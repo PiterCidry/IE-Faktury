@@ -6,15 +6,27 @@
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
         Title="PorownanieSprzedazy" Height="219.6" Width="331.2">
-    <Grid>
-        <DatePicker x:Name="dataPocz" HorizontalAlignment="Left" Margin="195,20,0,0" VerticalAlignment="Top"/>
-        <DatePicker x:Name="dataKon" HorizontalAlignment="Left" Margin="195,49,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_produkt1" Content="Wybierz pierwszy produkt:" HorizontalAlignment="Left" Margin="26,76,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_produkt2" Content="Wybierz drugi produkt:" HorizontalAlignment="Left" Margin="26,107,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_produkt1" HorizontalAlignment="Left" Margin="195,79,0,0" VerticalAlignment="Top" Width="102" Height="23"/>
-        <ComboBox x:Name="comboBox_produkt2" HorizontalAlignment="Left" Margin="195,107,0,0" VerticalAlignment="Top" Width="102" Height="23"/>
-        <Button x:Name="button_porownaj" Content="Porownaj" HorizontalAlignment="Left" Margin="129,153,0,0" VerticalAlignment="Top" Width="75" Click="button_porownaj_Click"/>
-        <Label x:Name="label_datapocz" Content="Wybierz date poczatkowa:" HorizontalAlignment="Left" Margin="26,18,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_datakon" Content="Wybierz date koncowa:" HorizontalAlignment="Left" Margin="26,47,0,0" VerticalAlignment="Top"/>
+    <Window.Resources>
+        <Style x:Key="t" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Grid Style="{DynamicResource t}">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF26839E" Offset="0.968"/>
+                <GradientStop Color="White" Offset="0.008"/>
+                <GradientStop Color="#FF7BCCE4" Offset="0.656"/>
+                <GradientStop Color="#FFE3EEF1" Offset="0.216"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <DatePicker x:Name="dataPocz" HorizontalAlignment="Left" Margin="195,20,0,0" VerticalAlignment="Top" FontFamily="Lucida Console" Background="{x:Null}"/>
+        <DatePicker x:Name="dataKon" HorizontalAlignment="Left" Margin="195,49,0,0" VerticalAlignment="Top" FontFamily="Lucida Console" Background="{x:Null}"/>
+        <Label x:Name="label_produkt1" Content="Wybierz pierwszy produkt:" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
+        <Label x:Name="label_produkt2" Content="Wybierz drugi produkt:" HorizontalAlignment="Left" Margin="11,107,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
+        <ComboBox x:Name="comboBox_produkt1" HorizontalAlignment="Left" Margin="195,79,0,0" VerticalAlignment="Top" Width="102" Height="23" FontFamily="Lucida Console"/>
+        <ComboBox x:Name="comboBox_produkt2" HorizontalAlignment="Left" Margin="195,107,0,0" VerticalAlignment="Top" Width="102" Height="23" FontFamily="Lucida Console" Background="{x:Null}"/>
+        <Button x:Name="button_porownaj" Content="Porownaj" HorizontalAlignment="Left" Margin="129,153,0,0" VerticalAlignment="Top" Width="75" Click="button_porownaj_Click" FontFamily="Lucida Console" Background="{x:Null}"/>
+        <Label x:Name="label_datapocz" Content="Wybierz date poczatkowa:" HorizontalAlignment="Left" Margin="11,20,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
+        <Label x:Name="label_datakon" Content="Wybierz date koncowa:" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
     </Grid>
 </Window>

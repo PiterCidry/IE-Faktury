@@ -56,6 +56,17 @@
       <LiczbaTransakcji>9</LiczbaTransakcji>
       <Rabat>0.9</Rabat>
     </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Joanna</Imie>
+      <Nazwisko>Jeziorek</Nazwisko>
+      <Pesel>97070900949</Pesel>
+      <DataUrodzenia>1997-07-09T00:00:00</DataUrodzenia>
+      <Ulica>Os Złota Podkowa 2/8</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>31-352</KodPocztowy>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
   </listaFizycznych>
   <listaPrawnych>
     <OsobaPrawna>

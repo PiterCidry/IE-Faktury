@@ -6,11 +6,23 @@
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
         Title="ZmianaProduktow" Height="299" Width="517.6">
-    <Grid>
-        <Button x:Name="button_dodaj" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="24,29,0,0" VerticalAlignment="Top" Width="90" Height="26" Click="button_dodaj_Click"/>
-        <Button x:Name="button_zmien" Content="Zmien Produkt" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top" Width="90" Height="24" Click="button_zmien_Click"/>
-        <Button x:Name="button_usun" Content="Usun Produkt" HorizontalAlignment="Left" Margin="24,110,0,0" VerticalAlignment="Top" Width="90" Height="24" Click="button_usun_Click"/>
-        <ListView x:Name="listView_produkty" HorizontalAlignment="Left" Height="187" Margin="159,29,0,0" VerticalAlignment="Top" Width="328">
+    <Window.Resources>
+        <Style x:Key="t" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Grid Style="{DynamicResource t}">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF26839E" Offset="0.968"/>
+                <GradientStop Color="White" Offset="0.008"/>
+                <GradientStop Color="#FF7BCCE4" Offset="0.656"/>
+                <GradientStop Color="#FFE3EEF1" Offset="0.216"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Button x:Name="button_dodaj" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="24,29,0,0" VerticalAlignment="Top" Width="101" Height="26" Click="button_dodaj_Click" Background="{x:Null}" FontFamily="Lucida Console" />
+        <Button x:Name="button_zmien" Content="Zmien Produkt" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top" Width="101" Height="24" Click="button_zmien_Click" Background="{x:Null}" FontFamily="Lucida Console" />
+        <Button x:Name="button_usun" Content="Usun Produkt" HorizontalAlignment="Left" Margin="24,110,0,0" VerticalAlignment="Top" Width="101" Height="24" Click="button_usun_Click" Background="{x:Null}" FontFamily="Lucida Console" />
+        <ListView x:Name="listView_produkty" HorizontalAlignment="Left" Height="187" Margin="159,29,0,0" VerticalAlignment="Top" Width="328" Background="{x:Null}" FontFamily="Lucida Console" >
             <ListView.View>
                 <GridView x:Name="GV1">
                     <GridViewColumn DisplayMemberBinding= "{Binding Path=Nazwa}" 
@@ -31,6 +43,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="button_gotowe" Content="Gotowe" HorizontalAlignment="Left" Margin="227,240,0,0" VerticalAlignment="Top" Width="75" Click="button_gotowe_Click"/>
+        <Button x:Name="button_gotowe" Content="Gotowe" HorizontalAlignment="Left" Margin="227,240,0,0" VerticalAlignment="Top" Width="75" Click="button_gotowe_Click" Background="{x:Null}" FontFamily="Lucida Console"/>
     </Grid>
 </Window>

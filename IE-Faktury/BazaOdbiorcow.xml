@@ -9,7 +9,7 @@
       <Ulica>Szymały 12</Ulica>
       <Miasto>Radzionków</Miasto>
       <KodPocztowy>41-922</KodPocztowy>
-      <LiczbaTransakcji>35</LiczbaTransakcji>
+      <LiczbaTransakcji>36</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -20,7 +20,7 @@
       <Ulica>Kwiatowa 15</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>92-912</KodPocztowy>
-      <LiczbaTransakcji>11</LiczbaTransakcji>
+      <LiczbaTransakcji>14</LiczbaTransakcji>
       <Rabat>0.85</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -31,7 +31,7 @@
       <Ulica>Szeroka 15</Ulica>
       <Miasto>Wrocław</Miasto>
       <KodPocztowy>11-111</KodPocztowy>
-      <LiczbaTransakcji>31</LiczbaTransakcji>
+      <LiczbaTransakcji>32</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -53,7 +53,7 @@
       <Ulica>Jabłeczna 4</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>30-001</KodPocztowy>
-      <LiczbaTransakcji>6</LiczbaTransakcji>
+      <LiczbaTransakcji>7</LiczbaTransakcji>
       <Rabat>0.9</Rabat>
     </OsobaFizyczna>
   </listaFizycznych>
@@ -64,7 +64,7 @@
       <Miasto>Kraków</Miasto>
       <KodPocztowy>30-102</KodPocztowy>
       <Nip>8819759685</Nip>
-      <LiczbaTransakcji>12</LiczbaTransakcji>
+      <LiczbaTransakcji>13</LiczbaTransakcji>
       <Rabat>0.85</Rabat>
     </OsobaPrawna>
     <OsobaPrawna>
@@ -73,8 +73,8 @@
       <Miasto>Katowice</Miasto>
       <KodPocztowy>12-345</KodPocztowy>
       <Nip>4411752086</Nip>
-      <LiczbaTransakcji>9</LiczbaTransakcji>
-      <Rabat>0.9</Rabat>
+      <LiczbaTransakcji>11</LiczbaTransakcji>
+      <Rabat>0.85</Rabat>
     </OsobaPrawna>
     <OsobaPrawna>
       <Nazwa>DS 11 Bonus</Nazwa>

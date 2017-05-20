@@ -20,6 +20,7 @@ namespace IE_Faktury
     {
 
         Document document;
+        double porabacie;
         
         public DokumentFaktury()
         {
@@ -139,8 +140,15 @@ namespace IE_Faktury
             this.addressFrame.RelativeVertical = RelativeVertical.Page;
 
             // dane klienta
-            
-            paragraph = this.addressFrame.AddParagraph(f.OdbiorcaFizyczny.wyswietl());           
+            if (f.OdbiorcaFizyczny != null)
+            {
+                paragraph = this.addressFrame.AddParagraph(f.OdbiorcaFizyczny.wyswietl());           
+            }
+            if (f.OdbiorcaPrawny != null)
+            {
+                paragraph = this.addressFrame.AddParagraph(f.OdbiorcaPrawny.wyswietl());
+            }
+            //paragraph = this.addressFrame.AddParagraph(f.OdbiorcaFizyczny.wyswietl());           
             //paragraph = this.addressFrame.AddParagraph(f.OdbiorcaPrawny.wyswietl());
             // TODO: DODAC WSZYSTKIE DANE O KLIENCIE!
             paragraph.Format.Font.Name = "Times New Roman";
@@ -216,7 +224,7 @@ namespace IE_Faktury
             row.Cells[0].VerticalAlignment = VerticalAlignment.Bottom;
             row.Cells[1].AddParagraph("Nazwa");
             row.Cells[1].Format.Alignment = ParagraphAlignment.Left;
-            row.Cells[2].AddParagraph("Cena jednostkowa");
+            row.Cells[2].AddParagraph("Cena jednostkowa brutto");
             row.Cells[2].Format.Alignment = ParagraphAlignment.Left;
             row.Cells[3].AddParagraph("Podatek (%)");
             row.Cells[3].Format.Alignment = ParagraphAlignment.Left;
@@ -233,7 +241,7 @@ namespace IE_Faktury
             foreach (System.Collections.Generic.KeyValuePair<Produkt, int> kvp in f.Produkty)
             {
                 i++;
-                suma1 = kvp.Key.CenaBrutto * 2;
+                suma1 = kvp.Key.CenaBrutto * kvp.Value;
                 suma2 = suma1++;
                 row = table.AddRow();
                 row.Format.Alignment = ParagraphAlignment.Center;
@@ -246,16 +254,16 @@ namespace IE_Faktury
                 row.Cells[1].AddParagraph(kvp.Key.Nazwa.ToString());
                 row.Cells[1].Format.Alignment = ParagraphAlignment.Center;
                 row.Cells[1].VerticalAlignment = VerticalAlignment.Bottom;
-                row.Cells[2].AddParagraph(kvp.Key.CenaBrutto.ToString());
+                row.Cells[2].AddParagraph(kvp.Key.CenaBrutto.ToString("F2", System.Globalization.CultureInfo.InvariantCulture));
                 row.Cells[2].Format.Alignment = ParagraphAlignment.Right;
                 row.Cells[2].VerticalAlignment = VerticalAlignment.Bottom;
                 row.Cells[3].AddParagraph(kvp.Key.StawkaPodatku.ToString());
                 row.Cells[3].Format.Alignment = ParagraphAlignment.Right;
                 row.Cells[3].VerticalAlignment = VerticalAlignment.Bottom;
-                row.Cells[4].AddParagraph();
+                row.Cells[4].AddParagraph(kvp.Value.ToString());
                 row.Cells[4].Format.Alignment = ParagraphAlignment.Right;
                 row.Cells[4].VerticalAlignment = VerticalAlignment.Bottom;
-                row.Cells[5].AddParagraph(suma1.ToString());
+                row.Cells[5].AddParagraph(suma1.ToString("F2", System.Globalization.CultureInfo.InvariantCulture));
                 row.Cells[5].Format.Alignment = ParagraphAlignment.Right;
                 row.Cells[5].VerticalAlignment = VerticalAlignment.Bottom;
             }
@@ -268,8 +276,36 @@ namespace IE_Faktury
             row.Cells[0].AddParagraph("Razem:");
             row.Cells[0].Format.Alignment = ParagraphAlignment.Left;
             row.Cells[0].MergeRight = 4;
-            row.Cells[5].AddParagraph(suma2.ToString());
+            row.Cells[5].AddParagraph(suma2.ToString("F2", System.Globalization.CultureInfo.InvariantCulture));
             row.Cells[5].Format.Alignment = ParagraphAlignment.Right;
+
+            
+            row = table.AddRow();
+            row.HeadingFormat = true;
+            row.Format.Alignment = ParagraphAlignment.Center;
+            row.Format.Font.Bold = true;
+            row.Shading.Color = TableBlue;
+            if (f.OdbiorcaFizyczny != null)
+            {
+                double rabatf = -(f.OdbiorcaFizyczny.Rabat*100-100);
+                porabacie = f.OdbiorcaFizyczny.Rabat*suma2;
+                row.Cells[0].AddParagraph("Rabat: " + rabatf.ToString()+"%");
+                row.Cells[0].Format.Alignment = ParagraphAlignment.Left;
+                row.Cells[0].MergeRight = 4;
+                row.Cells[5].AddParagraph(porabacie.ToString("F2", System.Globalization.CultureInfo.InvariantCulture));
+                row.Cells[5].Format.Alignment = ParagraphAlignment.Right;
+            }
+            if (f.OdbiorcaPrawny != null)
+            {
+                double rabatp = -(f.OdbiorcaPrawny.Rabat*100-100);
+                porabacie = f.OdbiorcaPrawny.Rabat * suma2;
+                row.Cells[0].AddParagraph("Rabat: " + rabatp.ToString()+"%");
+                row.Cells[0].Format.Alignment = ParagraphAlignment.Left;
+                row.Cells[0].MergeRight = 4;
+                row.Cells[5].AddParagraph(porabacie.ToString("F2", System.Globalization.CultureInfo.InvariantCulture));
+                row.Cells[5].Format.Alignment = ParagraphAlignment.Right;
+            }
+            
         }
 
         /*/// <summary>

@@ -4321,5 +4321,39 @@
       </ProduktyList>
       <Razem>9.7416</Razem>
     </Faktura>
+    <Faktura>
+      <NumerFaktury>38/2017</NumerFaktury>
+      <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
+      <OdbiorcaFizyczny>
+        <Imie>Joanna</Imie>
+        <Nazwisko>Jeziorek</Nazwisko>
+        <Pesel>97070900949</Pesel>
+        <DataUrodzenia>1997-07-09T00:00:00</DataUrodzenia>
+        <Ulica>Os Złota Podkowa 2/8</Ulica>
+        <Miasto>Kraków</Miasto>
+        <KodPocztowy>31-352</KodPocztowy>
+        <LiczbaTransakcji>1</LiczbaTransakcji>
+        <Rabat>1</Rabat>
+      </OdbiorcaFizyczny>
+      <ProduktyList>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Sok pomarańczowy</Nazwa>
+            <CenaHurtownia>2.99</CenaHurtownia>
+            <CenaJednostkowa>4.32</CenaJednostkowa>
+            <StawkaPodatku>5</StawkaPodatku>
+            <CenaBrutto>4.5360000000000005</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-18T16:16:26.6559673+02:00</Key>
+                <Value>4.32</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>2</Value>
+        </KeyValuePairOfProduktInt32>
+      </ProduktyList>
+      <Razem>9.072000000000001</Razem>
+    </Faktura>
   </listaFaktur>
 </BazaFaktur>

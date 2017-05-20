@@ -112,7 +112,7 @@ namespace IE_Faktury
             Section section = this.document.AddSection();
 
             // obrazek
-            Image image = section.Headers.Primary.AddImage("../../usmiech.jpg");
+            Image image = section.Headers.Primary.AddImage("../../faktura.png");
             image.Height = "2.5cm";
             image.LockAspectRatio = true;
             image.RelativeVertical = RelativeVertical.Line;
@@ -153,7 +153,7 @@ namespace IE_Faktury
             paragraph = section.AddParagraph();
             paragraph.Format.SpaceBefore = "8cm";
             paragraph.Style = "Reference";
-            paragraph.AddFormattedText("Faktura", TextFormat.Bold);
+            paragraph.AddFormattedText("Faktura nr "+f.NumerFaktury.ToString(),TextFormat.Bold);
             paragraph.AddTab();
             paragraph.AddText("Kraków, ");
             paragraph.AddDateField(f.DataWystawienia.ToString("dd-MM-yyyy"));

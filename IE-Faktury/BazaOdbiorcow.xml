@@ -9,7 +9,7 @@
       <Ulica>Szymały 12</Ulica>
       <Miasto>Radzionków</Miasto>
       <KodPocztowy>41-922</KodPocztowy>
-      <LiczbaTransakcji>36</LiczbaTransakcji>
+      <LiczbaTransakcji>45</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -20,8 +20,8 @@
       <Ulica>Kwiatowa 15</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>92-912</KodPocztowy>
-      <LiczbaTransakcji>14</LiczbaTransakcji>
-      <Rabat>0.85</Rabat>
+      <LiczbaTransakcji>17</LiczbaTransakcji>
+      <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
       <Imie>Anna</Imie>
@@ -31,7 +31,7 @@
       <Ulica>Szeroka 15</Ulica>
       <Miasto>Wrocław</Miasto>
       <KodPocztowy>11-111</KodPocztowy>
-      <LiczbaTransakcji>32</LiczbaTransakcji>
+      <LiczbaTransakcji>33</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -53,7 +53,7 @@
       <Ulica>Jabłeczna 4</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>30-001</KodPocztowy>
-      <LiczbaTransakcji>7</LiczbaTransakcji>
+      <LiczbaTransakcji>8</LiczbaTransakcji>
       <Rabat>0.9</Rabat>
     </OsobaFizyczna>
   </listaFizycznych>
@@ -64,8 +64,8 @@
       <Miasto>Kraków</Miasto>
       <KodPocztowy>30-102</KodPocztowy>
       <Nip>8819759685</Nip>
-      <LiczbaTransakcji>13</LiczbaTransakcji>
-      <Rabat>0.85</Rabat>
+      <LiczbaTransakcji>16</LiczbaTransakcji>
+      <Rabat>0.8</Rabat>
     </OsobaPrawna>
     <OsobaPrawna>
       <Nazwa>Uniwersytet Ekonomiczny</Nazwa>
@@ -73,7 +73,7 @@
       <Miasto>Katowice</Miasto>
       <KodPocztowy>12-345</KodPocztowy>
       <Nip>4411752086</Nip>
-      <LiczbaTransakcji>11</LiczbaTransakcji>
+      <LiczbaTransakcji>13</LiczbaTransakcji>
       <Rabat>0.85</Rabat>
     </OsobaPrawna>
     <OsobaPrawna>
@@ -82,7 +82,7 @@
       <Miasto>Kraków</Miasto>
       <KodPocztowy>30-072</KodPocztowy>
       <Nip>8712581799</Nip>
-      <LiczbaTransakcji>2</LiczbaTransakcji>
+      <LiczbaTransakcji>3</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaPrawna>
   </listaPrawnych>

@@ -163,97 +163,34 @@ namespace IE_Faktury
                
             }
             faktura.podajRazem();
-            /*  try
-              {
-                  // Create a invoice form with the sample invoice data
-                  Faktura invoice = new Faktura("../../invoice.xml");
-
-                  // Create a MigraDoc document
-                  Document document = invoice.CreateDocument();
-                  document.UseCmykColor = true;
-
-    #if DEBUG
-                  // for debugging only...
-                  MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
-                  document = MigraDoc.DocumentObjectModel.IO.DdlReader.DocumentFromFile("MigraDoc.mdddl");
-  #endif
-
-                  // Create a renderer for PDF that uses Unicode font encoding
-                  PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(true);
-
-                  // Set the MigraDoc document
-                  pdfRenderer.Document = document;
-
-                  // Create the PDF document
-                  pdfRenderer.RenderDocument();
-
-                  // Save the PDF document...
-                  string filename = "Invoice.pdf";
-  #if DEBUG
-                  // I don't want to close the document constantly...
-                  filename = "Invoice-" + Guid.NewGuid().ToString("N").ToUpper() + ".pdf";
-  #endif
-                  pdfRenderer.Save(filename);
-                  // ...and start a viewer.
-                  Process.Start(filename);
-
-              }
-              catch { }
-          }*/
-            /*  // Create a new PDF document
-              PdfDocument document = new PdfDocument();
-              document.Info.Title = "Created with PDFsharp";
-
-              // Create an empty page
-              PdfPage page = document.AddPage();
-
-              // Get an XGraphics object for drawing
-              XGraphics gfx = XGraphics.FromPdfPage(page);
-
-              // Create a font
-              XFont font = new XFont("Verdana", 10, XFontStyle.BoldItalic);
-
-              // Draw the text
-              gfx.DrawString("Data wystawienia: " + textBox_data.Text, font, XBrushes.Black,
-                new XRect(50, 10, page.Width, page.Height), XStringFormats.TopLeft);
-              gfx.DrawString("Numer faktury: " + textBox_nr.Text, font, XBrushes.Black,
-               new XRect(50, 30, page.Width, page.Height), XStringFormats.TopLeft);
-
-              gfx.DrawString("", font, XBrushes.Black,
-               new XRect(50, 50, page.Width, page.Height), XStringFormats.TopLeft);
-
-              // Save the document...
-              const string filename = "Faktura.pdf";
-              document.Save(filename);
-              // ...and start a viewer.
-              Process.Start(filename); }*/
+            
             DokumentFaktury invoice = new DokumentFaktury();
             Document document = invoice.CreateDocument(faktura);
             document.UseCmykColor = true;
 
 #if DEBUG
-            // for debugging only...
+            // debugging.
             MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
             document = MigraDoc.DocumentObjectModel.IO.DdlReader.DocumentFromFile("MigraDoc.mdddl");
 #endif
 
-            // Create a renderer for PDF that uses Unicode font encoding
+            // Utorzenie renderera
             PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(true);
 
-            // Set the MigraDoc document
+            // Podpięcie dokumentu
             pdfRenderer.Document = document;
 
-            // Create the PDF document
+            // Utworzenie dokumentu
             pdfRenderer.RenderDocument();
 
-            // Save the PDF document...
+            // Zapis faktury
             string filename = "Invoice.pdf";
 #if DEBUG
-            // I don't want to close the document constantly...
+            // Jeżeli nie chcemy od razu zamknąć dokumentu
             filename = "Invoice-" + Guid.NewGuid().ToString("N").ToUpper() + ".pdf";
 #endif
             pdfRenderer.Save(filename);
-            // ...and start a viewer.
+            // Podgląd faktury
             Process.Start(filename);
 
             foreach(System.Collections.Generic.KeyValuePair<Produkt, int> p in faktura.Produkty)

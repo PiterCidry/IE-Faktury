@@ -23,6 +23,7 @@ using MigraDoc.DocumentObjectModel;
 using MigraDoc.Rendering;
 using System.Xml;
 using System.ComponentModel;
+using Microsoft.Win32;
 
 namespace IE_Faktury
 {
@@ -59,7 +60,7 @@ namespace IE_Faktury
             WyborProduktow wybor = new WyborProduktow(faktura);
             wybor.ShowDialog();
             dataGrid_produkty.Items.Refresh();
-            textBox_razem.Text = faktura.podajRazem(textBox_rabat.Text).ToString();
+            textBox_razem.Text = String.Format("{0:c}", faktura.podajRazem());
         }
 
         private void button_zmienProd_Click(object sender, RoutedEventArgs e)
@@ -71,7 +72,7 @@ namespace IE_Faktury
                 WyborProduktow wybor = new WyborProduktow(faktura, element2.Key, element2.Value);
                 wybor.ShowDialog();
                 dataGrid_produkty.Items.Refresh();
-                textBox_razem.Text = faktura.podajRazem(textBox_rabat.Text).ToString();
+                textBox_razem.Text = String.Format("{0:c}", faktura.podajRazem());
             }
             catch (NullReferenceException)
             {
@@ -88,7 +89,7 @@ namespace IE_Faktury
                 System.Collections.Generic.KeyValuePair<IE_Faktury.Produkt, System.Int32> element2 = (System.Collections.Generic.KeyValuePair<IE_Faktury.Produkt, System.Int32>)element;
                 faktura.Produkty.Remove(element2.Key);
                 dataGrid_produkty.Items.Refresh();
-                textBox_razem.Text = faktura.podajRazem(textBox_rabat.Text).ToString();
+                textBox_razem.Text = String.Format("{0:c}", faktura.podajRazem());
             }
             catch (NullReferenceException)
             {
@@ -176,7 +177,7 @@ namespace IE_Faktury
 
             // Utorzenie renderera
             PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(true);
-
+            
             // Podpięcie dokumentu
             pdfRenderer.Document = document;
 
@@ -184,11 +185,29 @@ namespace IE_Faktury
             pdfRenderer.RenderDocument();
 
             // Zapis faktury
-            string filename = "Invoice.pdf";
+            string[] numerek = faktura.NumerFaktury.Split('/');
+            string filename = "Faktura_"+numerek[0]+"_"+numerek[1]+".pdf";
 #if DEBUG
             // Jeżeli nie chcemy od razu zamknąć dokumentu
-            filename = "Invoice-" + Guid.NewGuid().ToString("N").ToUpper() + ".pdf";
+            //filename = "Invoice-" + Guid.NewGuid().ToString("N").ToUpper() + ".pdf";
 #endif
+            Stream myStream;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            
+            saveFileDialog1.Filter = "PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
+            saveFileDialog1.AddExtension = true;
+            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            saveFileDialog1.FileName = filename;
+
+            Nullable<bool> result = saveFileDialog1.ShowDialog();
+            if(result == true)
+            {
+                filename = saveFileDialog1.FileName;
+                Debug.WriteLine(filename);
+            }
+            //zapis faktury
             pdfRenderer.Save(filename);
             // Podgląd faktury
             Process.Start(filename);
@@ -282,7 +301,7 @@ namespace IE_Faktury
                     }
                 }
             }
-            textBox_razem.Text = faktura.podajRazem(textBox_rabat.Text).ToString();
+            textBox_razem.Text = String.Format("{0:c}", faktura.podajRazem());
         }
     }
 }

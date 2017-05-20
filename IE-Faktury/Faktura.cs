@@ -145,7 +145,7 @@ namespace IE_Faktury
                 Debug.WriteLine(fnfe.InnerException);
             }
             StringBuilder sb = new StringBuilder();
-            sb.Append(inkrementowany).Append("/").Append(DateTime.Today.Year.ToString());
+            sb.Append(inkrementowany).Append(@"/").Append(DateTime.Today.Year.ToString());
             this.numerFaktury = sb.ToString();
             this.dataWystawienia = DateTime.Now;
             this.produkty = new Dictionary<Produkt, int>();

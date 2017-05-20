@@ -9,7 +9,7 @@
       <Ulica>Szymały 12</Ulica>
       <Miasto>Radzionków</Miasto>
       <KodPocztowy>41-922</KodPocztowy>
-      <LiczbaTransakcji>45</LiczbaTransakcji>
+      <LiczbaTransakcji>64</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -20,7 +20,7 @@
       <Ulica>Kwiatowa 15</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>92-912</KodPocztowy>
-      <LiczbaTransakcji>17</LiczbaTransakcji>
+      <LiczbaTransakcji>18</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -31,7 +31,7 @@
       <Ulica>Szeroka 15</Ulica>
       <Miasto>Wrocław</Miasto>
       <KodPocztowy>11-111</KodPocztowy>
-      <LiczbaTransakcji>33</LiczbaTransakcji>
+      <LiczbaTransakcji>34</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -42,7 +42,7 @@
       <Ulica>Wąska 12/5</Ulica>
       <Miasto>Gdańsk</Miasto>
       <KodPocztowy>25-212</KodPocztowy>
-      <LiczbaTransakcji>13</LiczbaTransakcji>
+      <LiczbaTransakcji>14</LiczbaTransakcji>
       <Rabat>0.85</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -53,7 +53,7 @@
       <Ulica>Jabłeczna 4</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>30-001</KodPocztowy>
-      <LiczbaTransakcji>8</LiczbaTransakcji>
+      <LiczbaTransakcji>9</LiczbaTransakcji>
       <Rabat>0.9</Rabat>
     </OsobaFizyczna>
   </listaFizycznych>
@@ -64,7 +64,7 @@
       <Miasto>Kraków</Miasto>
       <KodPocztowy>30-102</KodPocztowy>
       <Nip>8819759685</Nip>
-      <LiczbaTransakcji>16</LiczbaTransakcji>
+      <LiczbaTransakcji>17</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaPrawna>
     <OsobaPrawna>

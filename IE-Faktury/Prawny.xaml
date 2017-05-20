@@ -6,19 +6,32 @@
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
         Title="Prawny" Height="250" Width="322.4">
-    <Grid Margin="0,0,-0.4,0">
-        <Label x:Name="label" Content="Nazwa" HorizontalAlignment="Left" Height="25" Margin="21.6,20,0,0" VerticalAlignment="Top" Width="74"/>
-        <Label x:Name="label1" Content="NIP" HorizontalAlignment="Left" Height="25" Margin="21.6,50,0,0" VerticalAlignment="Top" Width="74"/>
-        <TextBox x:Name="textBox_nazwa" HorizontalAlignment="Left" Height="25" Margin="144,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
-        <TextBox x:Name="textBox_NIP" HorizontalAlignment="Left" Height="25" Margin="144,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
-        <Button x:Name="button_dodaj" Content="Dodaj" HorizontalAlignment="Left" Height="19" Margin="109,182,0,0" VerticalAlignment="Top" Width="96" Click="button_dodaj_Click"/>
-        <Label x:Name="label4" Content="Ulica" HorizontalAlignment="Left" Height="25" Margin="22,80,0,0" VerticalAlignment="Top" Width="57"/>
-        <TextBox x:Name="textBox_ulica" HorizontalAlignment="Left" Height="25" Margin="144,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="103"/>
-        <TextBox x:Name="textBox_kod" HorizontalAlignment="Left" Height="25" Margin="144,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
-        <TextBox x:Name="textBox_miasto" HorizontalAlignment="Left" Height="25" Margin="144,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
-        <Label x:Name="label4_Copy" Content="Kod pocztowy" HorizontalAlignment="Left" Height="25" Margin="22,110,0,0" VerticalAlignment="Top" Width="94"/>
-        <Label x:Name="label4_Copy1" Content="Miasto" HorizontalAlignment="Left" Height="25" Margin="22,140,0,0" VerticalAlignment="Top" Width="57"/>
-        <TextBox x:Name="textBox_nrDomu" HorizontalAlignment="Left" Height="25" Margin="252,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="32"/>
+    <Window.Resources>
+        <Style x:Key="t" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Grid Margin="0,0,-0.4,0" Style="{DynamicResource t}">
+    
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF26839E" Offset="0.968"/>
+                <GradientStop Color="White" Offset="0.008"/>
+                <GradientStop Color="#FF7BCCE4" Offset="0.656"/>
+                <GradientStop Color="#FFE3EEF1" Offset="0.216"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Label x:Name="label" Content="Nazwa" HorizontalAlignment="Left" Height="25" Margin="21.6,20,0,0" VerticalAlignment="Top" Width="74" FontFamily="Lucida Console" />
+        <Label x:Name="label1" Content="NIP" HorizontalAlignment="Left" Height="25" Margin="21.6,50,0,0" VerticalAlignment="Top" Width="74" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_nazwa" HorizontalAlignment="Left" Height="25" Margin="144,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" FontFamily="Lucida Console" Background="{x:Null}" />
+        <TextBox x:Name="textBox_NIP" HorizontalAlignment="Left" Height="25" Margin="144,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" FontFamily="Lucida Console" Background="{x:Null}" />
+        <Button x:Name="button_dodaj" Content="Dodaj" HorizontalAlignment="Left" Height="19" Margin="109,182,0,0" VerticalAlignment="Top" Width="96" Click="button_dodaj_Click" FontFamily="Lucida Console" Background="{x:Null}" />
+        <Label x:Name="label4" Content="Ulica" HorizontalAlignment="Left" Height="25" Margin="22,80,0,0" VerticalAlignment="Top" Width="57" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_ulica" HorizontalAlignment="Left" Height="25" Margin="144,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="103" FontFamily="Lucida Console" Background="{x:Null}" />
+        <TextBox x:Name="textBox_kod" HorizontalAlignment="Left" Height="25" Margin="144,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" FontFamily="Lucida Console" Background="{x:Null}" />
+        <TextBox x:Name="textBox_miasto" HorizontalAlignment="Left" Height="25" Margin="144,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" FontFamily="Lucida Console" Background="{x:Null}" />
+        <Label x:Name="label4_Copy" Content="Kod pocztowy" HorizontalAlignment="Left" Height="25" Margin="22,110,0,0" VerticalAlignment="Top" Width="103" FontFamily="Lucida Console" />
+        <Label x:Name="label4_Copy1" Content="Miasto" HorizontalAlignment="Left" Height="25" Margin="22,140,0,0" VerticalAlignment="Top" Width="57" FontFamily="Lucida Console" />
+        <TextBox x:Name="textBox_nrDomu" HorizontalAlignment="Left" Height="25" Margin="252,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="32" FontFamily="Lucida Console" Background="{x:Null}" />
         <Image x:Name="image" Source="/Resources/pytajnik.jpg" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="22" Margin="284,20,0,0" RenderTransformOrigin="0.2,-0.165" ToolTip="Wielka litera, max 100 znakow, dozwolone - . spacje"/>
         <Image x:Name="image_Copy" Source="Resources/pytajnik.jpg" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="22" Margin="284,50,0,0" RenderTransformOrigin="0.2,-0.165" ToolTip="Sprawdzany pod kątem poprawności!"/>
         <Image x:Name="image_Copy1" Source="Resources/pytajnik.jpg" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="22" Margin="284,80,0,0" RenderTransformOrigin="0.2,-0.165" ToolTip="Nr domu lub Nr domu/Nr lokalu"/>

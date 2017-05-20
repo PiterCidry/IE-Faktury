@@ -6,12 +6,24 @@
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
         Title="AnalizaWindow" Height="260.216" Width="196.337">
-    <Grid>
-        <Button x:Name="button_ogolna" Content="Wyswietl statystyki  &#xD;&#xA; sprzedazy ogolnej" HorizontalAlignment="Left" Margin="31,8,0,0" VerticalAlignment="Top" Width="130" Height="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="button_ogolna_Click"/>
-        <Button x:Name="button_produkt" Content="Wyswietl statystyki  &#xD;&#xA;         produktu" HorizontalAlignment="Left" Margin="31,49,0,0" VerticalAlignment="Top" Width="130" Height="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="button_produkt_Click"/>
-        <Button x:Name="button_kontrahent" Content="Wyswietl statystyki &#xD;&#xA;       kontrahena" HorizontalAlignment="Left" Margin="31,90,0,0" VerticalAlignment="Top" Width="130" Height="36" Click="button_kontrahent_Click"/>
-        <Button x:Name="button_porownanie_sprzedazy" Content="Porownanie sprzedazy &#xD;&#xA;   dwoch produktow" HorizontalAlignment="Left" Margin="31,131,0,0" VerticalAlignment="Top" Width="130" Height="36" Click="button_porownanie_sprzedazy_Click"/>
-        <Button x:Name="button_porownanie_zysku" Content="Porownanie zysku na &#xA;  dwoch produktach" HorizontalAlignment="Left" Margin="31,172,0,0" VerticalAlignment="Top" Width="130" Height="36" Click="button_porownanie_zysku_Click"/>
+    <Window.Resources>
+        <Style x:Key="t" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Grid Style="{DynamicResource t}" HorizontalAlignment="Left" Width="196" Margin="0,0,-8,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF26839E" Offset="0.968"/>
+                <GradientStop Color="White" Offset="0.008"/>
+                <GradientStop Color="#FF7BCCE4" Offset="0.656"/>
+                <GradientStop Color="#FFE3EEF1" Offset="0.216"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Button x:Name="button_ogolna" Content=" Wyswietl statystyki  &#xA;  sprzedazy ogolnej" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" Width="158" Height="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="button_ogolna_Click" Background="{x:Null}" FontFamily="Lucida Console" />
+        <Button x:Name="button_produkt" Content=" Wyswietl statystyki   &#xD;&#xA;       produktu" HorizontalAlignment="Left" Margin="19,51,0,0" VerticalAlignment="Top" Width="158" Height="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="button_produkt_Click" Background="{x:Null}" FontFamily="Lucida Console" />
+        <Button x:Name="button_kontrahent" Content="Wyswietl statystyki &#xA;     kontrahena" HorizontalAlignment="Left" Margin="19,92,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="button_kontrahent_Click" Background="{x:Null}" FontFamily="Lucida Console" />
+        <Button x:Name="button_porownanie_sprzedazy" Content="Porownanie sprzedazy &#xD;&#xA;   dwoch produktow" HorizontalAlignment="Left" Margin="19,133,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="button_porownanie_sprzedazy_Click" Background="{x:Null}" FontFamily="Lucida Console" />
+        <Button x:Name="button_porownanie_zysku" Content="Porownanie zysku na &#xA;  dwoch produktach" HorizontalAlignment="Left" Margin="19,174,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="button_porownanie_zysku_Click" Background="{x:Null}" FontFamily="Lucida Console" />
 
     </Grid>
 </Window>

@@ -6,16 +6,27 @@
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
         Title="ProduktWindow" Height="238.4" Width="331.2">
-    <Grid>
-        <Label x:Name="label_nazwa" Content="Nazwa:" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.042,-0.365"/>
-        <Label x:Name="label_cenahurt" Content="Cena z hurtowni:" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_cenajedn" Content="Cena jednostkowa:" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_podatek" Content="Stawka podatku:" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button_zatwierdz" Content="Zatwierdz" HorizontalAlignment="Left" Margin="111,172,0,0" VerticalAlignment="Top" Width="75" Click="button_zatwierdz_Click"/>
-        <TextBox x:Name="textBox_nazwa" HorizontalAlignment="Left" Height="23" Margin="164,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox_cenahurt" HorizontalAlignment="Left" Height="23" Margin="164,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox_cenajedn" HorizontalAlignment="Left" Height="23" Margin="164,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="comboBox_podatek" HorizontalAlignment="Left" Margin="164,123,0,0" VerticalAlignment="Top" Width="120">
+    <Window.Resources>
+        <Style x:Key="t" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Grid Style="{DynamicResource t}">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF26839E" Offset="0.968"/>
+                <GradientStop Color="White" Offset="0.008"/>
+                <GradientStop Color="#FF7BCCE4" Offset="0.656"/>
+                <GradientStop Color="#FFE3EEF1" Offset="0.216"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label x:Name="label_nazwa" Content="Nazwa:" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.042,-0.365" FontFamily="Lucida Console"/>
+        <Label x:Name="label_cenahurt" Content="Cena z hurtowni:" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
+        <Label x:Name="label_cenajedn" Content="Cena jednostkowa:" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
+        <Label x:Name="label_podatek" Content="Stawka podatku:" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
+        <Button x:Name="button_zatwierdz" Content="Zatwierdz" HorizontalAlignment="Left" Margin="111,172,0,0" VerticalAlignment="Top" Width="75" Click="button_zatwierdz_Click" Background="{x:Null}" BorderBrush="#FFE2E2E2" FontFamily="Lucida Console"/>
+        <TextBox x:Name="textBox_nazwa" HorizontalAlignment="Left" Height="23" Margin="164,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{x:Null}" FontFamily="Lucida Console"/>
+        <TextBox x:Name="textBox_cenahurt" HorizontalAlignment="Left" Height="23" Margin="164,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{x:Null}" FontFamily="Lucida Console"/>
+        <TextBox x:Name="textBox_cenajedn" HorizontalAlignment="Left" Height="23" Margin="164,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{x:Null}" FontFamily="Lucida Console"/>
+        <ComboBox x:Name="comboBox_podatek" HorizontalAlignment="Left" Margin="164,123,0,0" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Lucida Console">
             <ComboBoxItem>23%</ComboBoxItem>
             <ComboBoxItem>8%</ComboBoxItem>
             <ComboBoxItem>5%</ComboBoxItem>
@@ -25,3 +36,5 @@
         <Image x:Name="image_Copy1" Source="Resources/pytajnik.jpg" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="22" Margin="293,92,0,0" RenderTransformOrigin="0.2,-0.165" ToolTip="Nieujemna liczba, maksymalnie dwa miejsca po przecinku"/>
     </Grid>
 </Window>
+
+

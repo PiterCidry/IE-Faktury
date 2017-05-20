@@ -6,12 +6,24 @@
         xmlns:local="clr-namespace:IE_Faktury"
         mc:Ignorable="d"
         Title="WyborProduktow" Height="159.4" Width="300">
-    <Grid>
-        <Label x:Name="label_produkt" Content="Produkt:" HorizontalAlignment="Left" Margin="21,22,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_ilosc" Content="Ilosc:" HorizontalAlignment="Left" Margin="21,57,0,0" VerticalAlignment="Top"/>
+    <Window.Resources>
+        <Style x:Key="t" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Grid Style="{DynamicResource t}">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF26839E" Offset="0.968"/>
+                <GradientStop Color="White" Offset="0.008"/>
+                <GradientStop Color="#FF7BCCE4" Offset="0.656"/>
+                <GradientStop Color="#FFE3EEF1" Offset="0.216"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label x:Name="label_produkt" Content="Produkt:" HorizontalAlignment="Left" Margin="21,25,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
+        <Label x:Name="label_ilosc" Content="Ilosc:" HorizontalAlignment="Left" Margin="21,57,0,0" VerticalAlignment="Top" FontFamily="Lucida Console"/>
         <Button x:Name="button_dodaj" Content="Dodaj"  HorizontalAlignment="Left" Margin="111,100,0,0" VerticalAlignment="Top" Width="75" Click="button_dodaj_Click" Visibility="Hidden"/>
-        <ComboBox x:Name="comboBox_produkt" HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox_ilosc" HorizontalAlignment="Left" Height="23" Margin="146,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="comboBox_produkt" HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="120" Background="{x:Null}" FontFamily="Lucida Console"/>
+        <TextBox x:Name="textBox_ilosc" HorizontalAlignment="Left" Height="23" Margin="146,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{x:Null}" FontFamily="Lucida Console"/>
         <Button x:Name="button_zmien" Content="Zmien" HorizontalAlignment="Left" Margin="111,100,0,0" VerticalAlignment="Top" Width="75" Click="button_zmien_Click" Visibility="Hidden"/>
     </Grid>
 </Window>

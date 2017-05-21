@@ -20,7 +20,7 @@
       <Ulica>Kwiatowa 15</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>92-912</KodPocztowy>
-      <LiczbaTransakcji>18</LiczbaTransakcji>
+      <LiczbaTransakcji>19</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -64,7 +64,150 @@
       <Ulica>Os Złota Podkowa 2/8</Ulica>
       <Miasto>Kraków</Miasto>
       <KodPocztowy>31-352</KodPocztowy>
-      <LiczbaTransakcji>2</LiczbaTransakcji>
+      <LiczbaTransakcji>3</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Anna</Imie>
+      <Nazwisko>Maj</Nazwisko>
+      <Pesel>77071210463</Pesel>
+      <DataUrodzenia>1987-11-12T00:00:00</DataUrodzenia>
+      <Ulica>Strąkowa 3</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>20-303</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Dorota</Imie>
+      <Nazwisko>Nowak</Nazwisko>
+      <Pesel>94101312106</Pesel>
+      <DataUrodzenia>1988-07-21T00:00:00</DataUrodzenia>
+      <Ulica>Sodowa 7</Ulica>
+      <Miasto>Warszawa</Miasto>
+      <KodPocztowy>40-505</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Jan</Imie>
+      <Nazwisko>Przybylski</Nazwisko>
+      <Pesel>96102201771</Pesel>
+      <DataUrodzenia>1992-06-23T00:00:00</DataUrodzenia>
+      <Ulica>Brożka 8</Ulica>
+      <Miasto>Wrocław</Miasto>
+      <KodPocztowy>40-303</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Bogdan</Imie>
+      <Nazwisko>Kowalski</Nazwisko>
+      <Pesel>67040512182</Pesel>
+      <DataUrodzenia>1982-10-12T00:00:00</DataUrodzenia>
+      <Ulica>Makowa 91</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>20-353</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Piotr</Imie>
+      <Nazwisko>Giza</Nazwisko>
+      <Pesel>79123117593</Pesel>
+      <DataUrodzenia>1979-02-17T00:00:00</DataUrodzenia>
+      <Ulica>Batorego 5</Ulica>
+      <Miasto>Poznań</Miasto>
+      <KodPocztowy>20-303</KodPocztowy>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Joanna</Imie>
+      <Nazwisko>Bargiel</Nazwisko>
+      <Pesel>96100406406</Pesel>
+      <DataUrodzenia>1988-10-12T00:00:00</DataUrodzenia>
+      <Ulica>Wąska 5</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>40-234</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Katarzyna</Imie>
+      <Nazwisko>Maciocha</Nazwisko>
+      <Pesel>78110611009</Pesel>
+      <DataUrodzenia>1978-06-12T00:00:00</DataUrodzenia>
+      <Ulica>Mazowiecka 7</Ulica>
+      <Miasto>Warszawa</Miasto>
+      <KodPocztowy>18-202</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Joanna</Imie>
+      <Nazwisko>Motyczyńska</Nazwisko>
+      <Pesel>96111308142</Pesel>
+      <DataUrodzenia>1996-10-04T00:00:00</DataUrodzenia>
+      <Ulica>Szwai 8</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>20-123</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Marcin</Imie>
+      <Nazwisko>Groch</Nazwisko>
+      <Pesel>81062806562</Pesel>
+      <DataUrodzenia>1999-11-12T00:00:00</DataUrodzenia>
+      <Ulica>Markowa 3</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>20-119</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Paweł</Imie>
+      <Nazwisko>Moskała</Nazwisko>
+      <Pesel>99041906709</Pesel>
+      <DataUrodzenia>1990-09-09T00:00:00</DataUrodzenia>
+      <Ulica>Marka 10</Ulica>
+      <Miasto>Warszawa</Miasto>
+      <KodPocztowy>20-234</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Julian</Imie>
+      <Nazwisko>Szeląg</Nazwisko>
+      <Pesel>92101914816</Pesel>
+      <DataUrodzenia>1988-12-12T00:00:00</DataUrodzenia>
+      <Ulica>Marszałkowska 23</Ulica>
+      <Miasto>Warszawa</Miasto>
+      <KodPocztowy>23-123</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Marta</Imie>
+      <Nazwisko>Wierzbicka</Nazwisko>
+      <Pesel>90042507159</Pesel>
+      <DataUrodzenia>1978-02-10T00:00:00</DataUrodzenia>
+      <Ulica>Wysoka 3</Ulica>
+      <Miasto>Wrocław</Miasto>
+      <KodPocztowy>20-123</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaFizyczna>
+    <OsobaFizyczna>
+      <Imie>Matylda</Imie>
+      <Nazwisko>Sap</Nazwisko>
+      <Pesel>82072306794</Pesel>
+      <DataUrodzenia>1978-06-23T00:00:00</DataUrodzenia>
+      <Ulica>Maślana 45</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>45-909</KodPocztowy>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaFizyczna>
   </listaFizycznych>
@@ -94,6 +237,105 @@
       <KodPocztowy>30-072</KodPocztowy>
       <Nip>8712581799</Nip>
       <LiczbaTransakcji>4</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Haft Firany</Nazwa>
+      <Ulica>Majowa 5</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>30-404</KodPocztowy>
+      <Nip>8591318145</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Cyklop sp. z o.o.</Nazwa>
+      <Ulica>Mikołajska 16</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>50-303</KodPocztowy>
+      <Nip>9324182435</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Mój ogród</Nazwa>
+      <Ulica>Szwai 5</Ulica>
+      <Miasto>Warszawa</Miasto>
+      <KodPocztowy>30-401</KodPocztowy>
+      <Nip>2769579758</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Phinance S.A</Nazwa>
+      <Ulica>Grodzka 32</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>26-315</KodPocztowy>
+      <Nip>2847750322</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Air-Tech-Bud Sp. z o.o.</Nazwa>
+      <Ulica>3 Maja 3</Ulica>
+      <Miasto>Przemyśl</Miasto>
+      <KodPocztowy>20-818</KodPocztowy>
+      <Nip>7321634953</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>BRW S.A</Nazwa>
+      <Ulica>Floriańska 10</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>20-230</KodPocztowy>
+      <Nip>3767658460</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Buli Salon Meblowy</Nazwa>
+      <Ulica>Darwina 25</Ulica>
+      <Miasto>Tychy</Miasto>
+      <KodPocztowy>43-100</KodPocztowy>
+      <Nip>9919820309</Nip>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Super tata sp. z o.o.</Nazwa>
+      <Ulica>Strakowa 8</Ulica>
+      <Miasto>Karaków</Miasto>
+      <KodPocztowy>20-234</KodPocztowy>
+      <Nip>9864659378</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Misie Pysie S.A.</Nazwa>
+      <Ulica>Pyszna 9</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>40-404</KodPocztowy>
+      <Nip>8550633022</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Dom marzeń</Nazwa>
+      <Ulica>Wyśniona 3</Ulica>
+      <Miasto>Warszawa</Miasto>
+      <KodPocztowy>20-202</KodPocztowy>
+      <Nip>7696063074</Nip>
+      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <Rabat>1</Rabat>
+    </OsobaPrawna>
+    <OsobaPrawna>
+      <Nazwa>Twój Dom</Nazwa>
+      <Ulica>Obozowa 8</Ulica>
+      <Miasto>Kraków</Miasto>
+      <KodPocztowy>20-239</KodPocztowy>
+      <Nip>7273126749</Nip>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaPrawna>
   </listaPrawnych>

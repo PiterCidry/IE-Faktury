@@ -9,7 +9,7 @@
       <Ulica>Szymały 12</Ulica>
       <Miasto>Radzionków</Miasto>
       <KodPocztowy>41-922</KodPocztowy>
-      <LiczbaTransakcji>65</LiczbaTransakcji>
+      <LiczbaTransakcji>64</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -64,7 +64,7 @@
       <Ulica>Os Złota Podkowa 2/8</Ulica>
       <Miasto>Kraków</Miasto>
       <KodPocztowy>31-352</KodPocztowy>
-      <LiczbaTransakcji>2</LiczbaTransakcji>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaFizyczna>
   </listaFizycznych>
@@ -93,7 +93,7 @@
       <Miasto>Kraków</Miasto>
       <KodPocztowy>30-072</KodPocztowy>
       <Nip>8712581799</Nip>
-      <LiczbaTransakcji>4</LiczbaTransakcji>
+      <LiczbaTransakcji>3</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaPrawna>
   </listaPrawnych>

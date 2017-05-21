@@ -20,53 +20,20 @@ using System.Threading;
 namespace IE_Faktury
 {
 
-    /// <summary>
-    /// Klasa faktury.
-    /// </summary>
     [Serializable]
     [DataContract]
     public class Faktura
     {
-        /// <summary>
-        /// Inkrementowany numer faktury.
-        /// </summary>
         private static uint inkrementowany = 1;
-        /// <summary>
-        /// Numer faktury.
-        /// </summary>
         private string numerFaktury;
-        /// <summary>
-        /// Data wystawienia faktury.
-        /// </summary>
         private DateTime dataWystawienia;
-        /// <summary>
-        /// Odbiorca fizyczny faktury.
-        /// </summary>
         private OsobaFizyczna odbiorcaFizyczny;
-        /// <summary>
-        /// Odbiorca prawny faktury.
-        /// </summary>
         private OsobaPrawna odbiorcaPrawny;
-        /// <summary>
-        /// Słownik z produktami i ilościami.
-        /// </summary>
         private Dictionary<Produkt, int> produkty;
-        /// <summary>
-        /// Lista z produktami i ilościami.
-        /// </summary>
         private List<IE_Faktury.KeyValuePair<Produkt, int>> produktyList;
-        /// <summary>
-        /// Cena razem faktury.
-        /// </summary>
         private double razem = 0.0;
+       
 
-
-        /// <summary>
-        /// Udostępnianie lub zmiana numeru faktury.
-        /// </summary>
-        /// <value>
-        /// Numer faktury.
-        /// </value>
         public string NumerFaktury
         {
             get
@@ -80,12 +47,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Udostępnianie lub zmiana datę wystawienia.
-        /// </summary>
-        /// <value>
-        /// Data wystawienia.
-        /// </value>
         public DateTime DataWystawienia
         {
             get
@@ -99,12 +60,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Udostępnianie lub zmiana odbiorcy fizycznego.
-        /// </summary>
-        /// <value>
-        /// Odbiorca fizyczny.
-        /// </value>
         public OsobaFizyczna OdbiorcaFizyczny
         {
             get
@@ -118,12 +73,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Udostępnianie lub zmiana odbiorcy prawnego.
-        /// </summary>
-        /// <value>
-        /// Odbiorca prawny.
-        /// </value>
         public OsobaPrawna OdbiorcaPrawny
         {
             get
@@ -136,12 +85,6 @@ namespace IE_Faktury
                 odbiorcaPrawny = value;
             }
         }
-        /// <summary>
-        /// Udostępnianie lub zmiana słownika z produktami.
-        /// </summary>
-        /// <value>
-        /// Słownik z produktami.
-        /// </value>
         [XmlIgnore]
         public Dictionary<Produkt, int> Produkty
         {
@@ -156,12 +99,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Udostępnianie lub zmiana listy z produktami.
-        /// </summary>
-        /// <value>
-        /// Lista z produktami.
-        /// </value>
         public List<KeyValuePair<Produkt, int>> ProduktyList
         {
             get
@@ -175,12 +112,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Udostępnianie lub zmiana ceny razem.
-        /// </summary>
-        /// <value>
-        /// Cena razem.
-        /// </value>
         public double Razem
         {
             get
@@ -194,12 +125,8 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Kontruktor domyślny klasy <see cref="Faktura"/>.
-        /// </summary>
         public Faktura()
         {
-            //ustawianie numeru faktury
             try
             {
                 XmlDocument doc = new XmlDocument();
@@ -225,22 +152,18 @@ namespace IE_Faktury
             this.produktyList = new List<KeyValuePair<Produkt, int>>();
         }
 
-        /// <summary>
-        /// Metoda licząca cenę razem faktury.
-        /// </summary>
-        /// <returns>Łączna cena.</returns>
         public double podajRazem()
         {
             double razem = 0.0;
-            foreach (System.Collections.Generic.KeyValuePair<Produkt, int> kvp in this.Produkty)
+            foreach (System.Collections.Generic.KeyValuePair<Produkt,int> kvp in this.Produkty)
             {
                 razem += kvp.Key.CenaBrutto * kvp.Value;
             }
-            if (this.OdbiorcaFizyczny != null)
+            if(this.OdbiorcaFizyczny != null)
             {
                 razem = razem * this.OdbiorcaFizyczny.Rabat;
             }
-            if (this.OdbiorcaPrawny != null)
+            if(this.OdbiorcaPrawny != null)
             {
                 razem = razem * this.OdbiorcaPrawny.Rabat;
             }
@@ -248,11 +171,6 @@ namespace IE_Faktury
             return razem;
         }
 
-        /// <summary>
-        /// Metoda zwracająca cenę łączną na podstawie rabatu.
-        /// </summary>
-        /// <param name="rabat">Rabat.</param>
-        /// <returns>Cena razem łącznie z rabatem.</returns>
         public double podajRazem(string rabat)
         {
             double razem = 0.0;

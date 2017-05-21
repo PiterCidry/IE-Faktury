@@ -17,36 +17,16 @@ using System.Diagnostics;
 namespace IE_Faktury
 {
     /// <summary>
-    /// Okno analizy sprzedaży produktu.
+    /// Interaction logic for SprzedarzProduktow.xaml
     /// </summary>
-    /// <seealso cref="System.Windows.Window" />
-    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class SprzedarzProduktow : Window
     {
-        /// <summary>
-        /// Lista z datami.
-        /// </summary>
         private List<DateTime> daty = new List<DateTime>();
-        /// <summary>
-        /// Lista z cenami.
-        /// </summary>
         private List<double> ceny = new List<double>();
-        /// <summary>
-        /// Lista z nazwami produktów.
-        /// </summary>
         private List<string> nazwyProduktow = new List<string>();
-        /// <summary>
-        /// Baza faktur.
-        /// </summary>
         private BazaFaktur bazaFaktur = new BazaFaktur();
-        /// <summary>
-        /// Klasa służąca do liczenia statystyk.
-        /// </summary>
         private Descriptive desc = new Descriptive();
 
-        /// <summary>
-        /// Kontruktor domyślny okna: <see cref="SprzedarzProduktow"/>.
-        /// </summary>
         public SprzedarzProduktow()
         {
             InitializeComponent();
@@ -73,14 +53,8 @@ namespace IE_Faktury
             comboBox_produkt.ItemsSource = nazwyProduktow;            
         }
 
-        /// <summary>
-        ///  Obsługa zdarzenia naciśnięcia przycisku pokaż statystyki.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void button_pokaz_Click(object sender, RoutedEventArgs e)
         {
-            //analiza przychodu.
             if (radioButton_przychod.IsChecked == true)
             {
                 foreach (Faktura f in bazaFaktur.listaFaktur)
@@ -144,7 +118,6 @@ namespace IE_Faktury
                 }
                 ceny.Clear();
             }
-            //analiza kosztów.
             else if (radioButton_koszty.IsChecked == true)
             {
                 foreach (Faktura f in bazaFaktur.listaFaktur)
@@ -203,7 +176,6 @@ namespace IE_Faktury
                 }
                 ceny.Clear();
             }
-            //analiza zysku.
             else if (radioButton_zysk.IsChecked == true)
             {
                 foreach (Faktura f in bazaFaktur.listaFaktur)
@@ -277,7 +249,6 @@ namespace IE_Faktury
                 }
                 ceny.Clear();
             }
-            //analiza ilości produktów.
             else if (radioButton_iloscProd.IsChecked == true)
             {
                 foreach (Faktura f in bazaFaktur.listaFaktur)

@@ -8,46 +8,16 @@ using System.Threading.Tasks;
 
 namespace IE_Faktury
 {
-    /// <summary>
-    /// Klasa osoby prawnej.
-    /// </summary>
     public class OsobaPrawna
     {
-        /// <summary>
-        /// Nazwa.
-        /// </summary>
         private string nazwa;
-        /// <summary>
-        /// Ulica.
-        /// </summary>
         private string ulica;
-        /// <summary>
-        /// Kod pocztowy.
-        /// </summary>
         private string kodPocztowy;
-        /// <summary>
-        /// Miasto.
-        /// </summary>
         private string miasto;
-        /// <summary>
-        /// NIP.
-        /// </summary>
         private ulong nip;
-        /// <summary>
-        /// Liczba transakcji.
-        /// </summary>
         private uint liczbaTransakcji = 0;
-        /// <summary>
-        /// Rabat.
-        /// </summary>
         private double rabat;
 
-        /// <summary>
-        /// Udostępnianie lub zmiana nazwy.
-        /// </summary>
-        /// <value>
-        /// Nazwa.
-        /// </value>
         public string Nazwa
         {
             get
@@ -60,12 +30,6 @@ namespace IE_Faktury
                 nazwa = value;
             }
         }
-        /// <summary>
-        /// Udostępnianie lub zmiana ulicy.
-        /// </summary>
-        /// <value>
-        /// Ulica.
-        /// </value>
         public string Ulica
         {
             get
@@ -78,12 +42,6 @@ namespace IE_Faktury
                 ulica = value;
             }
         }
-        /// <summary>
-        /// Udostępnianie lub zmiana Miasta.
-        /// </summary>
-        /// <value>
-        /// Miasto.
-        /// </value>
         public string Miasto
         {
             get
@@ -96,12 +54,6 @@ namespace IE_Faktury
                 miasto = value;
             }
         }
-        /// <summary>
-        /// Udostępnianie lub zmiana kodu pocztowego.
-        /// </summary>
-        /// <value>
-        /// Kod pocztowy.
-        /// </value>
         public string KodPocztowy
         {
             get
@@ -114,12 +66,7 @@ namespace IE_Faktury
                 kodPocztowy = value;
             }
         }
-        /// <summary>
-        /// Udostępnianie lub zmiana nipu.
-        /// </summary>
-        /// <value>
-        /// Nip.
-        /// </value>
+       
         public ulong Nip
         {
             get
@@ -132,12 +79,7 @@ namespace IE_Faktury
                 nip = value;
             }
         }
-        /// <summary>
-        /// Udostępnianie lub zmiana Liczb Transakcji.
-        /// </summary>
-        /// <value>
-        /// Liczba transakcji.
-        /// </value>
+
         public uint LiczbaTransakcji
         {
             get
@@ -150,12 +92,7 @@ namespace IE_Faktury
                 liczbaTransakcji = value;
             }
         }
-        /// <summary>
-        /// Udostępnianie lub zmiana rabatu.
-        /// </summary>
-        /// <value>
-        /// Rabat.
-        /// </value>
+
         public double Rabat
         {
             get
@@ -169,9 +106,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Kontruktor domyślny klasy: <see cref="OsobaPrawna" />.
-        /// </summary>
         public OsobaPrawna()
         {
             this.nazwa = "";
@@ -182,35 +116,20 @@ namespace IE_Faktury
             this.rabat = 0;
         }
 
-        /// <summary>
-        /// Metoda zwracająca <see cref="System.String" /> reprezentujący osobę prawną.
-        /// </summary>
-        /// <returns>
-        /// <see cref="System.String" /> reprezentujący osobę prawną.
-        /// </returns>
         public override string ToString()
         {
             return (this.Nazwa);
         }
-        /// <summary>
-        /// Metoda wyświetlająca osobę prawną w rozszerzonej wersji.
-        /// </summary>
-        /// <returns>String reprezentujący osobę prawną w rozszerzonej wersji.</returns>
         public string wyswietl()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(this.Nazwa);
             sb.AppendLine(this.Ulica);
-            sb.AppendLine(this.KodPocztowy + " " + this.Miasto);
+            sb.AppendLine(this.KodPocztowy +" "+this.Miasto);
             sb.AppendLine("NIP: " + this.Nip);
             return sb.ToString();
         }
 
-        /// <summary>
-        /// Metoda walidująca wprowadzoną nazwę.
-        /// </summary>
-        /// <param name="n">Nazwa.</param>
-        /// <returns>True jeśli nazwa jest poprawna, false jeżeli nie jest.</returns>
         public bool validateNazwa(string n)
         {
             Regex rgx_nazwa = new Regex(@"^[\p{Lu}](\w+|(\s|\.|\-)?){0,99}$");
@@ -225,11 +144,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Metoda walidująca wprowadzoną ulicę.
-        /// </summary>
-        /// <param name="u">Ulica.</param>
-        /// <returns>True jeśli ulicajest poprawna, false jeżeli nie jest.</returns>
         public bool validateUlica(string u)
         {
             Regex rgx = new Regex(@"^[\p{L}0-9']+[\s\-]?[\p{L}0-9']*[\s-]?[\p{L}0-9']+$");
@@ -244,11 +158,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Metoda walidująca nr domu wprowadzony przez uzytkownika.
-        /// </summary>
-        /// <param name="nr">Numer domu.</param>
-        /// <returns>True jeśli nr domu jest poprawny, false jeżeli nie jest.</returns>
         public bool validateNrDomu(string nr)
         {
             Regex rgx = new Regex(@"^\d{1,4}(\/\d{1,3})?$");
@@ -263,11 +172,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Metoda walidująca kod pocztowy wprowadzony przez użytkownika.
-        /// </summary>
-        /// <param name="k">Kod pocztowy</param>
-        /// <returns>True jeśli kod pocztowy jest poprawny, false jeżeli nie jest.</returns>
         public bool validateKodPocztowy(string k)
         {
             Regex rgx = new Regex(@"^\d{2}\-\d{3}$");
@@ -282,11 +186,6 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Metoda walidująca wporwadzone miasto.
-        /// </summary>
-        /// <param name="m">Miasto.</param>
-        /// <returns>True jeśli miasto jest poprawne, false jeżeli nie jest.</returns>
         public bool validateMiasto(string m)
         {
             Regex rgx = new Regex(@"^[\p{Lu}][\p{L}]+[\s\-]?[\p{L}]*[\s-]?[\p{L}]+$");
@@ -301,19 +200,14 @@ namespace IE_Faktury
             }
         }
 
-        /// <summary>
-        /// Metoda walidująca numer nip.
-        /// </summary>
-        /// <param name="n">Nip.</param>
-        /// <returns>True jeśli nip jest poprawny, false jeżeli nie jest.</returns>
         public bool validateNip(string n)
         {
-            int[] wagi = new int[9] { 6, 5, 7, 2, 3, 4, 5, 6, 7 };
+            int[] wagi = new int[9] { 6, 5, 7, 2, 3, 4, 5, 6, 7};
             int[] cyfry = new int[10];
             char[] znaki = new char[10];
             bool result = false;
             n = n.Trim();
-            if (n.Length == 10)
+            if(n.Length == 10)
             {
                 znaki = n.ToCharArray();
                 try
@@ -346,7 +240,7 @@ namespace IE_Faktury
                 suma -= cyfry[9];
                 int sumaKontrolna = 0;
                 sumaKontrolna = (suma % 11);
-                if (sumaKontrolna == cyfry[9])
+                if(sumaKontrolna == cyfry[9])
                 {
                     return true;
                 }
@@ -362,9 +256,6 @@ namespace IE_Faktury
             return result;
         }
 
-        /// <summary>
-        /// Metoda ustawiająca rabat na podstawie liczby transakcji.
-        /// </summary>
         public void ustawRabat()
         {
             if (this.LiczbaTransakcji < 6)

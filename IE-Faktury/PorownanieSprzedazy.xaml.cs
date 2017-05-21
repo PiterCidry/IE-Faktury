@@ -18,18 +18,42 @@ using MathNet.Numerics.Distributions;
 namespace IE_Faktury
 {
     /// <summary>
-    /// Interaction logic for PorownanieSprzedazy.xaml
+    /// Okno do porównywania sprzedaży dwóch produktów.
     /// </summary>
     public partial class PorownanieSprzedazy : Window
     {
+        /// <summary>
+        /// Lista z datami.
+        /// </summary>
         private List<DateTime> daty = new List<DateTime>();
+        /// <summary>
+        /// Lista z ilościami sprzedanych produktów typu pierwszego.
+        /// </summary>
         private List<double> ilosciProd1 = new List<double>();
+        /// <summary>
+        /// Lista z ilościami sprzedanych produktów typu drugiego.
+        /// </summary>
         private List<double> ilosciProd2 = new List<double>();
+        /// <summary>
+        /// Baza faktur.
+        /// </summary>
         private BazaFaktur bazaFaktur = new BazaFaktur();
+        /// <summary>
+        /// Klasa do obsługi statystyk produktu typu pierwszego.
+        /// </summary>
         private Descriptive descProd1 = new Descriptive();
+        /// <summary>
+        /// Klasa do obsługi statystyk produktu typu drugiego.
+        /// </summary>
         private Descriptive descProd2 = new Descriptive();
+        /// <summary>
+        /// Lista z nazwami produktów
+        /// </summary>
         private List<string> nazwyProduktow = new List<string>();
 
+        /// <summary>
+        /// Konstruktor domyślny okna: <see cref="PorownanieSprzedazy"/>.
+        /// </summary>
         public PorownanieSprzedazy()
         {
             InitializeComponent();
@@ -57,6 +81,11 @@ namespace IE_Faktury
             comboBox_produkt2.ItemsSource = nazwyProduktow;
         }
 
+        /// <summary>
+        ///  Obsługa zdarzenia naciśnięcia przycisku porównaj.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void button_porownaj_Click(object sender, RoutedEventArgs e)
         {
             foreach (Faktura f in bazaFaktur.listaFaktur)
@@ -84,6 +113,7 @@ namespace IE_Faktury
                     return;
                 }
             }
+            //testowanie dwóch średnich.
             try
             {
                 double sredniaProd1, sredniaProd2, varProd1, varProd2, n1, n2, statTestowa, statKrytyczna;

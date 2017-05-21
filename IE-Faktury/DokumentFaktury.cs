@@ -16,40 +16,54 @@ using System.Collections.ObjectModel;
 
 namespace IE_Faktury
 {
+    /// <summary>
+    /// Klasa dokumentu faktury.
+    /// </summary>
     class DokumentFaktury
     {
 
+        /// <summary>
+        /// Dokument faktury.
+        /// </summary>
         Document document;
-        
+
+        /// <summary>
+        /// Konstruktor domyślny klasy: <see cref="DokumentFaktury"/>.
+        /// </summary>
         public DokumentFaktury()
         {
 
         }
 
         /// <summary>
-        /// An XML invoice based on a sample created with Microsoft InfoPath.
+        /// Faktura XML bazująca na przykładzie utworzonym przy użyciu Microsoft InfoPath.
         /// </summary>
         readonly XmlDocument invoice;
 
         /// <summary>
-        /// The root navigator for the XML document.
+        /// Korzeń nawigatora dla dokumentu.
         /// </summary>
         readonly XPathNavigator navigator;
 
         /// <summary>
-        /// The text frame of the MigraDoc document that contains the address.
+        /// Ramka tekstowa z adresem.
         /// </summary>
         TextFrame addressFrame;
 
         /// <summary>
-        /// The table of the MigraDoc document that contains the invoice items.
+        /// Tabelka z produktami.
         /// </summary>
         Table table;
 
-        private Faktura faktura;
         /// <summary>
-        /// Initializes a new instance of the class BillFrom and opens the specified XML document.
+        /// Faktura z danymi.
         /// </summary>
+        private Faktura faktura;
+
+        /// <summary>
+        /// Kontruktor parametryczny klasy.
+        /// </summary>
+        /// <param name="filename">Nazwa pliku do zapisu.</param>
         public DokumentFaktury(string filename)
         {
             this.invoice = new XmlDocument();
@@ -58,8 +72,10 @@ namespace IE_Faktury
         }
 
         /// <summary>
-        /// Tworzenie dokumentu
+        /// Tworzenie dokumentu.
         /// </summary>
+        /// <param name="f">Faktura</param>
+        /// <returns></returns>
         public Document CreateDocument(Faktura f)
         {
             this.faktura = f;
@@ -75,7 +91,7 @@ namespace IE_Faktury
         }
 
         /// <summary>
-        /// Style i pozycje
+        /// Style i pozycje.
         /// </summary>
         void DefineStyles()
         {
@@ -104,8 +120,9 @@ namespace IE_Faktury
         }
 
         /// <summary>
-        /// Tworzenie faktury
+        /// Tworzenie faktury.
         /// </summary>
+        /// <param name="f">Faktura.</param>
         void CreatePage(Faktura f)
         {
 

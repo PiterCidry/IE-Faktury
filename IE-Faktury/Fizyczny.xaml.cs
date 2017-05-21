@@ -16,18 +16,29 @@ using System.Windows.Shapes;
 namespace IE_Faktury
 {
     /// <summary>
-    /// Interaction logic for Fizyczny.xaml
+    /// Okno dodawania osoby fizycznej.
     /// </summary>
-    
+    /// <seealso cref="System.Windows.Window" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class Fizyczny : Window
     {
+        /// <summary>
+        /// Osoba fizyczna.
+        /// </summary>
         OsobaFizyczna f;
 
+        /// <summary>
+        /// Konstruktor domyślny okna: <see cref="Fizyczny"/>.
+        /// </summary>
         public Fizyczny()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Konstruktor parametryczny okna: <see cref="Fizyczny"/>.
+        /// </summary>
+        /// <param name="f">Osoba fizyczna</param>
         public Fizyczny(OsobaFizyczna f) : this()
         {
             this.f = f;
@@ -39,11 +50,17 @@ namespace IE_Faktury
             textBox_PESEL.Text = "";
             datePicker_dataur.DisplayDateEnd = DateTime.Today;
         }
-    
+
+        /// <summary>
+        /// Obsługa zdarzenia dodania osoby fizycznej.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void button_dodaj_Click(object sender, RoutedEventArgs e)
         { 
             try
             {
+                //walidacja imienia.
                 if (f.validateImie(textBox_imie.Text))
                 {
                     f.Imie = textBox_imie.Text;
@@ -53,7 +70,7 @@ namespace IE_Faktury
                     MessageBox.Show("Niepoprawne imie!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-
+                //walidacja nazwiska.
                 if (f.validateNazwisko(textBox_nazwisko.Text))
                 {
                     f.Nazwisko = textBox_nazwisko.Text;
@@ -63,7 +80,7 @@ namespace IE_Faktury
                     MessageBox.Show("Niepoprawne nazwisko!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-
+                //walidacja nr pesel.
                 if (f.validatePesel(textBox_PESEL.Text))
                 {
                     f.Pesel = UInt64.Parse(textBox_PESEL.Text);
@@ -73,7 +90,7 @@ namespace IE_Faktury
                     MessageBox.Show("Niepoprawny nr PESEL!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                
+                //walidacja daty urodzenia.
                 if (datePicker_dataur.SelectedDate != null)
                 {
                     f.DataUrodzenia = datePicker_dataur.SelectedDate.Value;
@@ -83,7 +100,7 @@ namespace IE_Faktury
                     MessageBox.Show("Niepoprawna data urodzenia!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-
+                //walidacja ulicy i nr domu.
                 if (f.validateUlica(textBox_ulica.Text) && f.validateNrDomu(textBox_nrdomu.Text))
                 {
                     f.Ulica = textBox_ulica.Text + " " + textBox_nrdomu.Text;
@@ -93,7 +110,7 @@ namespace IE_Faktury
                     MessageBox.Show("Niepoprawny adres!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-
+                //walidacja kodu pocztowego.
                 if (f.validateKodPocztowy(textBox_kod.Text))
                 {
                     f.KodPocztowy = textBox_kod.Text;
@@ -103,7 +120,7 @@ namespace IE_Faktury
                     MessageBox.Show("Niepoprawny kod pocztowy!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-
+                //walidacja miasta.
                 if (f.validateMiasto(textBox_miasto.Text))
                 {
                     f.Miasto = textBox_miasto.Text;

@@ -17,15 +17,22 @@ using System.Windows.Shapes;
 namespace IE_Faktury
 {
     /// <summary>
-    /// Interaction logic for ZmianaProduktow.xaml
+    /// Okno w którym zmieniamy bazę produktów.
     /// </summary>
     public partial class ZmianaProduktow : Window
     {
+        /// <summary>
+        /// Instancja obiektu bazy produktów.
+        /// </summary>
         BazaProduktow baza = new BazaProduktow();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ZmianaProduktow" /> class.
+        /// </summary>
         public ZmianaProduktow()
         {
             InitializeComponent();
+            //odczyt bazy z pliku
             try
             {
                 baza = (BazaProduktow)baza.OdczytajBaze();
@@ -37,6 +44,11 @@ namespace IE_Faktury
             listView_produkty.ItemsSource = baza.listaProduktow;
         }
 
+        /// <summary>
+        /// Obsługa zdarzenia naciśnięcia przycisku dodaj (produkt).
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs" /> instance containing the event data.</param>
         private void button_dodaj_Click(object sender, RoutedEventArgs e)
         {
             Produkt p = new Produkt();
@@ -49,6 +61,11 @@ namespace IE_Faktury
             listView_produkty.Items.Refresh();
         }
 
+        /// <summary>
+        /// Obsługa zdarzenia naciśnięcia przycisku usuń (produkt).
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs" /> instance containing the event data.</param>
         private void button_usun_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -63,6 +80,11 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Obsługa naciśnięcia przycisku zmień (produkt).
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs" /> instance containing the event data.</param>
         private void button_zmien_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -76,13 +98,18 @@ namespace IE_Faktury
                 }
                 listView_produkty.Items.Refresh();
             }
-            catch(ArgumentOutOfRangeException)
+            catch (ArgumentOutOfRangeException)
             {
                 MessageBox.Show("Nie wybrano żadnego produktu!", "Bład!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
         }
 
+        /// <summary>
+        /// Obsługa naciśnięcia przycisku gotowe.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs" /> instance containing the event data.</param>
         private void button_gotowe_Click(object sender, RoutedEventArgs e)
         {
             baza.ZapiszBaze();

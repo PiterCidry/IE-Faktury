@@ -18,18 +18,44 @@ using System.Windows.Shapes;
 namespace IE_Faktury
 {
     /// <summary>
-    /// Interaction logic for PorownanieZysku.xaml
+    /// Okno do porównywania zysku na dwóch produktach.
     /// </summary>
+    /// <seealso cref="System.Windows.Window" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class PorownanieZysku : Window
     {
+        /// <summary>
+        /// Lista z datami.
+        /// </summary>
         private List<DateTime> daty = new List<DateTime>();
+        /// <summary>
+        /// Lista z zyskami na pierwszym produkcie.
+        /// </summary>
         private List<double> zyskiProd1 = new List<double>();
+        /// <summary>
+        /// Lista z zyskami na drugim produkcie.
+        /// </summary>
         private List<double> zyskiProd2 = new List<double>();
+        /// <summary>
+        /// Baza faktur.
+        /// </summary>
         private BazaFaktur bazaFaktur = new BazaFaktur();
+        /// <summary>
+        /// Klasa do analizy statystycznej pierwszego produktu.
+        /// </summary>
         private Descriptive descProd1 = new Descriptive();
+        /// <summary>
+        /// Klasa do analizy statystycznej drugiego produktu.
+        /// </summary>
         private Descriptive descProd2 = new Descriptive();
+        /// <summary>
+        /// Lista z nazwami produktów.
+        /// </summary>
         private List<string> nazwyProduktow = new List<string>();
 
+        /// <summary>
+        /// Kontruktor domyślny okna: <see cref="PorownanieZysku"/>.
+        /// </summary>
         public PorownanieZysku()
         {
             InitializeComponent();
@@ -57,6 +83,11 @@ namespace IE_Faktury
             comboBox_produkt2.ItemsSource = nazwyProduktow;
         }
 
+        /// <summary>
+        ///  Obsługa zdarzenia naciśnięcia przycisku porównaj.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void button_porownaj_Click(object sender, RoutedEventArgs e)
         {
             int iloscProd1 = 0, iloscProd2 = 0;
@@ -106,6 +137,7 @@ namespace IE_Faktury
                     return;
                 }
             }
+            //analiza dwóch średnich.
             try
             {
                 double sredniaProd1, sredniaProd2, varProd1, varProd2, n1, n2, statTestowa, statKrytyczna;

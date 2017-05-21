@@ -7,18 +7,54 @@ using System.Threading.Tasks;
 
 namespace IE_Faktury
 {
+    /// <summary>
+    /// Klasa osoby fizycznej.
+    /// </summary>
     public class OsobaFizyczna
     {
+        /// <summary>
+        /// Imię.
+        /// </summary>
         private string imie;
+        /// <summary>
+        /// Nazwisko.
+        /// </summary>
         private string nazwisko;
+        /// <summary>
+        /// Pesel.
+        /// </summary>
         private ulong pesel;
+        /// <summary>
+        /// Data urodzenia.
+        /// </summary>
         private DateTime dataUrodzenia;
+        /// <summary>
+        /// Ulica.
+        /// </summary>
         private string ulica;
+        /// <summary>
+        /// Kod pocztowy.
+        /// </summary>
         private string kodPocztowy;
+        /// <summary>
+        /// Miasto.
+        /// </summary>
         private string miasto;
+        /// <summary>
+        /// Liczba transakcji.
+        /// </summary>
         private uint liczbaTransakcji = 0;
+        /// <summary>
+        /// Rabat.
+        /// </summary>
         private double rabat;
 
+        /// <summary>
+        ///  Udostępnianie lub zmiana imienia.
+        /// </summary>
+        /// <value>
+        /// Imie.
+        /// </value>
         public string Imie
         {
             get
@@ -32,6 +68,12 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        ///  Udostępnianie lub zmiana nazwiska.
+        /// </summary>
+        /// <value>
+        /// Nazwisko.
+        /// </value>
         public string Nazwisko
         {
             get
@@ -45,6 +87,12 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        ///  Udostępnianie lub zmiana nr pesel.
+        /// </summary>
+        /// <value>
+        /// Pesel.
+        /// </value>
         public ulong Pesel
         {
             get
@@ -58,6 +106,12 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        ///  Udostępnianie lub zmiana daty urodzenia.
+        /// </summary>
+        /// <value>
+        /// Data urodzenia.
+        /// </value>
         public DateTime DataUrodzenia
         {
             get
@@ -71,6 +125,12 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        ///  Udostępnianie lub zmiana ulicy.
+        /// </summary>
+        /// <value>
+        /// Ulica.
+        /// </value>
         public string Ulica
         {
             get
@@ -83,6 +143,12 @@ namespace IE_Faktury
                 ulica = value;
             }
         }
+        /// <summary>
+        /// Udostępnianie lub zmiana miasta.
+        /// </summary>
+        /// <value>
+        /// Miasto.
+        /// </value>
         public string Miasto
         {
             get
@@ -95,6 +161,13 @@ namespace IE_Faktury
                 miasto = value;
             }
         }
+
+        /// <summary>
+        ///  Udostępnianie lub zmiana kodu pocztowego.
+        /// </summary>
+        /// <value>
+        /// Kod pocztowy.
+        /// </value>
         public string KodPocztowy
         {
             get
@@ -108,6 +181,12 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        ///  Udostępnianie lub zmiana liczby transakcji.
+        /// </summary>
+        /// <value>
+        /// Liczba transakcji.
+        /// </value>
         public uint LiczbaTransakcji
         {
             get
@@ -121,6 +200,12 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Udostępnianie lub zmiana rabatu.
+        /// </summary>
+        /// <value>
+        /// Rabat.
+        /// </value>
         public double Rabat
         {
             get
@@ -134,6 +219,9 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Konstruktor domyślny klasy <see cref="OsobaFizyczna" />.
+        /// </summary>
         public OsobaFizyczna()
         {
             this.imie = "";
@@ -147,12 +235,21 @@ namespace IE_Faktury
         }
 
 
+        /// <summary>
+        /// Metoda zwracająca <see cref="System.String" /> reprezentujący osobę.
+        /// </summary>
+        /// <returns>
+        /// <see cref="System.String" /> reprezentujący osobę.
+        /// </returns>
         public override string ToString()
         {
-           return (this.Imie + " " + this.Nazwisko);
-            
+            return (this.Imie + " " + this.Nazwisko);
         }
-        
+
+        /// <summary>
+        /// Metoda wyświetlenia osoby.
+        /// </summary>
+        /// <returns>String reprezentujący osobę w wersji rozszerzonej</returns>
         public string wyswietl()
         {
             StringBuilder sb = new StringBuilder();
@@ -161,8 +258,13 @@ namespace IE_Faktury
             sb.AppendLine(this.KodPocztowy + " " + this.Miasto);
             return sb.ToString();
         }
-    
 
+
+        /// <summary>
+        /// Metoda walidacji wprowadzonego imienia.
+        /// </summary>
+        /// <param name="i">Imię</param>
+        /// <returns>True jeśli imie jest poprawne, false jeżeli nie jest.</returns>
         public bool validateImie(string i)
         {
             Regex rgx = new Regex(@"^[\p{Lu}][\p{L}'\-\s]{0,48}[\p{L}'\-]$");
@@ -177,6 +279,11 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Metoda walidacji wprowadzonego nazwiska.
+        /// </summary>
+        /// <param name="n">Nazwisko</param>
+        /// <returns>True jeśli nazwaisko jest poprawne, false jeżeli nie jest.</returns>
         public bool validateNazwisko(string n)
         {
             Regex rgx = new Regex(@"^[\p{Lu}][\p{L}0-9']+[\s\-]?[\p{L}0-9']*[\s-]?[\p{L}0-9']+$");
@@ -191,6 +298,11 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Metoda walidacji wprowadzonego nr pesel.
+        /// </summary>
+        /// <param name="szPesel">Pesel.</param>
+        /// <returns>True jeśli pesel jest poprawny, false jeżeli nie jest.</returns>
         public bool validatePesel(string szPesel)
         {
             byte[] tab = new byte[10] { 9, 7, 3, 1, 9, 7, 3, 1, 9, 7 };
@@ -263,6 +375,11 @@ namespace IE_Faktury
             return bResult;
         }
 
+        /// <summary>
+        /// Metoda walidująca wprowadzoną ulicę
+        /// </summary>
+        /// <param name="u">Ulica.</param>
+        /// <returns>True jeśli ulica jest poprawna, false jeżeli nie jest.</returns>
         public bool validateUlica(string u)
         {
             Regex rgx = new Regex(@"^[\p{L}0-9']+[\s\-]?[\p{L}0-9']*[\s-]?[\p{L}0-9']+$");
@@ -277,6 +394,11 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Metoda walidująca nr domu.
+        /// </summary>
+        /// <param name="nr">Nr domu</param>
+        /// <returns>True jeśli nr jest poprawny, false jeżeli nie jest.</returns>
         public bool validateNrDomu(string nr)
         {
             Regex rgx = new Regex(@"^\d{1,4}(\/\d{1,3})?$");
@@ -291,6 +413,11 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Metoda walidująca kod pocztowy.
+        /// </summary>
+        /// <param name="k">Kod pocztowy.</param>
+        /// <returns>True jeśli kod pocztowy jest poprawny, false jeżeli nie jest.</returns>
         public bool validateKodPocztowy(string k)
         {
             Regex rgx = new Regex(@"^\d{2}\-\d{3}$");
@@ -305,6 +432,11 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Metoda walidująca wprowadzoną nazwę miasta.
+        /// </summary>
+        /// <param name="m">Miasto.</param>
+        /// <returns>True jeśli miasto jest poprawne, false jeżeli nie jest.</returns>
         public bool validateMiasto(string m)
         {
             Regex rgx = new Regex(@"^[\p{Lu}][\p{L}]+[\s\-]?[\p{L}]*[\s-]?[\p{L}]+$");
@@ -319,21 +451,24 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Metoda ustawiająca rabat na podstawie liczby transakcji.
+        /// </summary>
         public void ustawRabat()
         {
-            if(this.LiczbaTransakcji < 6)
+            if (this.LiczbaTransakcji < 6)
             {
                 this.Rabat = 1;
             }
-            else if(this.LiczbaTransakcji >= 6 && this.LiczbaTransakcji < 11)
+            else if (this.LiczbaTransakcji >= 6 && this.LiczbaTransakcji < 11)
             {
                 this.Rabat = 0.9;
             }
-            else if(this.LiczbaTransakcji >= 11 && this.LiczbaTransakcji < 16)
+            else if (this.LiczbaTransakcji >= 11 && this.LiczbaTransakcji < 16)
             {
                 this.Rabat = 0.85;
             }
-            else if(this.LiczbaTransakcji >= 16)
+            else if (this.LiczbaTransakcji >= 16)
             {
                 this.Rabat = 0.8;
             }

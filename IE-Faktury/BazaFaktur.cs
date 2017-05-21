@@ -11,21 +11,40 @@ using System.Xml.Serialization;
 
 namespace IE_Faktury
 {
-   [Serializable]
+    /// <summary>
+    /// Klasa bazy faktur.
+    /// </summary>
+    [Serializable]
    public class BazaFaktur
     {
+        /// <summary>
+        /// Udostępnianie lub zmiana listy faktur.
+        /// </summary>
+        /// <value>
+        /// Lista faktur.
+        /// </value>
         public List<Faktura> listaFaktur { get; set; }
 
+        /// <summary>
+        /// Kontruktor domyślny klasy: <see cref="BazaFaktur"/>.
+        /// </summary>
         public BazaFaktur()
         {
             listaFaktur = new List<Faktura>();
         }
 
+        /// <summary>
+        /// Metoda dodająca fakturę do listy.
+        /// </summary>
+        /// <param name="f">Faktura do dodania.</param>
         public void DodajFakture(Faktura f)
         {
             listaFaktur.Add(f);
         }
 
+        /// <summary>
+        /// Metoda zapisująca bazę faktur do pliku xml.
+        /// </summary>
         public void ZapiszBaze()
         {
             try
@@ -41,6 +60,10 @@ namespace IE_Faktury
             }
         }
 
+        /// <summary>
+        /// Metoda oczytująca bazę faktur z pliku xml.
+        /// </summary>
+        /// <returns></returns>
         public Object OdczytajBaze()
         {
             BazaFaktur Baza = new BazaFaktur();

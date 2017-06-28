@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <BazaFaktur xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <listaFaktur>
     <Faktura>
@@ -1620,7 +1620,7 @@
       <Razem>35.64</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>1/2017</NumerFaktury>
+      <NumerFaktury>31/2017</NumerFaktury>
       <DataWystawienia>2017-05-18T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -1662,7 +1662,7 @@
       <Razem>5.7542400000000011</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>2/2017</NumerFaktury>
+      <NumerFaktury>32/2017</NumerFaktury>
       <DataWystawienia>2017-05-18T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Anna</Imie>
@@ -1696,7 +1696,7 @@
       <Razem>9.5040000000000013</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>3/2017</NumerFaktury>
+      <NumerFaktury>33/2017</NumerFaktury>
       <DataWystawienia>2017-05-18T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Krystyna</Imie>
@@ -1730,7 +1730,7 @@
       <Razem>18.144000000000002</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>4/2017</NumerFaktury>
+      <NumerFaktury>34/2017</NumerFaktury>
       <DataWystawienia>2017-05-18T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Anna</Imie>
@@ -1804,7 +1804,7 @@
       <Razem>33.799680000000009</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>1/2017</NumerFaktury>
+      <NumerFaktury>35/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -1838,7 +1838,7 @@
       <Razem>3.1968000000000005</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>2/2017</NumerFaktury>
+      <NumerFaktury>36/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -1884,7 +1884,7 @@
       <Razem>4.3296</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>3/2017</NumerFaktury>
+      <NumerFaktury>37/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Krystyna</Imie>
@@ -2002,69 +2002,7 @@
       <Razem>65.6016</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>1/2017</NumerFaktury>
-      <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
-      <OdbiorcaFizyczny>
-        <Imie>Jan</Imie>
-        <Nazwisko>Kowalski</Nazwisko>
-        <Pesel>80020700003</Pesel>
-        <DataUrodzenia>1980-02-07T00:00:00</DataUrodzenia>
-        <Ulica>Kwiatowa 15</Ulica>
-        <Miasto>Olsztyn</Miasto>
-        <KodPocztowy>92-912</KodPocztowy>
-        <LiczbaTransakcji>10</LiczbaTransakcji>
-        <Rabat>0.9</Rabat>
-      </OdbiorcaFizyczny>
-      <ProduktyList>
-        <KeyValuePairOfProduktInt32>
-          <Key>
-            <Nazwa>Pomidory</Nazwa>
-            <CenaHurtownia>2.5</CenaHurtownia>
-            <CenaJednostkowa>3.7</CenaJednostkowa>
-            <StawkaPodatku>8</StawkaPodatku>
-            <CenaBrutto>3.9960000000000004</CenaBrutto>
-            <ListaZmian>
-              <KeyValuePairOfDateTimeDouble>
-                <Key>2017-05-12T17:59:27.8438818+02:00</Key>
-                <Value>3.7</Value>
-              </KeyValuePairOfDateTimeDouble>
-            </ListaZmian>
-          </Key>
-          <Value>3</Value>
-        </KeyValuePairOfProduktInt32>
-        <KeyValuePairOfProduktInt32>
-          <Key>
-            <Nazwa>Szczypiorek</Nazwa>
-            <CenaHurtownia>2.79</CenaHurtownia>
-            <CenaJednostkowa>4.4</CenaJednostkowa>
-            <StawkaPodatku>23</StawkaPodatku>
-            <CenaBrutto>5.412</CenaBrutto>
-            <ListaZmian>
-              <KeyValuePairOfDateTimeDouble>
-                <Key>2017-05-12T17:59:42.3879702+02:00</Key>
-                <Value>4</Value>
-              </KeyValuePairOfDateTimeDouble>
-              <KeyValuePairOfDateTimeDouble>
-                <Key>2017-05-12T17:59:51.0436171+02:00</Key>
-                <Value>4</Value>
-              </KeyValuePairOfDateTimeDouble>
-              <KeyValuePairOfDateTimeDouble>
-                <Key>2017-05-12T18:01:48.373228+02:00</Key>
-                <Value>4.6</Value>
-              </KeyValuePairOfDateTimeDouble>
-              <KeyValuePairOfDateTimeDouble>
-                <Key>2017-05-14T23:30:19.1336313+02:00</Key>
-                <Value>4.4</Value>
-              </KeyValuePairOfDateTimeDouble>
-            </ListaZmian>
-          </Key>
-          <Value>4</Value>
-        </KeyValuePairOfProduktInt32>
-      </ProduktyList>
-      <Razem>30.272400000000005</Razem>
-    </Faktura>
-    <Faktura>
-      <NumerFaktury>2/2017</NumerFaktury>
+      <NumerFaktury>38/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Krzystof</Imie>
@@ -2138,7 +2076,7 @@
       <Razem>42.92352</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>3/2017</NumerFaktury>
+      <NumerFaktury>39/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Anna</Imie>
@@ -2200,7 +2138,7 @@
       <Razem>18.1632</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>1/2017</NumerFaktury>
+      <NumerFaktury>40/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -2286,7 +2224,7 @@
       <Razem>32.66304</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>2/2017</NumerFaktury>
+      <NumerFaktury>41/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -2336,7 +2274,7 @@
       <Razem>28.7712</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>3/2017</NumerFaktury>
+      <NumerFaktury>42/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -2394,7 +2332,7 @@
       <Razem>37.14336</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>4/2017</NumerFaktury>
+      <NumerFaktury>43/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Krzystof</Imie>
@@ -2460,7 +2398,7 @@
       <Razem>24.143400000000003</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>5/2017</NumerFaktury>
+      <NumerFaktury>44/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Krzystof</Imie>
@@ -2522,7 +2460,7 @@
       <Razem>52.795199999999994</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>6/2017</NumerFaktury>
+      <NumerFaktury>45/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Krzystof</Imie>
@@ -2572,7 +2510,7 @@
       <Razem>17.8092</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>7/2017</NumerFaktury>
+      <NumerFaktury>46/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -2606,7 +2544,7 @@
       <Razem>13.776</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>8/2017</NumerFaktury>
+      <NumerFaktury>47/2017</NumerFaktury>
       <DataWystawienia>2017-05-19T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Krystyna</Imie>
@@ -2640,7 +2578,7 @@
       <Razem>46.494</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>9/2017</NumerFaktury>
+      <NumerFaktury>48/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -2698,7 +2636,7 @@
       <Razem>28.728480000000005</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>10/2017</NumerFaktury>
+      <NumerFaktury>49/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Jan</Imie>
@@ -2732,7 +2670,7 @@
       <Razem>13.586400000000001</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>11/2017</NumerFaktury>
+      <NumerFaktury>50/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie</Nazwa>
@@ -2788,7 +2726,7 @@
       <Razem>37.472760000000008</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>12/2017</NumerFaktury>
+      <NumerFaktury>51/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Anna</Imie>
@@ -2858,7 +2796,7 @@
       <Razem>15.838080000000003</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>13/2017</NumerFaktury>
+      <NumerFaktury>52/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Jan</Imie>
@@ -2900,7 +2838,7 @@
       <Razem>3.0569400000000004</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>14/2017</NumerFaktury>
+      <NumerFaktury>53/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Uniwersytet Ekonomiczny</Nazwa>
@@ -2956,7 +2894,7 @@
       <Razem>30.12228</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>15/2017</NumerFaktury>
+      <NumerFaktury>54/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Jan</Imie>
@@ -3025,42 +2963,9 @@
       </ProduktyList>
       <Razem>18.371219999999997</Razem>
     </Faktura>
+    
     <Faktura>
-      <NumerFaktury>16/2017</NumerFaktury>
-      <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
-      <OdbiorcaFizyczny>
-        <Imie>Krystyna</Imie>
-        <Nazwisko>Janda</Nazwisko>
-        <Pesel>80013100007</Pesel>
-        <DataUrodzenia>1980-01-31T00:00:00</DataUrodzenia>
-        <Ulica>Jabłeczna 4</Ulica>
-        <Miasto>Olsztyn</Miasto>
-        <KodPocztowy>30-001</KodPocztowy>
-        <LiczbaTransakcji>7</LiczbaTransakcji>
-        <Rabat>0.9</Rabat>
-      </OdbiorcaFizyczny>
-      <ProduktyList>
-        <KeyValuePairOfProduktInt32>
-          <Key>
-            <Nazwa>Pomidory</Nazwa>
-            <CenaHurtownia>2.5</CenaHurtownia>
-            <CenaJednostkowa>3.7</CenaJednostkowa>
-            <StawkaPodatku>8</StawkaPodatku>
-            <CenaBrutto>3.9960000000000004</CenaBrutto>
-            <ListaZmian>
-              <KeyValuePairOfDateTimeDouble>
-                <Key>2017-05-12T17:59:27.8438818+02:00</Key>
-                <Value>3.7</Value>
-              </KeyValuePairOfDateTimeDouble>
-            </ListaZmian>
-          </Key>
-          <Value>5</Value>
-        </KeyValuePairOfProduktInt32>
-      </ProduktyList>
-      <Razem>17.982000000000003</Razem>
-    </Faktura>
-    <Faktura>
-      <NumerFaktury>17/2017</NumerFaktury>
+      <NumerFaktury>55/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Uniwersytet Ekonomiczny</Nazwa>
@@ -3116,7 +3021,7 @@
       <Razem>35.480700000000006</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>18/2017</NumerFaktury>
+      <NumerFaktury>56/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Uniwersytet Ekonomiczny</Nazwa>
@@ -3148,7 +3053,7 @@
       <Razem>7.3184999999999993</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>19/2017</NumerFaktury>
+      <NumerFaktury>57/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Jan</Imie>
@@ -3198,7 +3103,7 @@
       <Razem>14.5044</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>20/2017</NumerFaktury>
+      <NumerFaktury>58/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Anna</Imie>
@@ -3272,7 +3177,7 @@
       <Razem>45.783360000000009</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>21/2017</NumerFaktury>
+      <NumerFaktury>59/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -3322,7 +3227,7 @@
       <Razem>26.8104</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>22/2017</NumerFaktury>
+      <NumerFaktury>60/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie</Nazwa>
@@ -3410,7 +3315,7 @@
       <Razem>56.38356</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>23/2017</NumerFaktury>
+      <NumerFaktury>61/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie</Nazwa>
@@ -3466,7 +3371,7 @@
       <Razem>21.26088</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>24/2017</NumerFaktury>
+      <NumerFaktury>62/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie</Nazwa>
@@ -3514,7 +3419,7 @@
       <Razem>27.734400000000008</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>25/2017</NumerFaktury>
+      <NumerFaktury>63/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Krystyna</Imie>
@@ -3600,7 +3505,7 @@
       <Razem>25.041960000000003</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>26/2017</NumerFaktury>
+      <NumerFaktury>64/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -3686,7 +3591,7 @@
       <Razem>22.259520000000006</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>27/2017</NumerFaktury>
+      <NumerFaktury>65/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -3728,7 +3633,7 @@
       <Razem>2.8771200000000006</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>28/2017</NumerFaktury>
+      <NumerFaktury>66/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -3786,7 +3691,7 @@
       <Razem>9.2707200000000025</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>29/2017</NumerFaktury>
+      <NumerFaktury>67/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -3848,7 +3753,7 @@
       <Razem>26.908800000000003</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>30/2017</NumerFaktury>
+      <NumerFaktury>68/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -3922,7 +3827,7 @@
       <Razem>19.60272</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>31/2017</NumerFaktury>
+      <NumerFaktury>69/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -3980,7 +3885,7 @@
       <Razem>17.13312</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>32/2017</NumerFaktury>
+      <NumerFaktury>70/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Jan</Imie>
@@ -4038,7 +3943,7 @@
       <Razem>20.010240000000003</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>33/2017</NumerFaktury>
+      <NumerFaktury>71/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4100,7 +4005,7 @@
       <Razem>23.712000000000003</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>34/2017</NumerFaktury>
+      <NumerFaktury>72/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Jan</Imie>
@@ -4162,7 +4067,7 @@
       <Razem>36.3264</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>35/2017</NumerFaktury>
+      <NumerFaktury>73/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>DS 11 Bonus</Nazwa>
@@ -4226,7 +4131,7 @@
       <Razem>47.892</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>36/2017</NumerFaktury>
+      <NumerFaktury>74/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4276,7 +4181,7 @@
       <Razem>26.563200000000002</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>37/2017</NumerFaktury>
+      <NumerFaktury>75/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Anna</Imie>
@@ -4322,7 +4227,7 @@
       <Razem>25.977600000000002</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>38/2017</NumerFaktury>
+      <NumerFaktury>76/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Jan</Imie>
@@ -4356,7 +4261,7 @@
       <Razem>6.3936000000000011</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>39/2017</NumerFaktury>
+      <NumerFaktury>77/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4398,7 +4303,7 @@
       <Razem>5.7542400000000011</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>40/2017</NumerFaktury>
+      <NumerFaktury>78/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4440,7 +4345,7 @@
       <Razem>2.8771200000000006</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>41/2017</NumerFaktury>
+      <NumerFaktury>79/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4482,7 +4387,7 @@
       <Razem>2.8771200000000006</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>42/2017</NumerFaktury>
+      <NumerFaktury>80/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4528,7 +4433,7 @@
       <Razem>4.3296</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>43/2017</NumerFaktury>
+      <NumerFaktury>81/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4562,7 +4467,7 @@
       <Razem>3.1968000000000005</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>44/2017</NumerFaktury>
+      <NumerFaktury>82/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4604,7 +4509,7 @@
       <Razem>5.7542400000000011</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>45/2017</NumerFaktury>
+      <NumerFaktury>83/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4638,7 +4543,7 @@
       <Razem>3.6288000000000005</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>46/2017</NumerFaktury>
+      <NumerFaktury>84/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4672,7 +4577,7 @@
       <Razem>3.444</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>47/2017</NumerFaktury>
+      <NumerFaktury>85/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4706,7 +4611,7 @@
       <Razem>4.7520000000000007</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>48/2017</NumerFaktury>
+      <NumerFaktury>86/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4748,7 +4653,7 @@
       <Razem>2.8771200000000006</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>49/2017</NumerFaktury>
+      <NumerFaktury>87/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4782,7 +4687,7 @@
       <Razem>3.1968000000000005</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>50/2017</NumerFaktury>
+      <NumerFaktury>88/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Krzystof</Imie>
@@ -4824,7 +4729,7 @@
       <Razem>3.0569400000000004</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>51/2017</NumerFaktury>
+      <NumerFaktury>89/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4866,7 +4771,7 @@
       <Razem>2.8771200000000006</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>52/2017</NumerFaktury>
+      <NumerFaktury>90/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -4900,7 +4805,7 @@
       <Razem>3.444</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>53/2017</NumerFaktury>
+      <NumerFaktury>91/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie</Nazwa>
@@ -5032,7 +4937,7 @@
       <Razem>80.075520000000012</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>54/2017</NumerFaktury>
+      <NumerFaktury>92/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -5066,7 +4971,7 @@
       <Razem>3.1968000000000005</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>55/2017</NumerFaktury>
+      <NumerFaktury>93/2017</NumerFaktury>
       <DataWystawienia>2017-05-20T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Joanna</Imie>
@@ -5124,7 +5029,7 @@
       <Razem>19.861200000000004</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>56/2017</NumerFaktury>
+      <NumerFaktury>94/2017</NumerFaktury>
       <DataWystawienia>2017-05-21T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>DS 11 Bonus</Nazwa>
@@ -5200,7 +5105,7 @@
       <Razem>42.666</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>57/2017</NumerFaktury>
+      <NumerFaktury>95/2017</NumerFaktury>
       <DataWystawienia>2017-05-21T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Buli Salon Meblowy</Nazwa>
@@ -5276,7 +5181,7 @@
       <Razem>68.352</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>58/2017</NumerFaktury>
+      <NumerFaktury>96/2017</NumerFaktury>
       <DataWystawienia>2017-05-21T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Joanna</Imie>
@@ -5342,7 +5247,7 @@
       <Razem>107.92949999999999</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>59/2017</NumerFaktury>
+      <NumerFaktury>97/2017</NumerFaktury>
       <DataWystawienia>2017-05-21T00:00:00+02:00</DataWystawienia>
       <OdbiorcaPrawny>
         <Nazwa>Twój Dom</Nazwa>
@@ -5446,7 +5351,7 @@
       <Razem>161.6913</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>60/2017</NumerFaktury>
+      <NumerFaktury>98/2017</NumerFaktury>
       <DataWystawienia>2017-05-21T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Jan</Imie>
@@ -5544,7 +5449,7 @@
       <Razem>109.09032</Razem>
     </Faktura>
     <Faktura>
-      <NumerFaktury>61/2017</NumerFaktury>
+      <NumerFaktury>99/2017</NumerFaktury>
       <DataWystawienia>2017-05-21T00:00:00+02:00</DataWystawienia>
       <OdbiorcaFizyczny>
         <Imie>Piotr</Imie>
@@ -5649,5 +5554,285 @@
       </ProduktyList>
       <Razem>323.2851</Razem>
     </Faktura>
-  </listaFaktur>
-</BazaFaktur>
+    <Faktura>
+      <NumerFaktury>100/2017</NumerFaktury>
+      <DataWystawienia>2017-05-21T00:00:00+02:00</DataWystawienia>
+      <OdbiorcaFizyczny>
+        <Imie>Joanna</Imie>
+        <Nazwisko>Bargiel</Nazwisko>
+        <Pesel>96100406406</Pesel>
+        <DataUrodzenia>1988-10-12T00:00:00</DataUrodzenia>
+        <Ulica>Wąska 5</Ulica>
+        <Miasto>Kraków</Miasto>
+        <KodPocztowy>40-234</KodPocztowy>
+        <LiczbaTransakcji>1</LiczbaTransakcji>
+        <Rabat>1</Rabat>
+      </OdbiorcaFizyczny>
+      <ProduktyList>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Śmietana 30prc</Nazwa>
+            <CenaHurtownia>1.49</CenaHurtownia>
+            <CenaJednostkowa>2</CenaJednostkowa>
+            <StawkaPodatku>5</StawkaPodatku>
+            <CenaBrutto>2.1</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-21T17:55:14.6026428+02:00</Key>
+                <Value>2</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>2</Value>
+        </KeyValuePairOfProduktInt32>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Sól 1kg</Nazwa>
+            <CenaHurtownia>0.69</CenaHurtownia>
+            <CenaJednostkowa>1.29</CenaJednostkowa>
+            <StawkaPodatku>5</StawkaPodatku>
+            <CenaBrutto>1.3545</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-21T17:46:33.3854141+02:00</Key>
+                <Value>1.29</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>1</Value>
+        </KeyValuePairOfProduktInt32>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Makaron razowy</Nazwa>
+            <CenaHurtownia>3.29</CenaHurtownia>
+            <CenaJednostkowa>4.69</CenaJednostkowa>
+            <StawkaPodatku>5</StawkaPodatku>
+            <CenaBrutto>4.924500000000001</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-21T17:48:09.9882565+02:00</Key>
+                <Value>4.69</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>1</Value>
+        </KeyValuePairOfProduktInt32>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Pomidory</Nazwa>
+            <CenaHurtownia>2.5</CenaHurtownia>
+            <CenaJednostkowa>3.7</CenaJednostkowa>
+            <StawkaPodatku>8</StawkaPodatku>
+            <CenaBrutto>3.9960000000000004</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-12T17:59:27.8438818+02:00</Key>
+                <Value>3.7</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>1</Value>
+        </KeyValuePairOfProduktInt32>
+      </ProduktyList>
+      <Razem>14.475000000000001</Razem>
+    </Faktura>
+    <Faktura>
+      <NumerFaktury>101/2017</NumerFaktury>
+      <DataWystawienia>2017-06-10T00:00:00+02:00</DataWystawienia>
+      <OdbiorcaFizyczny>
+        <Imie>Krystyna</Imie>
+        <Nazwisko>Janda</Nazwisko>
+        <Pesel>80013100007</Pesel>
+        <DataUrodzenia>1980-01-31T00:00:00</DataUrodzenia>
+        <Ulica>Jabłeczna 4</Ulica>
+        <Miasto>Olsztyn</Miasto>
+        <KodPocztowy>30-001</KodPocztowy>
+        <LiczbaTransakcji>10</LiczbaTransakcji>
+        <Rabat>0.9</Rabat>
+      </OdbiorcaFizyczny>
+      <ProduktyList>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Michał Wroński</Nazwa>
+            <CenaHurtownia>69</CenaHurtownia>
+            <CenaJednostkowa>1234</CenaJednostkowa>
+            <StawkaPodatku>5</StawkaPodatku>
+            <CenaBrutto>1295.7</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-06-10T21:33:49.3697666+02:00</Key>
+                <Value>1234</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>12</Value>
+        </KeyValuePairOfProduktInt32>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Kapusta kiszona</Nazwa>
+            <CenaHurtownia>1.4</CenaHurtownia>
+            <CenaJednostkowa>3.5</CenaJednostkowa>
+            <StawkaPodatku>23</StawkaPodatku>
+            <CenaBrutto>4.305</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-19T19:53:15.4409824+02:00</Key>
+                <Value>3.5</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>3</Value>
+        </KeyValuePairOfProduktInt32>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Mąka przenna 1kg</Nazwa>
+            <CenaHurtownia>1.35</CenaHurtownia>
+            <CenaJednostkowa>2.9</CenaJednostkowa>
+            <StawkaPodatku>5</StawkaPodatku>
+            <CenaBrutto>3.045</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-21T17:43:13.0188207+02:00</Key>
+                <Value>2.9</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>2</Value>
+        </KeyValuePairOfProduktInt32>
+      </ProduktyList>
+      <Razem>14010.664500000003</Razem>
+    </Faktura>
+    <Faktura>
+      <NumerFaktury>102/2017</NumerFaktury>
+      <DataWystawienia>2017-06-11T00:00:00+02:00</DataWystawienia>
+      <OdbiorcaPrawny>
+        <Nazwa>Phinance S.A</Nazwa>
+        <Ulica>Grodzka 32</Ulica>
+        <Miasto>Kraków</Miasto>
+        <KodPocztowy>26-315</KodPocztowy>
+        <Nip>2847750322</Nip>
+        <LiczbaTransakcji>1</LiczbaTransakcji>
+        <Rabat>1</Rabat>
+      </OdbiorcaPrawny>
+      <ProduktyList>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Mąka przenna 1kg</Nazwa>
+            <CenaHurtownia>1.35</CenaHurtownia>
+            <CenaJednostkowa>2.9</CenaJednostkowa>
+            <StawkaPodatku>5</StawkaPodatku>
+            <CenaBrutto>3.045</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-21T17:43:13.0188207+02:00</Key>
+                <Value>2.9</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>2</Value>
+        </KeyValuePairOfProduktInt32>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Piwo pszeniczne</Nazwa>
+            <CenaHurtownia>2.29</CenaHurtownia>
+            <CenaJednostkowa>4.19</CenaJednostkowa>
+            <StawkaPodatku>23</StawkaPodatku>
+            <CenaBrutto>5.1537000000000006</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-21T18:24:27.9814338+02:00</Key>
+                <Value>4.19</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>3</Value>
+        </KeyValuePairOfProduktInt32>
+      </ProduktyList>
+      <Razem>21.5511</Razem>
+    </Faktura>
+    <Faktura>
+      <NumerFaktury>103/2017</NumerFaktury>
+      <DataWystawienia>2017-06-12T00:00:00+02:00</DataWystawienia>
+      <OdbiorcaFizyczny>
+        <Imie>Jan</Imie>
+        <Nazwisko>Kowalski</Nazwisko>
+        <Pesel>80020700003</Pesel>
+        <DataUrodzenia>1980-02-07T00:00:00</DataUrodzenia>
+        <Ulica>Kwiatowa 15</Ulica>
+        <Miasto>Olsztyn</Miasto>
+        <KodPocztowy>92-912</KodPocztowy>
+        <LiczbaTransakcji>20</LiczbaTransakcji>
+        <Rabat>0.8</Rabat>
+      </OdbiorcaFizyczny>
+      <ProduktyList>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Coca Cola 2l</Nazwa>
+            <CenaHurtownia>3</CenaHurtownia>
+            <CenaJednostkowa>5.5</CenaJednostkowa>
+            <StawkaPodatku>8</StawkaPodatku>
+            <CenaBrutto>5.94</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-18T15:55:11.6675027+02:00</Key>
+                <Value>5.5</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>2</Value>
+        </KeyValuePairOfProduktInt32>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Masło extra 200g</Nazwa>
+            <CenaHurtownia>3.19</CenaHurtownia>
+            <CenaJednostkowa>4.5</CenaJednostkowa>
+            <StawkaPodatku>5</StawkaPodatku>
+            <CenaBrutto>4.7250000000000005</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-21T18:09:27.9636997+02:00</Key>
+                <Value>4.5</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>3</Value>
+        </KeyValuePairOfProduktInt32>
+      </ProduktyList>
+      <Razem>20.844</Razem>
+    </Faktura>
+    <Faktura>
+      <NumerFaktury>104/2017</NumerFaktury>
+      <DataWystawienia>2017-06-26T00:00:00+02:00</DataWystawienia>
+      <OdbiorcaFizyczny>
+        <Imie>Krystyna</Imie>
+        <Nazwisko>Janda</Nazwisko>
+        <Pesel>80013100007</Pesel>
+        <DataUrodzenia>1980-01-31T00:00:00</DataUrodzenia>
+        <Ulica>Jabłeczna 4</Ulica>
+        <Miasto>Olsztyn</Miasto>
+        <KodPocztowy>30-001</KodPocztowy>
+        <LiczbaTransakcji>7</LiczbaTransakcji>
+        <Rabat>0.9</Rabat>
+      </OdbiorcaFizyczny>
+      <ProduktyList>
+        <KeyValuePairOfProduktInt32>
+          <Key>
+            <Nazwa>Pomidory</Nazwa>
+            <CenaHurtownia>2.5</CenaHurtownia>
+            <CenaJednostkowa>3.7</CenaJednostkowa>
+            <StawkaPodatku>8</StawkaPodatku>
+            <CenaBrutto>3.9960000000000004</CenaBrutto>
+            <ListaZmian>
+              <KeyValuePairOfDateTimeDouble>
+                <Key>2017-05-12T17:59:27.8438818+02:00</Key>
+                <Value>3.7</Value>
+              </KeyValuePairOfDateTimeDouble>
+            </ListaZmian>
+          </Key>
+          <Value>5</Value>
+        </KeyValuePairOfProduktInt32>
+      </ProduktyList>
+      <Razem>17.982000000000003</Razem>
+    </Faktura>
+    </listaFaktur>
+    </BazaFaktur>

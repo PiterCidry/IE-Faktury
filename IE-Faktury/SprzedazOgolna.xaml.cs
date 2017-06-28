@@ -72,7 +72,19 @@ namespace IE_Faktury
                 {
                     if(f.DataWystawienia <= dataKon.SelectedDate && f.DataWystawienia >= dataPocz.SelectedDate)
                     {
-                        ceny.Add(f.Razem);
+                        double razem = 0.0;
+                        foreach (var item in f.ProduktyList)
+                        {
+                            if(f.OdbiorcaFizyczny != null && f.OdbiorcaPrawny == null)
+                            {
+                                razem += (item.Key.CenaBrutto * f.OdbiorcaFizyczny.Rabat * item.Value);
+                            }
+                            else if(f.OdbiorcaPrawny != null && f.OdbiorcaFizyczny == null)
+                            {
+                                razem += (item.Key.CenaBrutto * f.OdbiorcaPrawny.Rabat * item.Value);
+                            }
+                        }
+                        ceny.Add(razem);
                     }
                 }
                 desc = new Descriptive(ceny.ToArray());

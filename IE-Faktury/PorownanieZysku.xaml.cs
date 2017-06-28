@@ -144,20 +144,29 @@ namespace IE_Faktury
                 descProd1 = new Descriptive(zyskiProd1.ToArray());
                 descProd1.Analyze();
                 sredniaProd1 = descProd1.Result.Mean;
+                Debug.WriteLine("X1sr: " + sredniaProd1.ToString());
                 varProd1 = descProd1.Result.Variance;
+                Debug.WriteLine("X1var: " + varProd1.ToString());
                 n1 = iloscProd1;
+                Debug.WriteLine("N1: " + n1.ToString());
                 descProd2 = new Descriptive(zyskiProd2.ToArray());
                 descProd2.Analyze();
                 sredniaProd2 = descProd2.Result.Mean;
+                Debug.WriteLine("X2sr: " + sredniaProd2.ToString());
                 varProd2 = descProd2.Result.Variance;
+                Debug.WriteLine("X1var: " + varProd2.ToString());
                 n2 = iloscProd2;
+                Debug.WriteLine("N2: " + n2.ToString());
                 statTestowa = (sredniaProd1 - sredniaProd2) / Math.Sqrt((varProd1 / n1) + (varProd2 / n2));
+                Debug.WriteLine("Stat testowa: "+statTestowa.ToString());
                 Normal normal = new Normal(0, 1);
                 statKrytyczna = normal.InverseCumulativeDistribution(0.95);
+                Debug.WriteLine("Stat kryt: " + statKrytyczna.ToString());
                 MessageBoxResult res = MessageBoxResult.Yes;
                 if (Math.Abs(statTestowa) >= statKrytyczna)
                 {
                     statKrytyczna = normal.InverseCumulativeDistribution(0.9);
+                    Debug.WriteLine("Stat kryt2: " + statKrytyczna.ToString());
                     if (statTestowa >= statKrytyczna)
                     {
                         res = MessageBox.Show(String.Format("Zysk na produkcie {0} jest istotnie większy niż na produkcie {1} w badanym okresie na poziomie ufności 95%\nCzy chcesz przeanalizować jeszcze jakieś produkty?", comboBox_produkt1.SelectedItem.ToString(), comboBox_produkt2.SelectedItem.ToString()), "Rezultat", MessageBoxButton.YesNo, MessageBoxImage.Information);

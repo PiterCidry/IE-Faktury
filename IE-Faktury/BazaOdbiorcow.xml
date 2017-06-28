@@ -20,7 +20,7 @@
       <Ulica>Kwiatowa 15</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>92-912</KodPocztowy>
-      <LiczbaTransakcji>19</LiczbaTransakcji>
+      <LiczbaTransakcji>20</LiczbaTransakcji>
       <Rabat>0.8</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -53,7 +53,7 @@
       <Ulica>Jabłeczna 4</Ulica>
       <Miasto>Olsztyn</Miasto>
       <KodPocztowy>30-001</KodPocztowy>
-      <LiczbaTransakcji>9</LiczbaTransakcji>
+      <LiczbaTransakcji>10</LiczbaTransakcji>
       <Rabat>0.9</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -130,7 +130,7 @@
       <Ulica>Wąska 5</Ulica>
       <Miasto>Kraków</Miasto>
       <KodPocztowy>40-234</KodPocztowy>
-      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaFizyczna>
     <OsobaFizyczna>
@@ -236,7 +236,7 @@
       <Miasto>Kraków</Miasto>
       <KodPocztowy>30-072</KodPocztowy>
       <Nip>8712581799</Nip>
-      <LiczbaTransakcji>4</LiczbaTransakcji>
+      <LiczbaTransakcji>5</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaPrawna>
     <OsobaPrawna>
@@ -272,7 +272,7 @@
       <Miasto>Kraków</Miasto>
       <KodPocztowy>26-315</KodPocztowy>
       <Nip>2847750322</Nip>
-      <LiczbaTransakcji>0</LiczbaTransakcji>
+      <LiczbaTransakcji>1</LiczbaTransakcji>
       <Rabat>1</Rabat>
     </OsobaPrawna>
     <OsobaPrawna>

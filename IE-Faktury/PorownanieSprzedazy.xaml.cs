@@ -128,8 +128,10 @@ namespace IE_Faktury
                 varProd2 = descProd2.Result.Variance;
                 n2 = ilosciProd2.Sum();
                 statTestowa = (sredniaProd1 - sredniaProd2) / Math.Sqrt((varProd1 / n1) + (varProd2 / n2));
+                Debug.WriteLine("StatTest: " + statTestowa.ToString());
                 Normal normal = new Normal(0, 1);
                 statKrytyczna = normal.InverseCumulativeDistribution(0.95);
+                Debug.WriteLine("StatKryt: " + statKrytyczna.ToString());
                 MessageBoxResult res = MessageBoxResult.Yes;
                 if (Math.Abs(statTestowa) >= statKrytyczna)
                 {
